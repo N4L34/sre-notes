@@ -4,74 +4,74 @@
 
 ## 1. Основы
 
-- [x] Что такое CI
-- [x] Что такое CD
-- [x] Continuous Delivery vs Continuous Deployment
-- [x] Pipeline
-- [x] Stages
-- [x] Jobs
-- [x] Runners / Agents
-- [x] Triggers
+- [ ] Что такое CI
+- [ ] Что такое CD
+- [ ] Continuous Delivery vs Continuous Deployment
+- [ ] Pipeline
+- [ ] Stages
+- [ ] Jobs
+- [ ] Runners / Agents
+- [ ] Triggers
 
 ---
 
 ## 2. Pipeline
 
-- [x] Build
-- [x] Tests
-- [x] Lint
-- [x] Security Scan
-- [x] Build Docker Image
-- [x] Push Image
-- [x] Deploy
-- [x] Rollback
+- [ ] Build
+- [ ] Tests
+- [ ] Lint
+- [ ] Security Scan
+- [ ] Build Docker Image
+- [ ] Push Image
+- [ ] Deploy
+- [ ] Rollback
 
 ---
 
 ## 3. Artifacts и Cache
 
-- [x] Artifacts
-- [x] Cache
-- [x] Docker Registry
-- [x] Package Registry
+- [ ] Artifacts
+- [ ] Cache
+- [ ] Docker Registry
+- [ ] Package Registry
 
 ---
 
 ## 4. Variables и Secrets
 
-- [x] Environment Variables
-- [x] Secrets
-- [x] Credentials
-- [x] Protected Variables
+- [ ] Environment Variables
+- [ ] Secrets
+- [ ] Credentials
+- [ ] Protected Variables
 
 ---
 
 ## 5. Pipeline Best Practices
 
-- [x] Parallel Jobs
-- [x] Reusable Pipelines
-- [x] Manual Approval
-- [x] Retry
-- [x] Notifications
-- [x] Multi-stage Pipeline
+- [ ] Parallel Jobs
+- [ ] Reusable Pipelines
+- [ ] Manual Approval
+- [ ] Retry
+- [ ] Notifications
+- [ ] Multi-stage Pipeline
 
 ---
 
 ## 6. Troubleshooting
 
-- [x] Failed Build
-- [x] Failed Tests
-- [x] Failed Deploy
-- [x] Missing Artifacts
-- [x] Cache Problems
-- [x] Rollback
+- [ ] Failed Build
+- [ ] Failed Tests
+- [ ] Failed Deploy
+- [ ] Missing Artifacts
+- [ ] Cache Problems
+- [ ] Rollback
 
 ---
 
 ## 7. Interview Questions
 
-- [x] CI vs CD
-- [x] Delivery vs Deployment
-- [x] Cache vs Artifact
-- [x] Blue-Green vs Canary
-- [x] Как выглядит хороший Pipeline
+- [ ] CI vs CD
+- [ ] Delivery vs Deployment
+- [ ] Cache vs Artifact
+- [ ] Blue-Green vs Canary
+- [ ] Как выглядит хороший Pipeline

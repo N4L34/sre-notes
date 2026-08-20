@@ -1,20 +1,20 @@
-  
-[[Python for DevOps SRE. Конспект]] 
-- [x] Основы синтаксиса  
-- [x] Переменные и типы данных  
-- [x] Условия (`if`)  
-- [x] Циклы (`for`, `while`)  
-- [x] Functions  
-- [x] Modules и `import`  
-- [x] Работа с файлами  
-- [x] Обработка исключений (`try/except`)  
-- [x] Работа с JSON  
-- [x] Работа с HTTP API (`requests`)  
-- [x] Запуск внешних команд (`subprocess`)  
-- [x] Работа с путями (`pathlib`)  
-- [x] Аргументы командной строки (`argparse`)  
-- [x] Virtual environments (`venv`) и `pip`  
-- [x] Практика для DevOps/SRE (парсинг логов, API, автоматизация)
+
+[[Python for DevOps SRE. Конспект]]
+- [ ] Основы синтаксиса
+- [ ] Переменные и типы данных
+- [ ] Условия (`if`)
+- [ ] Циклы (`for`, `while`)
+- [ ] Functions
+- [ ] Modules и `import`
+- [ ] Работа с файлами
+- [ ] Обработка исключений (`try/except`)
+- [ ] Работа с JSON
+- [ ] Работа с HTTP API (`requests`)
+- [ ] Запуск внешних команд (`subprocess`)
+- [ ] Работа с путями (`pathlib`)
+- [ ] Аргументы командной строки (`argparse`)
+- [ ] Virtual environments (`venv`) и `pip`
+- [ ] Практика для DevOps/SRE (парсинг логов, API, автоматизация)
 ## Практика Python для DevOps/SRE
 
 - [ ] Парсинг логов

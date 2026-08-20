@@ -1,12 +1,12 @@
 [[Infrastructure as Code (Terraform + Ansible). Конспект]]
 ## 1. Основы IaC
 
-- [x] Что такое Infrastructure as Code
-- [x] Зачем нужен IaC
-- [x] Imperative vs Declarative подход
-- [x] Idempotency
-- [x] Reproducible infrastructure
-- [x] Version control для инфраструктуры
+- [ ] Что такое Infrastructure as Code
+- [ ] Зачем нужен IaC
+- [ ] Imperative vs Declarative подход
+- [ ] Idempotency
+- [ ] Reproducible infrastructure
+- [ ] Version control для инфраструктуры
 
 ---
 
@@ -14,69 +14,69 @@
 
 ## 2. Основы Terraform
 
-- [x] Что такое Terraform
-- [x] Terraform architecture
-- [x] Terraform CLI
-- [x] Provider
-- [x] Resource
-- [x] Data Source
-- [x] Configuration files (.tf)
+- [ ] Что такое Terraform
+- [ ] Terraform architecture
+- [ ] Terraform CLI
+- [ ] Provider
+- [ ] Resource
+- [ ] Data Source
+- [ ] Configuration files (.tf)
 
 ---
 
 ## 3. Terraform Workflow
 
-- [x] terraform init
-- [x] terraform plan
-- [x] terraform apply
-- [x] terraform destroy
-- [x] terraform validate
-- [x] terraform fmt
+- [ ] terraform init
+- [ ] terraform plan
+- [ ] terraform apply
+- [ ] terraform destroy
+- [ ] terraform validate
+- [ ] terraform fmt
 
 ---
 
 ## 4. Terraform Configuration
 
-- [x] Variables
-- [x] Outputs
-- [x] Locals
-- [x] Resource dependencies
-- [x] References
-- [x] Expressions
-- [x] Functions basics
+- [ ] Variables
+- [ ] Outputs
+- [ ] Locals
+- [ ] Resource dependencies
+- [ ] References
+- [ ] Expressions
+- [ ] Functions basics
 
 ---
 
 ## 5. Terraform State
 
-- [x] Что такое Terraform state
-- [x] terraform.tfstate
-- [x] Local state
-- [x] Remote state
-- [x] Backend
-- [x] State locking
-- [x] Почему нельзя терять state
+- [ ] Что такое Terraform state
+- [ ] terraform.tfstate
+- [ ] Local state
+- [ ] Remote state
+- [ ] Backend
+- [ ] State locking
+- [ ] Почему нельзя терять state
 
 ---
 
 ## 6. Terraform Modules
 
-- [x] Что такое Module
-- [x] Root module
-- [x] Child modules
-- [x] Reusable infrastructure
-- [x] Module registry basics
+- [ ] Что такое Module
+- [ ] Root module
+- [ ] Child modules
+- [ ] Reusable infrastructure
+- [ ] Module registry basics
 
 ---
 
 ## 7. Terraform в Cloud
 
-- [x] Terraform + AWS basics
-- [x] Создание VPC
-- [x] Создание EC2
-- [x] Security Groups
-- [x] IAM basics
-- [x] Terraform + Kubernetes basics
+- [ ] Terraform + AWS basics
+- [ ] Создание VPC
+- [ ] Создание EC2
+- [ ] Security Groups
+- [ ] IAM basics
+- [ ] Terraform + Kubernetes basics
 
 ---
 
@@ -84,76 +84,76 @@
 
 ## 8. Основы Ansible
 
-- [x] Что такое Ansible
-- [x] Configuration Management
-- [x] Agentless architecture
-- [x] SSH connection
-- [x] Inventory
-- [x] Hosts
+- [ ] Что такое Ansible
+- [ ] Configuration Management
+- [ ] Agentless architecture
+- [ ] SSH connection
+- [ ] Inventory
+- [ ] Hosts
 
 ---
 
 ## 9. Ansible Components
 
-- [x] Playbook
-- [x] Task
-- [x] Module
-- [x] Handler
-- [x] Role
-- [x] Variables
-- [x] Facts
+- [ ] Playbook
+- [ ] Task
+- [ ] Module
+- [ ] Handler
+- [ ] Role
+- [ ] Variables
+- [ ] Facts
 
 ---
 
 ## 10. Ansible Workflow
 
-- [x] ansible command
-- [x] ansible-playbook
-- [x] Check mode
-- [x] Diff mode
-- [x] Become (sudo)
+- [ ] ansible command
+- [ ] ansible-playbook
+- [ ] Check mode
+- [ ] Diff mode
+- [ ] Become (sudo)
 
 ---
 
 ## 11. Ansible Templates
 
-- [x] Jinja2 basics
-- [x] Template files
-- [x] Variables inside templates
-- [x] Configuration generation
+- [ ] Jinja2 basics
+- [ ] Template files
+- [ ] Variables inside templates
+- [ ] Configuration generation
 
 ---
 
 ## 12. Ansible Best Practices
 
-- [x] Idempotent playbooks
-- [x] Roles structure
-- [x] Secrets через Ansible Vault
-- [x] Inventory management
-- [x] Tags
+- [ ] Idempotent playbooks
+- [ ] Roles structure
+- [ ] Secrets через Ansible Vault
+- [ ] Inventory management
+- [ ] Tags
 
 ---
 
 ## 13. Terraform vs Ansible
 
-- [x] Terraform создаёт инфраструктуру
-- [x] Ansible конфигурирует инфраструктуру
-- [x] Terraform vs Ansible use cases
-- [x] Использование вместе
+- [ ] Terraform создаёт инфраструктуру
+- [ ] Ansible конфигурирует инфраструктуру
+- [ ] Terraform vs Ansible use cases
+- [ ] Использование вместе
 
 ---
 
 ## 14. Interview Questions
 
-- [x] Что такое IaC
-- [x] Terraform vs Ansible
-- [x] Declarative vs Imperative
-- [x] Что такое Terraform state
-- [x] Зачем нужен backend
-- [x] Что делает terraform plan
-- [x] Что такое provider
-- [x] Что такое resource
-- [x] Что такое Ansible inventory
-- [x] Что такое playbook
-- [x] Что такое idempotency
-- [x] Почему Ansible не требует агента
+- [ ] Что такое IaC
+- [ ] Terraform vs Ansible
+- [ ] Declarative vs Imperative
+- [ ] Что такое Terraform state
+- [ ] Зачем нужен backend
+- [ ] Что делает terraform plan
+- [ ] Что такое provider
+- [ ] Что такое resource
+- [ ] Что такое Ansible inventory
+- [ ] Что такое playbook
+- [ ] Что такое idempotency
+- [ ] Почему Ansible не требует агента

@@ -2,316 +2,316 @@
 
 ## 1. Основы сетей
 
-- [x] IP address
-- [x] IPv4
-- [x] IPv6 basics
-- [x] Private IP ranges
-- [x] Public IP
-- [x] MAC address
-- [x] Subnet
-- [x] Subnet mask
-- [x] CIDR
-- [x] Broadcast address
-- [x] Network address
-- [x] Gateway
-- [x] Default gateway
-- [x] Port
-- [x] Socket
-- [x] Protocol
-- [x] MTU
-- [x] MSS
-- [x] TTL
-- [x] ARP
-- [x] NAT
-- [x] PAT
+- [ ] IP address
+- [ ] IPv4
+- [ ] IPv6 basics
+- [ ] Private IP ranges
+- [ ] Public IP
+- [ ] MAC address
+- [ ] Subnet
+- [ ] Subnet mask
+- [ ] CIDR
+- [ ] Broadcast address
+- [ ] Network address
+- [ ] Gateway
+- [ ] Default gateway
+- [ ] Port
+- [ ] Socket
+- [ ] Protocol
+- [ ] MTU
+- [ ] MSS
+- [ ] TTL
+- [ ] ARP
+- [ ] NAT
+- [ ] PAT
 
 ---
 
 ## 2. TCP/IP и OSI
 
-- [x] OSI model
-- [x] TCP/IP model
-- [x] L1 Physical
-- [x] L2 Data Link
-- [x] L3 Network
-- [x] L4 Transport
-- [x] L7 Application
-- [x] Ethernet
-- [x] Encapsulation
-- [x] Decapsulation
-- [x] Packet
-- [x] Frame
-- [x] Segment
-- [x] Datagram
+- [ ] OSI model
+- [ ] TCP/IP model
+- [ ] L1 Physical
+- [ ] L2 Data Link
+- [ ] L3 Network
+- [ ] L4 Transport
+- [ ] L7 Application
+- [ ] Ethernet
+- [ ] Encapsulation
+- [ ] Decapsulation
+- [ ] Packet
+- [ ] Frame
+- [ ] Segment
+- [ ] Datagram
 
 ---
 
 ## 3. Routing
 
-- [x] Routing table
-- [x] Static route
-- [x] Dynamic routing basics
-- [x] Default route
-- [x] Host route
-- [x] Network route
-- [x] Route metric
-- [x] Policy routing basics
-- [x] Asymmetric routing
-- [x] Blackhole route
+- [ ] Routing table
+- [ ] Static route
+- [ ] Dynamic routing basics
+- [ ] Default route
+- [ ] Host route
+- [ ] Network route
+- [ ] Route metric
+- [ ] Policy routing basics
+- [ ] Asymmetric routing
+- [ ] Blackhole route
 
 ---
 
 ## 4. TCP
 
-- [x] TCP handshake
-- [x] SYN
-- [x] SYN-ACK
-- [x] ACK
-- [x] FIN
-- [x] RST
-- [x] TCP states
-- [x] LISTEN
-- [x] ESTABLISHED
-- [x] TIME_WAIT
-- [x] CLOSE_WAIT
-- [x] FIN_WAIT
-- [x] SYN_SENT
-- [x] SYN_RECV
-- [x] Retransmission
-- [x] Window size
-- [x] Congestion control basics
-- [x] Slow start basics
-- [x] Keepalive
-- [x] Backlog
-- [x] Ephemeral ports
-- [x] Nagle algorithm basics
+- [ ] TCP handshake
+- [ ] SYN
+- [ ] SYN-ACK
+- [ ] ACK
+- [ ] FIN
+- [ ] RST
+- [ ] TCP states
+- [ ] LISTEN
+- [ ] ESTABLISHED
+- [ ] TIME_WAIT
+- [ ] CLOSE_WAIT
+- [ ] FIN_WAIT
+- [ ] SYN_SENT
+- [ ] SYN_RECV
+- [ ] Retransmission
+- [ ] Window size
+- [ ] Congestion control basics
+- [ ] Slow start basics
+- [ ] Keepalive
+- [ ] Backlog
+- [ ] Ephemeral ports
+- [ ] Nagle algorithm basics
 
 ---
 
 ## 5. UDP
 
-- [x] UDP basics
-- [x] Connectionless protocol
-- [x] DNS over UDP
-- [x] QUIC basics
-- [x] Когда использовать UDP
-- [x] Ограничения UDP
+- [ ] UDP basics
+- [ ] Connectionless protocol
+- [ ] DNS over UDP
+- [ ] QUIC basics
+- [ ] Когда использовать UDP
+- [ ] Ограничения UDP
 
 ---
 
 ## 6. ICMP
 
-- [x] Echo Request
-- [x] Echo Reply
-- [x] Destination Unreachable
-- [x] Time Exceeded
-- [x] Path MTU Discovery
-- [x] ICMP troubleshooting
+- [ ] Echo Request
+- [ ] Echo Reply
+- [ ] Destination Unreachable
+- [ ] Time Exceeded
+- [ ] Path MTU Discovery
+- [ ] ICMP troubleshooting
 
 ---
 
 ## 7. DNS
 
-- [x] DNS architecture
-- [x] Recursive resolver
-- [x] Authoritative DNS
-- [x] DNS cache
-- [x] DNS propagation
-- [x] TTL
-- [x] A
-- [x] AAAA
-- [x] CNAME
-- [x] MX
-- [x] TXT
-- [x] NS
-- [x] PTR
-- [x] SOA
-- [x] SRV
-- [x] Reverse DNS
-- [x] Split-horizon DNS
-- [x] `/etc/hosts`
-- [x] `/etc/resolv.conf`
-- [x] `systemd-resolved`
-- [x] DNS over TLS basics
+- [ ] DNS architecture
+- [ ] Recursive resolver
+- [ ] Authoritative DNS
+- [ ] DNS cache
+- [ ] DNS propagation
+- [ ] TTL
+- [ ] A
+- [ ] AAAA
+- [ ] CNAME
+- [ ] MX
+- [ ] TXT
+- [ ] NS
+- [ ] PTR
+- [ ] SOA
+- [ ] SRV
+- [ ] Reverse DNS
+- [ ] Split-horizon DNS
+- [ ] `/etc/hosts`
+- [ ] `/etc/resolv.conf`
+- [ ] `systemd-resolved`
+- [ ] DNS over TLS basics
 
 ---
 
 ## 8. HTTP / HTTPS
 
-- [x] HTTP request
-- [x] HTTP response
-- [x] Methods
-- [x] GET
-- [x] POST
-- [x] PUT
-- [x] PATCH
-- [x] DELETE
-- [x] HEAD
-- [x] OPTIONS
-- [x] Headers
-- [x] Host header
-- [x] User-Agent
-- [x] Authorization
-- [x] Cookie
-- [x] Content-Type
-- [x] Content-Length
-- [x] Keep-Alive
-- [x] Status codes
-- [x] 2xx
-- [x] 3xx
-- [x] 4xx
-- [x] 5xx
-- [x] HTTP/1.1
-- [x] HTTP/2 basics
+- [ ] HTTP request
+- [ ] HTTP response
+- [ ] Methods
+- [ ] GET
+- [ ] POST
+- [ ] PUT
+- [ ] PATCH
+- [ ] DELETE
+- [ ] HEAD
+- [ ] OPTIONS
+- [ ] Headers
+- [ ] Host header
+- [ ] User-Agent
+- [ ] Authorization
+- [ ] Cookie
+- [ ] Content-Type
+- [ ] Content-Length
+- [ ] Keep-Alive
+- [ ] Status codes
+- [ ] 2xx
+- [ ] 3xx
+- [ ] 4xx
+- [ ] 5xx
+- [ ] HTTP/1.1
+- [ ] HTTP/2 basics
 ---
 
 ## 9. TLS / SSL
 
-- [x] TLS handshake
-- [x] Certificate
-- [x] Certificate chain
-- [x] Root CA
-- [x] Intermediate CA
-- [x] Public key
-- [x] Private key
-- [x] CSR
-- [x] SAN
-- [x] CN
-- [x] SNI
-- [x] TLS termination
-- [x] TLS passthrough
-- [x] mTLS basics
-- [x] Self-signed certificate
-- [x] Let's Encrypt basics
+- [ ] TLS handshake
+- [ ] Certificate
+- [ ] Certificate chain
+- [ ] Root CA
+- [ ] Intermediate CA
+- [ ] Public key
+- [ ] Private key
+- [ ] CSR
+- [ ] SAN
+- [ ] CN
+- [ ] SNI
+- [ ] TLS termination
+- [ ] TLS passthrough
+- [ ] mTLS basics
+- [ ] Self-signed certificate
+- [ ] Let's Encrypt basics
 
 ---
 
 ## 10. Linux Networking
 
-- [x] Интерфейсы
-- [x] Loopback
-- [x] Bridge
-- [x] Bonding basics
-- [x] VLAN basics
-- [x] Routing
-- [x] ARP cache
-- [x] Neighbor table
+- [ ] Интерфейсы
+- [ ] Loopback
+- [ ] Bridge
+- [ ] Bonding basics
+- [ ] VLAN basics
+- [ ] Routing
+- [ ] ARP cache
+- [ ] Neighbor table
 
 ---
 
 ## 11. Проверка соединений
 
-- [x] Listening sockets
-- [x] Established connections
-- [x] TCP sockets
+- [ ] Listening sockets
+- [ ] Established connections
+- [ ] TCP sockets
 - [ ] UDP sockets
 
 ---
 
 ## 12. Firewall и NAT
 
-- [x] Stateful firewall
-- [x] Stateless firewall
-- [x] SNAT
-- [x] DNAT
-- [x] Masquerade
-- [x] Port forwarding
-- [x] Connection tracking
+- [ ] Stateful firewall
+- [ ] Stateless firewall
+- [ ] SNAT
+- [ ] DNAT
+- [ ] Masquerade
+- [ ] Port forwarding
+- [ ] Connection tracking
 
 
 ---
 
 ## 13. Load Balancing
 
-- [x] L4 Load Balancer
-- [x] L7 Load Balancer
-- [x] Reverse Proxy
-- [x] Forward Proxy
-- [x] Round Robin
-- [x] Least Connections
-- [x] IP Hash
-- [x] Sticky Sessions
-- [x] Health Checks
-- [x] Active Health Checks
-- [x] Passive Health Checks
-- [x] Connection Draining
+- [ ] L4 Load Balancer
+- [ ] L7 Load Balancer
+- [ ] Reverse Proxy
+- [ ] Forward Proxy
+- [ ] Round Robin
+- [ ] Least Connections
+- [ ] IP Hash
+- [ ] Sticky Sessions
+- [ ] Health Checks
+- [ ] Active Health Checks
+- [ ] Passive Health Checks
+- [ ] Connection Draining
 
 ---
 
 ## 14. Packet Capture
 
-- [x] Packet capture
-- [x] Packet filtering
-- [x] PCAP
+- [ ] Packet capture
+- [ ] Packet filtering
+- [ ] PCAP
 ---
 
 ## 15. Docker Networking
 
-- [x] bridge network
-- [x] host network
-- [x] none network
-- [x] overlay network
-- [x] docker0
-- [x] Port publishing
-- [x] Container DNS
-- [x] NAT в Docker
+- [ ] bridge network
+- [ ] host network
+- [ ] none network
+- [ ] overlay network
+- [ ] docker0
+- [ ] Port publishing
+- [ ] Container DNS
+- [ ] NAT в Docker
 
 ---
 
 ## 16. Kubernetes Networking
 
-- [x] Pod IP
-- [x] Node IP
-- [x] ClusterIP
-- [x] NodePort
-- [x] LoadBalancer
-- [x] Headless Service
-- [x] Endpoints
-- [x] EndpointSlice
-- [x] kube-proxy
-- [x] iptables mode
-- [x] IPVS mode
-- [x] CNI
-- [x] Calico
-- [x] Cilium
-- [x] Flannel
-- [x] CoreDNS
-- [x] Ingress
-- [x] Ingress Controller
-- [x] NetworkPolicy
-- [x] externalTrafficPolicy
+- [ ] Pod IP
+- [ ] Node IP
+- [ ] ClusterIP
+- [ ] NodePort
+- [ ] LoadBalancer
+- [ ] Headless Service
+- [ ] Endpoints
+- [ ] EndpointSlice
+- [ ] kube-proxy
+- [ ] iptables mode
+- [ ] IPVS mode
+- [ ] CNI
+- [ ] Calico
+- [ ] Cilium
+- [ ] Flannel
+- [ ] CoreDNS
+- [ ] Ingress
+- [ ] Ingress Controller
+- [ ] NetworkPolicy
+- [ ] externalTrafficPolicy
 
 ---
 
 ## 17. Cloud Networking
 
-- [x] VPC
-- [x] Public subnet
-- [x] Private subnet
-- [x] Route table
-- [x] Internet Gateway
-- [x] NAT Gateway
-- [x] Security Group
-- [x] Network ACL
-- [x] VPN basics
-- [x] VPC Peering
-- [x] Transit Gateway basics
-- [x] PrivateLink basics
-- [x] Cloud DNS
+- [ ] VPC
+- [ ] Public subnet
+- [ ] Private subnet
+- [ ] Route table
+- [ ] Internet Gateway
+- [ ] NAT Gateway
+- [ ] Security Group
+- [ ] Network ACL
+- [ ] VPN basics
+- [ ] VPC Peering
+- [ ] Transit Gateway basics
+- [ ] PrivateLink basics
+- [ ] Cloud DNS
 
 ---
 
 ## 18. Performance
 
-- [x] Latency
-- [x] RTT
-- [x] Throughput
-- [x] Bandwidth
-- [x] Packet loss
-- [x] Jitter
-- [x] TCP backlog
-- [x] Socket buffers
-- [x] Interface saturation
+- [ ] Latency
+- [ ] RTT
+- [ ] Throughput
+- [ ] Bandwidth
+- [ ] Packet loss
+- [ ] Jitter
+- [ ] TCP backlog
+- [ ] Socket buffers
+- [ ] Interface saturation
 
 ---
 

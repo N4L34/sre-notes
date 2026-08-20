@@ -2,260 +2,260 @@
 
 ## 1. Основы
 
-- [x] Что такое Git
-- [x] Git vs GitHub
-- [x] Система контроля версий
-- [x] Распределенная система контроля версий
-- [x] Репозиторий
-- [x] Локальный репозиторий
-- [x] Удаленный репозиторий
-- [x] Рабочая директория
-- [x] Staging area / Index
-- [x] Директория `.git`
-- [x] Коммит
-- [x] Хэш коммита
-- [x] Ветка
-- [x] HEAD
-- [x] Ветка main / master
+- [ ] Что такое Git
+- [ ] Git vs GitHub
+- [ ] Система контроля версий
+- [ ] Распределенная система контроля версий
+- [ ] Репозиторий
+- [ ] Локальный репозиторий
+- [ ] Удаленный репозиторий
+- [ ] Рабочая директория
+- [ ] Staging area / Index
+- [ ] Директория `.git`
+- [ ] Коммит
+- [ ] Хэш коммита
+- [ ] Ветка
+- [ ] HEAD
+- [ ] Ветка main / master
 
 ---
 
 ## 2. Настройка Git
 
-- [x] `git config`
-- [x] Глобальный config
-- [x] Локальный config
-- [x] `user.name`
-- [x] `user.email`
-- [x] Редактор по умолчанию
-- [x] Имя ветки по умолчанию
-- [x] Credential helper
-- [x] SSH-ключ для Git
-- [x] HTTPS vs SSH авторизация
+- [ ] `git config`
+- [ ] Глобальный config
+- [ ] Локальный config
+- [ ] `user.name`
+- [ ] `user.email`
+- [ ] Редактор по умолчанию
+- [ ] Имя ветки по умолчанию
+- [ ] Credential helper
+- [ ] SSH-ключ для Git
+- [ ] HTTPS vs SSH авторизация
 
 ---
 
 ## 3. Создание репозитория
 
-- [x] `git init`
-- [x] `git clone`
-- [x] Клонирование через HTTPS
-- [x] Клонирование через SSH
-- [x] `git remote -v`
-- [x] `origin`
-- [x] Добавить удаленный репозиторий
-- [x] Изменить remote URL
-- [x] Удалить remote repository
+- [ ] `git init`
+- [ ] `git clone`
+- [ ] Клонирование через HTTPS
+- [ ] Клонирование через SSH
+- [ ] `git remote -v`
+- [ ] `origin`
+- [ ] Добавить удаленный репозиторий
+- [ ] Изменить remote URL
+- [ ] Удалить remote repository
 
 ---
 
 ## 4. Базовый workflow
 
-- [x] `git status`
-- [x] `git add`
-- [x] `git add .`
-- [x] `git commit`
-- [x] `git commit -m`
-- [x] `git push`
-- [x] `git pull`
-- [x] `git fetch`
-- [x] `git log`
-- [x] `git diff`
+- [ ] `git status`
+- [ ] `git add`
+- [ ] `git add .`
+- [ ] `git commit`
+- [ ] `git commit -m`
+- [ ] `git push`
+- [ ] `git pull`
+- [ ] `git fetch`
+- [ ] `git log`
+- [ ] `git diff`
 
 ---
 
 ## 5. Staging Area
 
-- [x] Что такое staging area
-- [x] Добавить файл в staging
-- [x] Добавить все изменения в staging
-- [x] Убрать файл из staging
-- [x] Staged changes
-- [x] Unstaged changes
-- [x] Tracked files
-- [x] Untracked files
-- [x] Частично добавить изменения в staging
-- [x] Почему commit включает только staged changes
+- [ ] Что такое staging area
+- [ ] Добавить файл в staging
+- [ ] Добавить все изменения в staging
+- [ ] Убрать файл из staging
+- [ ] Staged changes
+- [ ] Unstaged changes
+- [ ] Tracked files
+- [ ] Untracked files
+- [ ] Частично добавить изменения в staging
+- [ ] Почему commit включает только staged changes
 
 ---
 
 ## 6. Коммиты
 
-- [x] Что такое commit
-- [x] Хэш коммита
-- [x] Commit message
-- [x] Atomic commit
-- [x] Хороший commit message
-- [x] Плохой commit message
-- [x] `git commit --amend`
-- [x] Изменить последний commit message
-- [x] Добавить забытый файл в последний commit
-- [x] Пустой commit
+- [ ] Что такое commit
+- [ ] Хэш коммита
+- [ ] Commit message
+- [ ] Atomic commit
+- [ ] Хороший commit message
+- [ ] Плохой commit message
+- [ ] `git commit --amend`
+- [ ] Изменить последний commit message
+- [ ] Добавить забытый файл в последний commit
+- [ ] Пустой commit
 
 ---
 
 ## 7. Просмотр истории
 
-- [x] `git log`  
-- [x] `git log --oneline`
-- [x] `git log --graph`
-- [x] `git show`
-- [x] `git diff`
-- [x] `git diff --staged`
-- [x] `git blame`
-- [x] Показать изменения в конкретном commit
-- [x] Показать изменения между ветками
-- [x] Показать изменения между commit
+- [ ] `git log`
+- [ ] `git log --oneline`
+- [ ] `git log --graph`
+- [ ] `git show`
+- [ ] `git diff`
+- [ ] `git diff --staged`
+- [ ] `git blame`
+- [ ] Показать изменения в конкретном commit
+- [ ] Показать изменения между ветками
+- [ ] Показать изменения между commit
 
 ---
 
 ## 8. Ветки
 
-- [x] Что такое branch
-- [x] `main`
-- [x] `master`
-- [x] Feature branch
-- [x] Hotfix branch
-- [x] Release branch
-- [x] `git branch`
-- [x] `git branch -a`
-- [x] `git switch`
-- [x] `git checkout`
-- [x] Создать новую ветку
-- [x] Переключиться на ветку
-- [x] Удалить локальную ветку
-- [x] Удалить удаленную ветку
-- [x] Переименовать ветку
+- [ ] Что такое branch
+- [ ] `main`
+- [ ] `master`
+- [ ] Feature branch
+- [ ] Hotfix branch
+- [ ] Release branch
+- [ ] `git branch`
+- [ ] `git branch -a`
+- [ ] `git switch`
+- [ ] `git checkout`
+- [ ] Создать новую ветку
+- [ ] Переключиться на ветку
+- [ ] Удалить локальную ветку
+- [ ] Удалить удаленную ветку
+- [ ] Переименовать ветку
 
 ---
 
 ## 9. Merge
 
-- [x] Что такое merge
-- [x] `git merge`
-- [x] Fast-forward merge
-- [x] 3-way merge
-- [x] Merge commit
-- [x] Влить feature branch в main
-- [x] Влить main в feature branch
-- [x] Отменить merge
-- [x] Merge conflict при merge
-- [x] Когда использовать merge
+- [ ] Что такое merge
+- [ ] `git merge`
+- [ ] Fast-forward merge
+- [ ] 3-way merge
+- [ ] Merge commit
+- [ ] Влить feature branch в main
+- [ ] Влить main в feature branch
+- [ ] Отменить merge
+- [ ] Merge conflict при merge
+- [ ] Когда использовать merge
 
 ---
 
 ## 10. Rebase
 
-- [x] Что такое rebase
-- [x] `git rebase`
-- [x] Rebase feature branch на main
-- [x] Rebase vs merge
-- [x] Interactive rebase
-- [x] `git rebase -i`
-- [x] Squash commits
-- [x] Reword commit
-- [x] Drop commit
-- [x] Изменить порядок commits
-- [x] Отменить rebase
-- [x] Продолжить rebase
-- [x] Почему нельзя rebase-ить shared branches
+- [ ] Что такое rebase
+- [ ] `git rebase`
+- [ ] Rebase feature branch на main
+- [ ] Rebase vs merge
+- [ ] Interactive rebase
+- [ ] `git rebase -i`
+- [ ] Squash commits
+- [ ] Reword commit
+- [ ] Drop commit
+- [ ] Изменить порядок commits
+- [ ] Отменить rebase
+- [ ] Продолжить rebase
+- [ ] Почему нельзя rebase-ить shared branches
 
 ---
 
 ## 11. Merge Conflicts
 
-- [x] Что такое merge conflict
-- [x] Почему появляются merge conflicts
-- [x] Как conflict выглядит в файле
-- [x] `<<<<<<< HEAD`
-- [x] `=======`
-- [x] `>>>>>>> branch`
-- [x] Решить conflict вручную
-- [x] `git status` во время conflict
-- [x] `git add` после решения conflict
-- [x] `git merge --abort`
-- [x] `git rebase --abort`
-- [x] `git rebase --continue`
+- [ ] Что такое merge conflict
+- [ ] Почему появляются merge conflicts
+- [ ] Как conflict выглядит в файле
+- [ ] `<<<<<<< HEAD`
+- [ ] `=======`
+- [ ] `>>>>>>> branch`
+- [ ] Решить conflict вручную
+- [ ] `git status` во время conflict
+- [ ] `git add` после решения conflict
+- [ ] `git merge --abort`
+- [ ] `git rebase --abort`
+- [ ] `git rebase --continue`
 
 ---
 
 ## 12. Remote Repositories
 
-- [x] Что такое remote repository
-- [x] `origin`
-- [x] `git remote`
-- [x] `git remote -v`
-- [x] `git remote add`
-- [x] `git remote remove`
-- [x] `git remote set-url`
-- [x] Remote branch
-- [x] Tracking branch
-- [x] Upstream branch
-- [x] `git push -u origin branch`
+- [ ] Что такое remote repository
+- [ ] `origin`
+- [ ] `git remote`
+- [ ] `git remote -v`
+- [ ] `git remote add`
+- [ ] `git remote remove`
+- [ ] `git remote set-url`
+- [ ] Remote branch
+- [ ] Tracking branch
+- [ ] Upstream branch
+- [ ] `git push -u origin branch`
 
 ---
 
 ## 13. Fetch / Pull / Push
 
-- [x] `git fetch`
-- [x] `git pull`
-- [x] `git pull --rebase`
-- [x] `git push`
-- [x] `git push -u`
-- [x] Fetch vs pull
-- [x] Pull = fetch + merge/rebase
-- [x] Push локальной ветки в remote
-- [x] Push tags
-- [x] Push rejected
-- [x] Non-fast-forward error
+- [ ] `git fetch`
+- [ ] `git pull`
+- [ ] `git pull --rebase`
+- [ ] `git push`
+- [ ] `git push -u`
+- [ ] Fetch vs pull
+- [ ] Pull = fetch + merge/rebase
+- [ ] Push локальной ветки в remote
+- [ ] Push tags
+- [ ] Push rejected
+- [ ] Non-fast-forward error
 
 ---
 
 ## 14. Force Push
 
-- [x] Что такое force push
-- [x] `git push --force`
-- [x] `git push --force-with-lease`
-- [x] Force push после rebase
-- [x] Почему force push опасен
-- [x] Почему `--force-with-lease` безопаснее
-- [x] Когда force push допустим
-- [x] Когда force push запрещен
+- [ ] Что такое force push
+- [ ] `git push --force`
+- [ ] `git push --force-with-lease`
+- [ ] Force push после rebase
+- [ ] Почему force push опасен
+- [ ] Почему `--force-with-lease` безопаснее
+- [ ] Когда force push допустим
+- [ ] Когда force push запрещен
 
 ---
 
 ## 15. Restore / Reset / Revert
 
-- [x] `git restore`
-- [x] `git restore file`
-- [x] `git restore --staged`
-- [x] `git reset`
-- [x] `git reset --soft`
-- [x] `git reset --mixed`
-- [x] `git reset --hard`
-- [x] `git revert`
-- [x] Reset vs revert
-- [x] Отменить локальные изменения
-- [x] Отменить staged changes
-- [x] Отменить последний commit
-- [x] Отменить pushed commit
-- [x] Безопасный rollback в общей ветке
- 
+- [ ] `git restore`
+- [ ] `git restore file`
+- [ ] `git restore --staged`
+- [ ] `git reset`
+- [ ] `git reset --soft`
+- [ ] `git reset --mixed`
+- [ ] `git reset --hard`
+- [ ] `git revert`
+- [ ] Reset vs revert
+- [ ] Отменить локальные изменения
+- [ ] Отменить staged changes
+- [ ] Отменить последний commit
+- [ ] Отменить pushed commit
+- [ ] Безопасный rollback в общей ветке
+
 ---
 
 ## 16. Stash
 
-- [x] Что такое stash
-- [x] `git stash`
-- [x] `git stash list`
-- [x] `git stash pop`
-- [x] `git stash apply`
-- [x] `git stash drop`
-- [x] `git stash clear`
-- [x] Stash с сообщением
-- [x] Stash untracked files
-- [x] Conflict после stash pop
-- [x] Когда использовать stash
+- [ ] Что такое stash
+- [ ] `git stash`
+- [ ] `git stash list`
+- [ ] `git stash pop`
+- [ ] `git stash apply`
+- [ ] `git stash drop`
+- [ ] `git stash clear`
+- [ ] Stash с сообщением
+- [ ] Stash untracked files
+- [ ] Conflict после stash pop
+- [ ] Когда использовать stash
 
 ---
 
@@ -275,208 +275,208 @@
 
 ## 18. Tags
 
-- [x] Что такое tag
-- [x] Lightweight tag
-- [x] Annotated tag
-- [x] Version tag
-- [x] `git tag`
-- [x] Создать tag
-- [x] Push tag
+- [ ] Что такое tag
+- [ ] Lightweight tag
+- [ ] Annotated tag
+- [ ] Version tag
+- [ ] `git tag`
+- [ ] Создать tag
+- [ ] Push tag
 - [ ] Push всех tags
-- [x] Удалить локальный tag
-- [x] Удалить remote tag
-- [x] Tags для releases
+- [ ] Удалить локальный tag
+- [ ] Удалить remote tag
+- [ ] Tags для releases
 
 ---
 
 ## 19. `.gitignore`
 
-- [x] Что такое `.gitignore`
-- [x] Игнорировать файлы
-- [x] Игнорировать директории
-- [x] Игнорировать логи
-- [x] Игнорировать build artifacts
-- [x] Игнорировать `.env`
-- [x] Игнорировать файлы IDE
-- [x] Файл уже отслеживается Git
-- [x] `git rm --cached`
-- [x] Глобальный `.gitignore`
-- [x] Почему `.gitignore` не удаляет файл из истории
+- [ ] Что такое `.gitignore`
+- [ ] Игнорировать файлы
+- [ ] Игнорировать директории
+- [ ] Игнорировать логи
+- [ ] Игнорировать build artifacts
+- [ ] Игнорировать `.env`
+- [ ] Игнорировать файлы IDE
+- [ ] Файл уже отслеживается Git
+- [ ] `git rm --cached`
+- [ ] Глобальный `.gitignore`
+- [ ] Почему `.gitignore` не удаляет файл из истории
 
 ---
 
 ## 20. Secrets
 
-- [x] Почему нельзя коммитить secrets
-- [x] Пароль в Git
-- [x] Token в Git
-- [x] Private key в Git
-- [x] `.env` в Git
-- [x] Secret случайно закоммичен
-- [x] Удалить secret из текущей ветки
-- [x] Удалить secret из Git history
-- [x] Rotate leaked secret
-- [x] Secret scanning
-- [x] `.gitignore` для secrets
+- [ ] Почему нельзя коммитить secrets
+- [ ] Пароль в Git
+- [ ] Token в Git
+- [ ] Private key в Git
+- [ ] `.env` в Git
+- [ ] Secret случайно закоммичен
+- [ ] Удалить secret из текущей ветки
+- [ ] Удалить secret из Git history
+- [ ] Rotate leaked secret
+- [ ] Secret scanning
+- [ ] `.gitignore` для secrets
 
 ---
 
 ## 21. Pull Request Flow
 
-- [x] Создать ветку от main
-- [x] Сделать изменения
-- [x] Закоммитить изменения
-- [x] Запушить ветку
-- [x] Открыть Pull Request
-- [x] Code review
-- [x] Approve PR
-- [x] Request changes
-- [x] Обновить PR
-- [x] Merge PR
-- [x] Squash merge
-- [x] Rebase merge
-- [x] Удалить ветку после merge
+- [ ] Создать ветку от main
+- [ ] Сделать изменения
+- [ ] Закоммитить изменения
+- [ ] Запушить ветку
+- [ ] Открыть Pull Request
+- [ ] Code review
+- [ ] Approve PR
+- [ ] Request changes
+- [ ] Обновить PR
+- [ ] Merge PR
+- [ ] Squash merge
+- [ ] Rebase merge
+- [ ] Удалить ветку после merge
 
 ---
 
 ## 22. GitHub / GitLab Flow
 
-- [x] Repository
-- [x] Pull Request
-- [x] Merge Request
-- [x] Review
-- [x] Approvals
-- [x] Branch protection
-- [x] Required status checks
-- [x] CI/CD pipeline на PR
-- [x] Merge в main
-- [x] Release из tag
-- [x] Hotfix flow
+- [ ] Repository
+- [ ] Pull Request
+- [ ] Merge Request
+- [ ] Review
+- [ ] Approvals
+- [ ] Branch protection
+- [ ] Required status checks
+- [ ] CI/CD pipeline на PR
+- [ ] Merge в main
+- [ ] Release из tag
+- [ ] Hotfix flow
 
 ---
 
 ## 23. Detached HEAD
 
-- [x] Что такое detached HEAD
-- [x] Как появляется detached HEAD
-- [x] Checkout конкретного commit
-- [x] Работа в detached HEAD
-- [x] Сохранить изменения из detached HEAD
-- [x] Создать ветку из detached HEAD
-- [x] Выйти из detached HEAD
-- [x] Почему detached HEAD может быть опасен
+- [ ] Что такое detached HEAD
+- [ ] Как появляется detached HEAD
+- [ ] Checkout конкретного commit
+- [ ] Работа в detached HEAD
+- [ ] Сохранить изменения из detached HEAD
+- [ ] Создать ветку из detached HEAD
+- [ ] Выйти из detached HEAD
+- [ ] Почему detached HEAD может быть опасен
 
 ---
 
 ## 24. Reflog
 
-- [x] Что такое reflog
-- [x] `git reflog`
-- [x] История HEAD
-- [x] Восстановить потерянный commit
-- [x] Восстановиться после reset hard
-- [x] Восстановить удаленную ветку
-- [x] Reflog vs log
-- [x] Когда reflog полезен
+- [ ] Что такое reflog
+- [ ] `git reflog`
+- [ ] История HEAD
+- [ ] Восстановить потерянный commit
+- [ ] Восстановиться после reset hard
+- [ ] Восстановить удаленную ветку
+- [ ] Reflog vs log
+- [ ] Когда reflog полезен
 
 ---
 
 ## 25. Clean
 
-- [x] `git clean`
-- [x] Удалить untracked files
-- [x] Удалить untracked directories
-- [x] Dry run clean
-- [x] `git clean -n`
-- [x] `git clean -fd`
-- [x] Почему `git clean` опасен
-- [x] Разница clean и restore
+- [ ] `git clean`
+- [ ] Удалить untracked files
+- [ ] Удалить untracked directories
+- [ ] Dry run clean
+- [ ] `git clean -n`
+- [ ] `git clean -fd`
+- [ ] Почему `git clean` опасен
+- [ ] Разница clean и restore
 
 ---
 
 ## 26. Submodules
 
-- [x] Что такое submodule
-- [x] `git submodule`
-- [x] Добавить submodule
-- [x] Clone repo с submodules
-- [x] Обновить submodules
-- [x] Удалить submodule
-- [x] Почему submodules сложные
-- [x] Альтернативы submodules
+- [ ] Что такое submodule
+- [ ] `git submodule`
+- [ ] Добавить submodule
+- [ ] Clone repo с submodules
+- [ ] Обновить submodules
+- [ ] Удалить submodule
+- [ ] Почему submodules сложные
+- [ ] Альтернативы submodules
 
 ---
 
 ## 27. Git Hooks
 
-- [x] Что такое Git hooks
-- [x] `.git/hooks`
-- [x] pre-commit hook
-- [x] commit-msg hook
-- [x] pre-push hook
-- [x] Client-side hooks
-- [x] Server-side hooks
-- [x] Hooks для linting
-- [x] Hooks для secret checking
+- [ ] Что такое Git hooks
+- [ ] `.git/hooks`
+- [ ] pre-commit hook
+- [ ] commit-msg hook
+- [ ] pre-push hook
+- [ ] Client-side hooks
+- [ ] Server-side hooks
+- [ ] Hooks для linting
+- [ ] Hooks для secret checking
 
 ---
 
 ## 28. Git для DevOps/SRE
 
-- [x] Git для Infrastructure as Code
-- [x] Terraform в Git
-- [x] Ansible в Git
-- [x] Kubernetes manifests в Git
-- [x] Helm charts в Git
-- [x] CI/CD configs в Git
-- [x] GitOps
-- [x] Rollback через Git
-- [x] Audit changes через Git
-- [x] Review infrastructure changes
+- [ ] Git для Infrastructure as Code
+- [ ] Terraform в Git
+- [ ] Ansible в Git
+- [ ] Kubernetes manifests в Git
+- [ ] Helm charts в Git
+- [ ] CI/CD configs в Git
+- [ ] GitOps
+- [ ] Rollback через Git
+- [ ] Audit changes через Git
+- [ ] Review infrastructure changes
 
 ---
 
 ## 29. Common Problems
 
-- [x] Случайно закоммитил не тот файл
-- [x] Случайно закоммитил secret
-- [x] Нужно отменить последний commit
-- [x] Нужно отменить pushed commit
-- [x] Нужно удалить локальные изменения
-- [x] Нужно убрать файл из staging
-- [x] Нужно решить merge conflict
-- [x] Push rejected
-- [x] Non-fast-forward error
-- [x] Detached HEAD
-- [x] Потерянный commit
-- [x] Не та ветка
-- [x] Локальная ветка отстает от remote
-- [x] Локальная ветка разошлась с remote
-- [x] Нужно синхронизировать feature branch с main
+- [ ] Случайно закоммитил не тот файл
+- [ ] Случайно закоммитил secret
+- [ ] Нужно отменить последний commit
+- [ ] Нужно отменить pushed commit
+- [ ] Нужно удалить локальные изменения
+- [ ] Нужно убрать файл из staging
+- [ ] Нужно решить merge conflict
+- [ ] Push rejected
+- [ ] Non-fast-forward error
+- [ ] Detached HEAD
+- [ ] Потерянный commit
+- [ ] Не та ветка
+- [ ] Локальная ветка отстает от remote
+- [ ] Локальная ветка разошлась с remote
+- [ ] Нужно синхронизировать feature branch с main
 
 ---
 
 ## 30. Interview Questions
 
-- [x] Что такое Git
-- [x] Git vs GitHub
-- [x] Что такое commit
-- [x] Что такое branch
-- [x] Что такое HEAD
-- [x] Что такое staging area
-- [x] Что делает `git add`
-- [x] Что делает `git commit`
-- [x] Что делает `git push`
-- [x] Что делает `git pull`
-- [x] Fetch vs pull
-- [x] Merge vs rebase
-- [x] Reset vs revert
-- [x] Что такое merge conflict
-- [x] Как решить conflict
-- [x] Что такое stash
-- [x] Что такое cherry-pick
-- [x] Что такое detached HEAD
-- [x] Что такое `.gitignore`
-- [x] Что делать, если secret был закоммичен
-- [x] Что такое tag
-- [x] Что такое reflog
+- [ ] Что такое Git
+- [ ] Git vs GitHub
+- [ ] Что такое commit
+- [ ] Что такое branch
+- [ ] Что такое HEAD
+- [ ] Что такое staging area
+- [ ] Что делает `git add`
+- [ ] Что делает `git commit`
+- [ ] Что делает `git push`
+- [ ] Что делает `git pull`
+- [ ] Fetch vs pull
+- [ ] Merge vs rebase
+- [ ] Reset vs revert
+- [ ] Что такое merge conflict
+- [ ] Как решить conflict
+- [ ] Что такое stash
+- [ ] Что такое cherry-pick
+- [ ] Что такое detached HEAD
+- [ ] Что такое `.gitignore`
+- [ ] Что делать, если secret был закоммичен
+- [ ] Что такое tag
+- [ ] Что такое reflog

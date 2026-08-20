@@ -2,279 +2,279 @@
 
 ## 1. Основы логирования
 
-- [x] Что такое лог
-- [x] Зачем нужны логи
-- [x] Application logs
-- [x] System logs
-- [x] Access logs
-- [x] Audit logs
-- [x] Structured vs Unstructured logs
-- [x] JSON logs
-- [x] Log levels
-- [x] DEBUG
-- [x] INFO
-- [x] WARN
-- [x] ERROR
-- [x] FATAL
+- [ ] Что такое лог
+- [ ] Зачем нужны логи
+- [ ] Application logs
+- [ ] System logs
+- [ ] Access logs
+- [ ] Audit logs
+- [ ] Structured vs Unstructured logs
+- [ ] JSON logs
+- [ ] Log levels
+- [ ] DEBUG
+- [ ] INFO
+- [ ] WARN
+- [ ] ERROR
+- [ ] FATAL
 
 ---
 
 ## 2. Централизованное логирование
 
-- [x] Зачем собирать логи централизованно
-- [x] Log collection
-- [x] Log aggregation
-- [x] Log storage
-- [x] Log parsing
-- [x] Log indexing
-- [x] Log search
-- [x] Log visualization
-- [x] Log retention
+- [ ] Зачем собирать логи централизованно
+- [ ] Log collection
+- [ ] Log aggregation
+- [ ] Log storage
+- [ ] Log parsing
+- [ ] Log indexing
+- [ ] Log search
+- [ ] Log visualization
+- [ ] Log retention
 
 ---
 
 ## 3. Logging Pipeline
 
-- [x] Источник логов
-- [x] Log agent
-- [x] Parsing и enrichment
-- [x] Buffering
-- [x] Storage
-- [x] Visualization
-- [x] Alerting по логам
+- [ ] Источник логов
+- [ ] Log agent
+- [ ] Parsing и enrichment
+- [ ] Buffering
+- [ ] Storage
+- [ ] Visualization
+- [ ] Alerting по логам
 
 ---
 
 ## 4. Логи в Linux
 
-- [x] `stdout` и `stderr`
-- [x] `journald`
-- [x] `journalctl`
-- [x] Syslog
-- [x] `/var/log`
-- [x] Log rotation
-- [x] `logrotate`
+- [ ] `stdout` и `stderr`
+- [ ] `journald`
+- [ ] `journalctl`
+- [ ] Syslog
+- [ ] `/var/log`
+- [ ] Log rotation
+- [ ] `logrotate`
 
 ---
 
 ## 5. Логи контейнеров
 
-- [x] Docker logs
-- [x] `docker logs`
-- [x] Logging drivers
-- [x] Логи в `stdout` и `stderr`
-- [x] Ограничение размера логов
-- [x] Ротация логов контейнеров
+- [ ] Docker logs
+- [ ] `docker logs`
+- [ ] Logging drivers
+- [ ] Логи в `stdout` и `stderr`
+- [ ] Ограничение размера логов
+- [ ] Ротация логов контейнеров
 
 ---
 
 ## 6. Логи Kubernetes
 
-- [x] `kubectl logs`
-- [x] Логи конкретного контейнера
-- [x] Логи предыдущего контейнера
-- [x] Логи нескольких реплик
-- [x] Логи Node
-- [x] Логи Control Plane
-- [x] Kubernetes audit logs
-- [x] DaemonSet для сбора логов
-- [x] Почему логи нельзя хранить только внутри Pod
+- [ ] `kubectl logs`
+- [ ] Логи конкретного контейнера
+- [ ] Логи предыдущего контейнера
+- [ ] Логи нескольких реплик
+- [ ] Логи Node
+- [ ] Логи Control Plane
+- [ ] Kubernetes audit logs
+- [ ] DaemonSet для сбора логов
+- [ ] Почему логи нельзя хранить только внутри Pod
 
 ---
 
 ## 7. ELK / EFK Stack
 
-- [x] Что такое ELK
-- [x] Что такое EFK
-- [x] Elasticsearch
-- [x] Logstash
-- [x] Fluentd
-- [x] Fluent Bit
-- [x] Kibana
-- [x] ELK vs EFK
+- [ ] Что такое ELK
+- [ ] Что такое EFK
+- [ ] Elasticsearch
+- [ ] Logstash
+- [ ] Fluentd
+- [ ] Fluent Bit
+- [ ] Kibana
+- [ ] ELK vs EFK
 
 ---
 
 ## 8. Elasticsearch
 
-- [x] Cluster
-- [x] Node
-- [x] Index
-- [x] Document
-- [x] Field
-- [x] Mapping
-- [x] Shard
-- [x] Replica
-- [x] Inverted index
-- [x] Query basics
-- [x] Index lifecycle management
-- [x] Retention
-- [x] Почему высокая cardinality опасна
-- [x] Почему Elasticsearch требует много ресурсов
+- [ ] Cluster
+- [ ] Node
+- [ ] Index
+- [ ] Document
+- [ ] Field
+- [ ] Mapping
+- [ ] Shard
+- [ ] Replica
+- [ ] Inverted index
+- [ ] Query basics
+- [ ] Index lifecycle management
+- [ ] Retention
+- [ ] Почему высокая cardinality опасна
+- [ ] Почему Elasticsearch требует много ресурсов
 
 ---
 
 ## 9. Logstash / Fluentd / Fluent Bit
 
-- [x] Log collector
-- [x] Input
-- [x] Filter
-- [x] Output
-- [x] Parsing логов
-- [x] Regex и Grok basics
-- [x] Добавление labels и metadata
-- [x] Buffering
-- [x] Fluentd vs Fluent Bit
-- [x] Logstash vs Fluent Bit
+- [ ] Log collector
+- [ ] Input
+- [ ] Filter
+- [ ] Output
+- [ ] Parsing логов
+- [ ] Regex и Grok basics
+- [ ] Добавление labels и metadata
+- [ ] Buffering
+- [ ] Fluentd vs Fluent Bit
+- [ ] Logstash vs Fluent Bit
 
 ---
 
 ## 10. Kibana
 
-- [x] Data View
-- [x] Discover
-- [x] Search
-- [x] Filters
-- [x] Dashboards
-- [x] Visualizations
-- [x] KQL basics
-- [x] Alerting basics
+- [ ] Data View
+- [ ] Discover
+- [ ] Search
+- [ ] Filters
+- [ ] Dashboards
+- [ ] Visualizations
+- [ ] KQL basics
+- [ ] Alerting basics
 
 ---
 
 ## 11. Loki
 
-- [x] Что такое Loki
-- [x] Loki architecture
-- [x] Log streams
-- [x] Labels
-- [x] Chunks
-- [x] Index
-- [x] Loki vs Elasticsearch
-- [x] Почему Loki не индексирует полный текст логов
-- [x] Cardinality labels
-- [x] Хорошие и плохие labels
+- [ ] Что такое Loki
+- [ ] Loki architecture
+- [ ] Log streams
+- [ ] Labels
+- [ ] Chunks
+- [ ] Index
+- [ ] Loki vs Elasticsearch
+- [ ] Почему Loki не индексирует полный текст логов
+- [ ] Cardinality labels
+- [ ] Хорошие и плохие labels
 
 ---
 
 ## 12. Компоненты Loki
 
-- [x] Loki
-- [x] Promtail
-- [x] Grafana Alloy basics
-- [x] Distributor
-- [x] Ingester
-- [x] Querier
-- [x] Query frontend
-- [x] Object Storage
-- [x] Single binary mode
-- [x] Distributed mode
+- [ ] Loki
+- [ ] Promtail
+- [ ] Grafana Alloy basics
+- [ ] Distributor
+- [ ] Ingester
+- [ ] Querier
+- [ ] Query frontend
+- [ ] Object Storage
+- [ ] Single binary mode
+- [ ] Distributed mode
 
 ---
 
 ## 13. LogQL
 
-- [x] Что такое LogQL
-- [x] Log stream selector
-- [x] Label filters
-- [x] Line filters
-- [x] `|=`
-- [x] `!=`
-- [x] Regex filters
-- [x] JSON parser
-- [x] Logfmt parser
-- [x] `rate`
-- [x] `count_over_time`
-- [x] Метрики из логов
+- [ ] Что такое LogQL
+- [ ] Log stream selector
+- [ ] Label filters
+- [ ] Line filters
+- [ ] `|=`
+- [ ] `!=`
+- [ ] Regex filters
+- [ ] JSON parser
+- [ ] Logfmt parser
+- [ ] `rate`
+- [ ] `count_over_time`
+- [ ] Метрики из логов
 
 ---
 
 ## 14. Grafana + Loki
 
-- [x] Loki как Data Source
-- [x] Просмотр логов в Explore
-- [x] Logs panel
-- [x] Фильтрация по namespace
-- [x] Фильтрация по Pod
-- [x] Связь логов и метрик
-- [x] Алерты на основе логов
+- [ ] Loki как Data Source
+- [ ] Просмотр логов в Explore
+- [ ] Logs panel
+- [ ] Фильтрация по namespace
+- [ ] Фильтрация по Pod
+- [ ] Связь логов и метрик
+- [ ] Алерты на основе логов
 
 ---
 
 ## 15. Logs, Metrics и Traces
 
-- [x] Logs vs Metrics
-- [x] Logs vs Traces
-- [x] Correlation ID
-- [x] Trace ID
-- [x] Связь логов с запросом пользователя
-- [x] Переход от метрики к логам
-- [x] Переход от логов к trace
+- [ ] Logs vs Metrics
+- [ ] Logs vs Traces
+- [ ] Correlation ID
+- [ ] Trace ID
+- [ ] Связь логов с запросом пользователя
+- [ ] Переход от метрики к логам
+- [ ] Переход от логов к trace
 
 ---
 
 ## 16. Security
 
-- [x] Маскирование паролей
-- [x] Маскирование токенов
-- [x] Маскирование персональных данных
-- [x] Доступ к логам
-- [x] Audit logs
-- [x] Шифрование логов
-- [x] Retention policy
-- [x] Почему нельзя логировать secrets
+- [ ] Маскирование паролей
+- [ ] Маскирование токенов
+- [ ] Маскирование персональных данных
+- [ ] Доступ к логам
+- [ ] Audit logs
+- [ ] Шифрование логов
+- [ ] Retention policy
+- [ ] Почему нельзя логировать secrets
 
 ---
 
 ## 17. Troubleshooting
 
-- [x] Логи не собираются
-- [x] Логи не появляются в хранилище
-- [x] Ошибка парсинга
-- [x] Неправильный timestamp
-- [x] Потеря логов
-- [x] Дублирование логов
-- [x] Log agent использует много CPU
-- [x] Log agent использует много памяти
-- [x] Elasticsearch cluster red/yellow
-- [x] Заканчивается место на диске
-- [x] Слишком много shards
-- [x] Loki query работает медленно
-- [x] Высокая cardinality labels
-- [x] Слишком большой объём логов
+- [ ] Логи не собираются
+- [ ] Логи не появляются в хранилище
+- [ ] Ошибка парсинга
+- [ ] Неправильный timestamp
+- [ ] Потеря логов
+- [ ] Дублирование логов
+- [ ] Log agent использует много CPU
+- [ ] Log agent использует много памяти
+- [ ] Elasticsearch cluster red/yellow
+- [ ] Заканчивается место на диске
+- [ ] Слишком много shards
+- [ ] Loki query работает медленно
+- [ ] Высокая cardinality labels
+- [ ] Слишком большой объём логов
 
 ---
 
 ## 18. Практика
 
-- [x] Посмотреть системные логи через `journalctl`
-- [x] Настроить `logrotate`
-- [x] Посмотреть логи Docker-контейнера
-- [x] Посмотреть логи Kubernetes Pod
-- [x] Развернуть EFK stack
-- [x] Собрать Kubernetes-логи через Fluent Bit
-- [x] Найти ошибку в Kibana
-- [x] Развернуть Loki
-- [x] Подключить Loki к Grafana
-- [x] Выполнить базовые LogQL-запросы
-- [x] Создать alert на основе логов
-- [x] Найти ошибку по correlation ID
+- [ ] Посмотреть системные логи через `journalctl`
+- [ ] Настроить `logrotate`
+- [ ] Посмотреть логи Docker-контейнера
+- [ ] Посмотреть логи Kubernetes Pod
+- [ ] Развернуть EFK stack
+- [ ] Собрать Kubernetes-логи через Fluent Bit
+- [ ] Найти ошибку в Kibana
+- [ ] Развернуть Loki
+- [ ] Подключить Loki к Grafana
+- [ ] Выполнить базовые LogQL-запросы
+- [ ] Создать alert на основе логов
+- [ ] Найти ошибку по correlation ID
 
 ---
 
 ## 19. Interview Questions
 
-- [x] Зачем нужно централизованное логирование
-- [x] ELK vs EFK
-- [x] Elasticsearch vs Loki
-- [x] Fluentd vs Fluent Bit
-- [x] Что такое structured logging
-- [x] Зачем писать логи в `stdout`
-- [x] Как собираются логи в Kubernetes
-- [x] Почему нельзя хранить логи только внутри Pod
-- [x] Что такое shard и replica
-- [x] Как Loki хранит логи
-- [x] Что такое LogQL
-- [x] Почему высокая cardinality опасна
-- [x] Как найти ошибку конкретного запроса
-- [x] Что нельзя записывать в логи
+- [ ] Зачем нужно централизованное логирование
+- [ ] ELK vs EFK
+- [ ] Elasticsearch vs Loki
+- [ ] Fluentd vs Fluent Bit
+- [ ] Что такое structured logging
+- [ ] Зачем писать логи в `stdout`
+- [ ] Как собираются логи в Kubernetes
+- [ ] Почему нельзя хранить логи только внутри Pod
+- [ ] Что такое shard и replica
+- [ ] Как Loki хранит логи
+- [ ] Что такое LogQL
+- [ ] Почему высокая cardinality опасна
+- [ ] Как найти ошибку конкретного запроса
+- [ ] Что нельзя записывать в логи

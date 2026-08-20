@@ -2,44 +2,44 @@
 
 ## 1. Основы
 
-- [x] Архитектура
-- [x] Runner / Agent
-- [x] Pipeline Configuration File
-- [x] Pipeline Execution
+- [ ] Архитектура
+- [ ] Runner / Agent
+- [ ] Pipeline Configuration File
+- [ ] Pipeline Execution
 
 ---
 
 ## 2. Pipeline Configuration
 
-- [x] Stages
-- [x] Jobs
-- [x] Steps
-- [x] Variables
-- [x] Conditions
-- [x] Matrix Builds
-- [x] Docker Images
-- [x] Services
+- [ ] Stages
+- [ ] Jobs
+- [ ] Steps
+- [ ] Variables
+- [ ] Conditions
+- [ ] Matrix Builds
+- [ ] Docker Images
+- [ ] Services
 
 ---
 
 ## 3. Deploy Pipeline
 
-- [x] Build Docker Image
-- [x] Push Docker Image
-- [x] Deploy Kubernetes
-- [x] Manual Deploy
-- [x] Rollback
+- [ ] Build Docker Image
+- [ ] Push Docker Image
+- [ ] Deploy Kubernetes
+- [ ] Manual Deploy
+- [ ] Rollback
 
 ---
 
 ## 4. Практика
 
-- [x] Собрать Docker Image
-- [x] Запустить тесты
-- [x] Запушить образ в Registry
-- [x] Задеплоить в Kubernetes
-- [x] Использовать Secrets
-- [x] Настроить Multi-stage Pipeline
+- [ ] Собрать Docker Image
+- [ ] Запустить тесты
+- [ ] Запушить образ в Registry
+- [ ] Задеплоить в Kubernetes
+- [ ] Использовать Secrets
+- [ ] Настроить Multi-stage Pipeline
 
 ---
 
@@ -47,33 +47,33 @@
 
 ### GitLab CI
 
-- [x] `.gitlab-ci.yml`
-- [x] GitLab Runner
-- [x] rules
-- [x] artifacts
-- [x] cache
+- [ ] `.gitlab-ci.yml`
+- [ ] GitLab Runner
+- [ ] rules
+- [ ] artifacts
+- [ ] cache
 
 ### GitHub Actions
 
-- [x] Workflow
-- [x] Event
-- [x] Marketplace Actions
-- [x] GitHub Runners
-- [x] GitHub Secrets
+- [ ] Workflow
+- [ ] Event
+- [ ] Marketplace Actions
+- [ ] GitHub Runners
+- [ ] GitHub Secrets
 
 ### Jenkins
 
-- [x] Jenkinsfile
-- [x] Declarative Pipeline
-- [x] Scripted Pipeline
-- [x] Plugins
-- [x] Jenkins Agents
+- [ ] Jenkinsfile
+- [ ] Declarative Pipeline
+- [ ] Scripted Pipeline
+- [ ] Plugins
+- [ ] Jenkins Agents
 
 ---
 
 ## 6. Interview Questions
 
-- [x] Runner vs Agent
-- [x] GitLab CI vs GitHub Actions
-- [x] Declarative vs Scripted Pipeline
-- [x] Как работает Pipeline
+- [ ] Runner vs Agent
+- [ ] GitLab CI vs GitHub Actions
+- [ ] Declarative vs Scripted Pipeline
+- [ ] Как работает Pipeline

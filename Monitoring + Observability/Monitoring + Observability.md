@@ -2,137 +2,137 @@
 
 ## 1. Основы
 
-- [x] Что такое Monitoring
-- [x] Что такое Observability
-- [x] Monitoring vs Observability
-- [x] Зачем нужен мониторинг
-- [x] Reactive vs Proactive monitoring
-- [x] Production monitoring
+- [ ] Что такое Monitoring
+- [ ] Что такое Observability
+- [ ] Monitoring vs Observability
+- [ ] Зачем нужен мониторинг
+- [ ] Reactive vs Proactive monitoring
+- [ ] Production monitoring
 
 ---
 
 ## 2. Основные сигналы Observability
 
-- [x] Metrics
-- [x] Logs
-- [x] Traces
-- [x] Events
+- [ ] Metrics
+- [ ] Logs
+- [ ] Traces
+- [ ] Events
 
 ---
 
 ## 3. Metrics
 
-- [x] Что такое metric
-- [x] Time series
-- [x] Labels
-- [x] Counters
-- [x] Gauges
-- [x] Histograms
-- [x] Summaries
+- [ ] Что такое metric
+- [ ] Time series
+- [ ] Labels
+- [ ] Counters
+- [ ] Gauges
+- [ ] Histograms
+- [ ] Summaries
 
 ---
 
 ## 4. Что обычно мониторят
 
-- [x] CPU
-- [x] Memory
-- [x] Disk usage
-- [x] Disk I/O
-- [x] Network
-- [x] Processes
-- [x] Containers
-- [x] Kubernetes resources
-- [x] Application metrics
+- [ ] CPU
+- [ ] Memory
+- [ ] Disk usage
+- [ ] Disk I/O
+- [ ] Network
+- [ ] Processes
+- [ ] Containers
+- [ ] Kubernetes resources
+- [ ] Application metrics
 
 ---
 
 ## 5. Golden Signals
 
-- [x] Latency
-- [x] Traffic
-- [x] Errors
-- [x] Saturation
+- [ ] Latency
+- [ ] Traffic
+- [ ] Errors
+- [ ] Saturation
 
 ---
 
 ## 6. USE Method
 
-- [x] Utilization
-- [x] Saturation
-- [x] Errors
+- [ ] Utilization
+- [ ] Saturation
+- [ ] Errors
 
 ---
 
 ## 7. RED Method
 
-- [x] Rate
-- [x] Errors
-- [x] Duration
+- [ ] Rate
+- [ ] Errors
+- [ ] Duration
 
 ---
 
 ## 8. Alerting
 
-- [x] Что такое Alert
-- [x] Alert rules
-- [x] Threshold-based alerts
-- [x] Anomaly detection basics
-- [x] Alert fatigue
-- [x] Alert severity
-- [x] Warning vs Critical
-- [x] Escalation
+- [ ] Что такое Alert
+- [ ] Alert rules
+- [ ] Threshold-based alerts
+- [ ] Anomaly detection basics
+- [ ] Alert fatigue
+- [ ] Alert severity
+- [ ] Warning vs Critical
+- [ ] Escalation
 
 ---
 
 ## 9. SLI / SLO / SLA
 
-- [x] Что такое SLI
-- [x] Что такое SLO
-- [x] Что такое SLA
-- [x] Error Budget basics
+- [ ] Что такое SLI
+- [ ] Что такое SLO
+- [ ] Что такое SLA
+- [ ] Error Budget basics
 
 ---
 
 ## 10. Monitoring Architecture
 
-- [x] Application
-- [x] Exporter
-- [x] Collector
-- [x] Storage
-- [x] Visualization
-- [x] Alerting
+- [ ] Application
+- [ ] Exporter
+- [ ] Collector
+- [ ] Storage
+- [ ] Visualization
+- [ ] Alerting
 
 ---
 
 ## 11. Tools Overview
 
-- [x] Prometheus
-- [x] Grafana
-- [x] Alertmanager
-- [x] Elasticsearch
-- [x] Loki
-- [x] OpenTelemetry basics
+- [ ] Prometheus
+- [ ] Grafana
+- [ ] Alertmanager
+- [ ] Elasticsearch
+- [ ] Loki
+- [ ] OpenTelemetry basics
 
 ---
 
 ## 12. Troubleshooting
 
-- [x] Высокий CPU
-- [x] Memory leak
-- [x] Disk full
-- [x] Network latency
-- [x] Рост ошибок приложения
-- [x] Рост latency
-- [x] Ложные алерты
+- [ ] Высокий CPU
+- [ ] Memory leak
+- [ ] Disk full
+- [ ] Network latency
+- [ ] Рост ошибок приложения
+- [ ] Рост latency
+- [ ] Ложные алерты
 
 ---
 
 ## 13. Interview Questions
 
-- [x] Monitoring vs Observability
-- [x] Metrics vs Logs vs Traces
-- [x] Что такое SLI/SLO/SLA
-- [x] Что такое Golden Signals
-- [x] Что мониторить у сервиса
-- [x] Как понять причину инцидента по метрикам
-- [x] Почему много алертов — это плохо
+- [ ] Monitoring vs Observability
+- [ ] Metrics vs Logs vs Traces
+- [ ] Что такое SLI/SLO/SLA
+- [ ] Что такое Golden Signals
+- [ ] Что мониторить у сервиса
+- [ ] Как понять причину инцидента по метрикам
+- [ ] Почему много алертов — это плохо

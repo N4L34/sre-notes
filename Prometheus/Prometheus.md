@@ -2,179 +2,179 @@
 
 ## 1. Основы
 
-- [x] Что такое Prometheus
-- [x] Для чего используется Prometheus
-- [x] Pull model
-- [x] Time series database
-- [x] Metrics endpoint `/metrics`
-- [x] Prometheus architecture
+- [ ] Что такое Prometheus
+- [ ] Для чего используется Prometheus
+- [ ] Pull model
+- [ ] Time series database
+- [ ] Metrics endpoint `/metrics`
+- [ ] Prometheus architecture
 
 ---
 
 ## 2. Компоненты
 
-- [x] Prometheus Server
-- [x] Exporters
-- [x] Pushgateway
-- [x] Alertmanager
-- [x] Service Discovery
-- [x] Targets
+- [ ] Prometheus Server
+- [ ] Exporters
+- [ ] Pushgateway
+- [ ] Alertmanager
+- [ ] Service Discovery
+- [ ] Targets
 
 ---
 
 ## 3. Типы метрик
 
-- [x] Counter
-- [x] Gauge
-- [x] Histogram
-- [x] Summary
-- [x] Когда использовать каждый тип
+- [ ] Counter
+- [ ] Gauge
+- [ ] Histogram
+- [ ] Summary
+- [ ] Когда использовать каждый тип
 
 ---
 
 ## 4. Metrics и Labels
 
-- [x] Metric name
-- [x] Labels
-- [x] Time series
-- [x] Cardinality
-- [x] Почему высокая cardinality опасна
-- [x] Хорошие и плохие labels
+- [ ] Metric name
+- [ ] Labels
+- [ ] Time series
+- [ ] Cardinality
+- [ ] Почему высокая cardinality опасна
+- [ ] Хорошие и плохие labels
 
 ---
 
 ## 5. Scraping
 
-- [x] Scrape interval
-- [x] Scrape timeout
-- [x] Targets
-- [x] Jobs
-- [x] `prometheus.yml`
-- [x] Static configuration
-- [x] Service Discovery
-- [x] Проверка состояния target
+- [ ] Scrape interval
+- [ ] Scrape timeout
+- [ ] Targets
+- [ ] Jobs
+- [ ] `prometheus.yml`
+- [ ] Static configuration
+- [ ] Service Discovery
+- [ ] Проверка состояния target
 
 ---
 
 ## 6. PromQL
 
-- [x] Что такое PromQL
-- [x] Instant vector
-- [x] Range vector
-- [x] Scalar
-- [x] Label filtering
-- [x] Arithmetic operators
-- [x] Comparison operators
-- [x] Aggregation
-- [x] `sum`
-- [x] `avg`
-- [x] `min`
-- [x] `max`
-- [x] `count`
-- [x] `rate`
-- [x] `irate`
-- [x] `increase`
-- [x] `histogram_quantile`
+- [ ] Что такое PromQL
+- [ ] Instant vector
+- [ ] Range vector
+- [ ] Scalar
+- [ ] Label filtering
+- [ ] Arithmetic operators
+- [ ] Comparison operators
+- [ ] Aggregation
+- [ ] `sum`
+- [ ] `avg`
+- [ ] `min`
+- [ ] `max`
+- [ ] `count`
+- [ ] `rate`
+- [ ] `irate`
+- [ ] `increase`
+- [ ] `histogram_quantile`
 
 ---
 
 ## 7. Exporters
 
-- [x] Что такое Exporter
-- [x] Node Exporter
-- [x] Blackbox Exporter
-- [x] kube-state-metrics
-- [x] cAdvisor
-- [x] Database exporters basics
-- [x] Как Prometheus собирает метрики с exporter
+- [ ] Что такое Exporter
+- [ ] Node Exporter
+- [ ] Blackbox Exporter
+- [ ] kube-state-metrics
+- [ ] cAdvisor
+- [ ] Database exporters basics
+- [ ] Как Prometheus собирает метрики с exporter
 
 ---
 
 ## 8. Alerting Rules
 
-- [x] Alerting rules
-- [x] Recording rules
-- [x] `for`
-- [x] Labels
-- [x] Annotations
-- [x] Severity
-- [x] Передача алертов в Alertmanager
-- [x] Проверка правил через `promtool`
+- [ ] Alerting rules
+- [ ] Recording rules
+- [ ] `for`
+- [ ] Labels
+- [ ] Annotations
+- [ ] Severity
+- [ ] Передача алертов в Alertmanager
+- [ ] Проверка правил через `promtool`
 
 ---
 
 ## 9. Storage
 
-- [x] Local TSDB
-- [x] Retention
-- [x] Blocks
-- [x] WAL
-- [x] Compaction basics
-- [x] Почему Prometheus не является долгосрочным хранилищем
-- [x] Remote Write basics
-- [x] Thanos / Cortex / Mimir basics
+- [ ] Local TSDB
+- [ ] Retention
+- [ ] Blocks
+- [ ] WAL
+- [ ] Compaction basics
+- [ ] Почему Prometheus не является долгосрочным хранилищем
+- [ ] Remote Write basics
+- [ ] Thanos / Cortex / Mimir basics
 
 ---
 
 ## 10. Kubernetes Integration
 
-- [x] Prometheus в Kubernetes
-- [x] Kubernetes Service Discovery
-- [x] ServiceMonitor
-- [x] PodMonitor
-- [x] Prometheus Operator
-- [x] kube-prometheus-stack
-- [x] Monitoring Pods
-- [x] Monitoring Nodes
-- [x] Monitoring Deployments и StatefulSets
+- [ ] Prometheus в Kubernetes
+- [ ] Kubernetes Service Discovery
+- [ ] ServiceMonitor
+- [ ] PodMonitor
+- [ ] Prometheus Operator
+- [ ] kube-prometheus-stack
+- [ ] Monitoring Pods
+- [ ] Monitoring Nodes
+- [ ] Monitoring Deployments и StatefulSets
 
 ---
 
 ## 11. Troubleshooting
 
-- [x] Target находится в состоянии Down
-- [x] Метрики не появляются
-- [x] Неправильный metrics path
-- [x] Timeout при scrape
-- [x] Ошибка DNS
-- [x] Ошибка TLS
-- [x] Неправильные labels
-- [x] Высокая cardinality
-- [x] Prometheus использует много памяти
-- [x] Заканчивается место на диске
-- [x] PromQL-запрос возвращает неожиданный результат
+- [ ] Target находится в состоянии Down
+- [ ] Метрики не появляются
+- [ ] Неправильный metrics path
+- [ ] Timeout при scrape
+- [ ] Ошибка DNS
+- [ ] Ошибка TLS
+- [ ] Неправильные labels
+- [ ] Высокая cardinality
+- [ ] Prometheus использует много памяти
+- [ ] Заканчивается место на диске
+- [ ] PromQL-запрос возвращает неожиданный результат
 
 ---
 
 ## 12. Практика
 
-- [x] Запустить Prometheus
-- [x] Подключить Node Exporter
-- [x] Добавить static target
-- [x] Выполнить базовые PromQL-запросы
-- [x] Посчитать CPU usage
-- [x] Посчитать memory usage
-- [x] Посчитать rate HTTP-запросов
-- [x] Создать recording rule
-- [x] Создать alert rule
-- [x] Подключить Prometheus к Grafana
-- [x] Развернуть kube-prometheus-stack
-- [x] Найти и исправить target Down
+- [ ] Запустить Prometheus
+- [ ] Подключить Node Exporter
+- [ ] Добавить static target
+- [ ] Выполнить базовые PromQL-запросы
+- [ ] Посчитать CPU usage
+- [ ] Посчитать memory usage
+- [ ] Посчитать rate HTTP-запросов
+- [ ] Создать recording rule
+- [ ] Создать alert rule
+- [ ] Подключить Prometheus к Grafana
+- [ ] Развернуть kube-prometheus-stack
+- [ ] Найти и исправить target Down
 
 ---
 
 ## 13. Interview Questions
 
-- [x] Как работает Prometheus
-- [x] Почему Prometheus использует Pull model
-- [x] Counter vs Gauge
-- [x] Histogram vs Summary
-- [x] Что такое time series
-- [x] Что такое labels
-- [x] Что такое cardinality
-- [x] `rate` vs `increase`
-- [x] Что такое exporter
-- [x] Что такое recording rule
-- [x] Как Prometheus отправляет алерты
-- [x] Почему target может быть Down
-- [x] Как мониторить Kubernetes через Prometheus
+- [ ] Как работает Prometheus
+- [ ] Почему Prometheus использует Pull model
+- [ ] Counter vs Gauge
+- [ ] Histogram vs Summary
+- [ ] Что такое time series
+- [ ] Что такое labels
+- [ ] Что такое cardinality
+- [ ] `rate` vs `increase`
+- [ ] Что такое exporter
+- [ ] Что такое recording rule
+- [ ] Как Prometheus отправляет алерты
+- [ ] Почему target может быть Down
+- [ ] Как мониторить Kubernetes через Prometheus

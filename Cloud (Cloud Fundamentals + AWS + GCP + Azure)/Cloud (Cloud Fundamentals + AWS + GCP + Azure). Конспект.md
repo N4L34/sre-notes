@@ -6,22 +6,22 @@
 
 Cloud Computing — аренда вычислительных ресурсов через интернет.
 
-Можно арендовать: 
+Можно арендовать:
 
 - серверы;
-    
+
 - сети;
-    
+
 - диски;
-    
+
 - базы данных;
-    
+
 - Kubernetes;
-    
+
 - monitoring;
-    
+
 - serverless.
-    
+
 
 Идея: не покупать железо самому, а использовать ресурсы cloud provider.
 
@@ -54,13 +54,13 @@ Cloud provider управляет платформой, а ты деплоишь
 Примеры:
 
 - managed database;
-    
+
 - app platform;
-    
+
 - serverless runtime;
-    
+
 - managed Kubernetes частично.
-    
+
 
 Меньше контроля, но меньше операционной работы.
 
@@ -75,13 +75,13 @@ SaaS — Software as a Service.
 Примеры:
 
 - Gmail;
-    
+
 - GitHub;
-    
+
 - Slack;
-    
+
 - Google Docs.
-    
+
 
 Ты просто используешь продукт, не управляешь инфраструктурой.
 
@@ -142,13 +142,13 @@ High Availability — способность системы продолжать
 Например:
 
 - несколько replicas;
-    
+
 - несколько AZ;
-    
+
 - Load Balancer;
-    
+
 - managed database failover.
-    
+
 
 Цель — минимизировать downtime.
 
@@ -161,9 +161,9 @@ Scalability — способность системы выдерживать р�
 Бывает:
 
 - vertical scaling — увеличить размер сервера;
-    
+
 - horizontal scaling — добавить больше серверов/реплик.
-    
+
 
 ---
 
@@ -191,15 +191,15 @@ Cloud provider отвечает за физическую инфраструкт
 Пользователь отвечает за:
 
 - настройки доступа;
-    
+
 - данные;
-    
+
 - конфигурацию;
-    
+
 - приложения;
-    
+
 - сетевые правила.
-    
+
 
 ---
 
@@ -210,13 +210,13 @@ Pay-as-you-go — оплата по фактическому использов�
 Например:
 
 - сколько часов работала VM;
-    
+
 - сколько GB хранится в storage;
-    
+
 - сколько запросов пришло в сервис;
-    
+
 - сколько traffic ушло наружу.
-    
+
 
 ---
 
@@ -229,15 +229,15 @@ Virtual Machine — виртуальный сервер в cloud.
 Ты получаешь:
 
 - CPU;
-    
+
 - RAM;
-    
+
 - disk;
-    
+
 - network;
-    
+
 - OS.
-    
+
 
 Примеры: EC2, Compute Engine, Azure VM.
 
@@ -252,13 +252,13 @@ Image — шаблон для создания VM.
 Внутри image обычно есть:
 
 - OS;
-    
+
 - предустановленные пакеты;
-    
+
 - настройки;
-    
+
 - иногда application runtime.
-    
+
 
 ---
 
@@ -269,15 +269,15 @@ Instance Type — размер и тип VM.
 Например:
 
 - general purpose;
-    
+
 - compute optimized;
-    
+
 - memory optimized;
-    
+
 - storage optimized;
-    
+
 - GPU instances.
-    
+
 
 Выбор зависит от workload.
 
@@ -290,9 +290,9 @@ Autoscaling автоматически меняет количество instanc
 Например:
 
 - CPU высокий → добавить VM;
-    
+
 - нагрузка упала → удалить лишние VM.
-    
+
 
 Используется для availability и экономии.
 
@@ -305,12 +305,12 @@ Spot/Preemptible instances — дешевые VM, которые cloud provider 
 Плюсы:
 
 - дешевле.
-    
+
 
 Минусы:
 
 - могут быть остановлены в любой момент.
-    
+
 
 Подходят для batch jobs, CI runners, stateless workloads.
 
@@ -323,11 +323,11 @@ Serverless — модель, где не нужно управлять серв�
 Пример:
 
 - AWS Lambda;
-    
+
 - Google Cloud Functions;
-    
+
 - Azure Functions.
-    
+
 
 Ты загружаешь код, provider запускает его по событиям.
 
@@ -411,11 +411,11 @@ Security Group — firewall на уровне ресурса/instance.
 Например:
 
 - разрешить SSH 22 только с твоего IP;
-    
+
 - разрешить HTTP 80 от Load Balancer;
-    
+
 - разрешить PostgreSQL 5432 только от app servers.
-    
+
 
 ---
 
@@ -452,9 +452,9 @@ Private subnet не имеет прямого входящего доступа 
 Обычно:
 
 - Load Balancer — public subnet;
-    
+
 - app/db servers — private subnet.
-    
+
 
 ---
 
@@ -467,24 +467,24 @@ Object Storage хранит данные как objects в buckets.
 Примеры:
 
 - AWS S3;
-    
+
 - Google Cloud Storage;
-    
+
 - Azure Blob Storage.
-    
+
 
 Подходит для:
 
 - backups;
-    
+
 - logs;
-    
+
 - images;
-    
+
 - static files;
-    
+
 - artifacts.
-    
+
 
 ---
 
@@ -495,11 +495,11 @@ Block Storage — диск для VM.
 Примеры:
 
 - AWS EBS;
-    
+
 - GCP Persistent Disk;
-    
+
 - Azure Managed Disk.
-    
+
 
 Подходит для filesystem, databases, VM disks.
 
@@ -512,11 +512,11 @@ File Storage — shared filesystem.
 Примеры:
 
 - AWS EFS;
-    
+
 - Google Filestore;
-    
+
 - Azure Files.
-    
+
 
 Подходит, когда нескольким серверам нужен общий filesystem.
 
@@ -529,15 +529,15 @@ Storage Classes — разные классы хранения по цене, с
 Например:
 
 - hot storage;
-    
+
 - cool storage;
-    
+
 - archive;
-    
+
 - standard;
-    
+
 - infrequent access.
-    
+
 
 Чем дешевле хранение, тем дороже/медленнее доступ.
 
@@ -550,13 +550,13 @@ Snapshot — снимок диска или volume.
 Используется для:
 
 - backup;
-    
+
 - restore;
-    
+
 - clone;
-    
+
 - миграций.
-    
+
 
 Важно помнить: snapshot — не всегда полноценная backup-стратегия сам по себе.
 
@@ -587,11 +587,11 @@ IAM — Identity and Access Management.
 Управляет тем:
 
 - кто имеет доступ;
-    
+
 - к каким ресурсам;
-    
+
 - какие действия разрешены.
-    
+
 
 Это один из самых важных security-компонентов в cloud.
 
@@ -612,13 +612,13 @@ Group — группа пользователей с общими правами
 Например:
 
 - developers;
-    
+
 - admins;
-    
+
 - read-only;
-    
+
 - billing.
-    
+
 
 Права проще назначать группе, чем каждому user отдельно.
 
@@ -631,15 +631,15 @@ Role — identity с набором permissions, которую можно вр�
 Используется для:
 
 - VM;
-    
+
 - Kubernetes workloads;
-    
+
 - CI/CD;
-    
+
 - cross-account access;
-    
+
 - services.
-    
+
 
 Roles обычно безопаснее long-lived access keys.
 
@@ -689,11 +689,11 @@ Cloud Monitoring — сервис provider для метрик, логов и al
 Примеры:
 
 - AWS CloudWatch;
-    
+
 - Google Cloud Monitoring;
-    
+
 - Azure Monitor.
-    
+
 
 ---
 
@@ -704,17 +704,17 @@ Metrics — числовые показатели системы.
 Примеры:
 
 - CPU usage;
-    
+
 - memory usage;
-    
+
 - disk I/O;
-    
+
 - network traffic;
-    
+
 - request count;
-    
+
 - error rate.
-    
+
 
 ---
 
@@ -725,13 +725,13 @@ Logs — текстовые события от приложений и инфр
 Примеры:
 
 - application logs;
-    
+
 - system logs;
-    
+
 - load balancer logs;
-    
+
 - audit logs.
-    
+
 
 Logs помогают расследовать инциденты.
 
@@ -744,15 +744,15 @@ Alerts уведомляют, когда что-то пошло не так.
 Например:
 
 - CPU > 90%;
-    
+
 - disk почти заполнен;
-    
+
 - 5xx выросли;
-    
+
 - instance down;
-    
+
 - database connections high.
-    
+
 
 ---
 
@@ -763,13 +763,13 @@ Audit Logs показывают, кто и что сделал в cloud.
 Например:
 
 - кто удалил VM;
-    
+
 - кто изменил IAM policy;
-    
+
 - кто открыл security group;
-    
+
 - кто создал access key.
-    
+
 
 Очень важно для security и расследований.
 
@@ -794,15 +794,15 @@ S3 — object storage в AWS.
 Используется для:
 
 - backups;
-    
+
 - static files;
-    
+
 - logs;
-    
+
 - artifacts;
-    
+
 - data lake.
-    
+
 
 ---
 
@@ -813,17 +813,17 @@ VPC — изолированная сеть в AWS.
 Внутри:
 
 - subnets;
-    
+
 - route tables;
-    
+
 - internet gateway;
-    
+
 - NAT gateway;
-    
+
 - security groups;
-    
+
 - NACL.
-    
+
 
 ---
 
@@ -834,13 +834,13 @@ AWS IAM управляет доступами к AWS resources.
 Основные сущности:
 
 - users;
-    
+
 - groups;
-    
+
 - roles;
-    
+
 - policies.
-    
+
 
 ---
 
@@ -861,15 +861,15 @@ RDS — managed relational database service.
 Поддерживает, например:
 
 - PostgreSQL;
-    
+
 - MySQL;
-    
+
 - MariaDB;
-    
+
 - SQL Server;
-    
+
 - Oracle.
-    
+
 
 AWS управляет backups, patching, failover и maintenance.
 
@@ -882,11 +882,11 @@ ELB — Elastic Load Balancing.
 Основные типы:
 
 - Application Load Balancer;
-    
+
 - Network Load Balancer;
-    
+
 - Gateway Load Balancer.
-    
+
 
 Распределяет traffic между targets.
 
@@ -912,15 +912,15 @@ CloudWatch — monitoring/logging сервис AWS.
 Используется для:
 
 - metrics;
-    
+
 - logs;
-    
+
 - alarms;
-    
+
 - dashboards;
-    
+
 - events.
-    
+
 
 ---
 
@@ -957,13 +957,13 @@ GCP IAM управляет доступами.
 Основные идеи:
 
 - principals;
-    
+
 - roles;
-    
+
 - policies;
-    
+
 - service accounts.
-    
+
 
 ---
 
@@ -1108,15 +1108,15 @@ Azure Monitor
 Практика:
 
 - выбрать image;
-    
+
 - выбрать instance type;
-    
+
 - выбрать network/subnet;
-    
+
 - настроить SSH;
-    
+
 - запустить VM.
-    
+
 
 После создания проверить доступ по SSH.
 
@@ -1127,15 +1127,15 @@ Azure Monitor
 Практика:
 
 - создать VPC/VNet;
-    
+
 - задать CIDR;
-    
+
 - создать subnets;
-    
+
 - настроить route tables;
-    
+
 - добавить internet/NAT gateway при необходимости.
-    
+
 
 ---
 
@@ -1144,11 +1144,11 @@ Azure Monitor
 Практика:
 
 - разрешить SSH только со своего IP;
-    
+
 - разрешить HTTP/HTTPS от Load Balancer;
-    
+
 - закрыть все лишние порты.
-    
+
 
 Главная идея — минимально нужный доступ.
 
@@ -1159,13 +1159,13 @@ Azure Monitor
 Обычно нужно:
 
 - public/private key;
-    
+
 - public IP или bastion;
-    
+
 - открытый порт 22;
-    
+
 - правильный user.
-    
+
 
 Пример:
 
@@ -1180,13 +1180,13 @@ ssh ubuntu@<public-ip>
 Практика:
 
 - создать bucket;
-    
+
 - загрузить файл;
-    
+
 - настроить access;
-    
+
 - включить versioning/lifecycle при необходимости.
-    
+
 
 Важно не делать bucket публичным без причины.
 
@@ -1197,15 +1197,15 @@ ssh ubuntu@<public-ip>
 Практика:
 
 - создать backend instances;
-    
+
 - настроить health check;
-    
+
 - создать target group/backend pool;
-    
+
 - создать listener;
-    
+
 - проверить traffic.
-    
+
 
 ---
 
@@ -1214,13 +1214,13 @@ ssh ubuntu@<public-ip>
 Практика:
 
 - создать role;
-    
+
 - прикрепить минимальную policy;
-    
+
 - назначить role VM/service;
-    
+
 - проверить доступ.
-    
+
 
 Не использовать long-lived keys, если можно использовать role.
 
@@ -1231,13 +1231,13 @@ ssh ubuntu@<public-ip>
 Практика:
 
 - открыть monitoring;
-    
+
 - посмотреть CPU/network/disk;
-    
+
 - создать dashboard;
-    
+
 - настроить alert.
-    
+
 
 Метрики помогают понять состояние сервиса.
 
@@ -1313,11 +1313,11 @@ IAM — система управления доступами.
 Она определяет:
 
 - кто имеет доступ;
-    
+
 - к каким ресурсам;
-    
+
 - какие действия разрешены.
-    
+
 
 ---
 
@@ -1328,13 +1328,13 @@ Load Balancer распределяет traffic между несколькими
 Он помогает с:
 
 - high availability;
-    
+
 - scaling;
-    
+
 - health checks;
-    
+
 - отказоустойчивостью.
-    
+
 
 ---
 

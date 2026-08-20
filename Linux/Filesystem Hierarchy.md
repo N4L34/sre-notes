@@ -50,11 +50,11 @@ bash
 Например:
 
 ```
-/usr/bin/python3  
-/usr/bin/git  
-/usr/bin/curl  
-/usr/bin/vim  
-/usr/bin/ssh  
+/usr/bin/python3
+/usr/bin/git
+/usr/bin/curl
+/usr/bin/vim
+/usr/bin/ssh
 /usr/bin/systemctl
 ```
 ---
@@ -484,4 +484,4 @@ runtime state
 /run очищается после перезагрузки
 ```
 
-То есть это не место для постоянного хранения данных. 
+То есть это не место для постоянного хранения данных.

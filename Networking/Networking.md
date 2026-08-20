@@ -346,7 +346,7 @@
 - [ ] Почему `ping` работает, а `curl` — нет?
 - [ ] Почему `curl` по IP работает, а по домену — нет?
 - [ ] Почему возникает `TIME_WAIT`?
-- [ ] 
+- [ ]
 - [ ] Чем `TIME_WAIT` отличается от `CLOSE_WAIT`?
 - [ ] Что означает `Connection refused`?
 - [ ] Что означает `Connection timeout`?

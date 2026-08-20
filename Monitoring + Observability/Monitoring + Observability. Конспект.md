@@ -7,19 +7,19 @@ Monitoring — сбор и проверка данных о состоянии �
 Обычно мониторят:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk;
-    
+
 - network;
-    
+
 - errors;
-    
+
 - latency;
-    
+
 - availability.
-    
+
 
 Цель — понять, работает ли система нормально.
 
@@ -32,13 +32,13 @@ Observability — способность понять внутреннее со�
 Основные сигналы:
 
 - metrics;
-    
+
 - logs;
-    
+
 - traces;
-    
+
 - events.
-    
+
 
 Observability помогает не только видеть проблему, но и искать причину.
 
@@ -67,17 +67,17 @@ Monitoring больше про известные проблемы, observabilit
 Мониторинг нужен, чтобы:
 
 - быстро узнать о проблеме;
-    
+
 - видеть состояние production;
-    
+
 - находить bottlenecks;
-    
+
 - измерять reliability;
-    
+
 - строить alerting;
-    
+
 - анализировать инциденты.
-    
+
 
 ---
 
@@ -103,17 +103,17 @@ Production monitoring — мониторинг реальных сервисов
 Важно мониторить:
 
 - availability;
-    
+
 - latency;
-    
+
 - error rate;
-    
+
 - saturation;
-    
+
 - бизнес-метрики;
-    
+
 - инфраструктуру.
-    
+
 
 ---
 
@@ -126,15 +126,15 @@ Metrics — числовые показатели во времени.
 Примеры:
 
 - CPU usage;
-    
+
 - request count;
-    
+
 - error rate;
-    
+
 - latency;
-    
+
 - memory usage.
-    
+
 
 Хорошо подходят для dashboards и alerts.
 
@@ -177,17 +177,17 @@ Events — важные события в системе.
 Примеры:
 
 - deploy;
-    
+
 - restart;
-    
+
 - node down;
-    
+
 - pod killed;
-    
+
 - config changed;
-    
+
 - autoscaling event.
-    
+
 
 Events помогают связать проблему с изменениями.
 
@@ -244,11 +244,11 @@ Counter — metric, которая только растет.
 Примеры:
 
 - количество HTTP-запросов;
-    
+
 - количество ошибок;
-    
+
 - количество обработанных jobs.
-    
+
 
 ```text
 http_requests_total
@@ -265,13 +265,13 @@ Gauge — metric, которая может расти и падать.
 Примеры:
 
 - CPU usage;
-    
+
 - memory usage;
-    
+
 - queue size;
-    
+
 - active connections.
-    
+
 
 ```text
 node_memory_used_bytes
@@ -314,15 +314,15 @@ CPU показывает загрузку процессора.
 Важно смотреть:
 
 - общий usage;
-    
+
 - load average;
-    
+
 - throttling;
-    
+
 - CPU steal;
-    
+
 - per-process usage.
-    
+
 
 Высокий CPU может означать bottleneck или нормальную высокую нагрузку.
 
@@ -335,15 +335,15 @@ Memory показывает использование RAM.
 Важно смотреть:
 
 - used memory;
-    
+
 - available memory;
-    
+
 - swap;
-    
+
 - OOM kills;
-    
+
 - memory leaks.
-    
+
 
 Не путать used memory и реально доступную память с учетом page cache.
 
@@ -371,15 +371,15 @@ Disk I/O показывает нагрузку на диск.
 Смотреть:
 
 - read/write throughput;
-    
+
 - IOPS;
-    
+
 - latency;
-    
+
 - disk utilization;
-    
+
 - queue.
-    
+
 
 Высокий disk latency может тормозить всё приложение.
 
@@ -390,17 +390,17 @@ Disk I/O показывает нагрузку на диск.
 Network metrics:
 
 - traffic in/out;
-    
+
 - packet loss;
-    
+
 - errors;
-    
+
 - drops;
-    
+
 - latency;
-    
+
 - connections.
-    
+
 
 Полезно при сетевых проблемах и перегрузках.
 
@@ -411,13 +411,13 @@ Network metrics:
 Мониторят процессы:
 
 - жив ли процесс;
-    
+
 - сколько CPU/RAM ест;
-    
+
 - сколько файлов открыл;
-    
+
 - сколько threads/processes создал.
-    
+
 
 Для Linux полезны `ps`, `top`, `pidstat`.
 
@@ -428,19 +428,19 @@ Network metrics:
 Для containers мониторят:
 
 - CPU;
-    
+
 - memory;
-    
+
 - restarts;
-    
+
 - exit codes;
-    
+
 - network;
-    
+
 - filesystem usage;
-    
+
 - OOMKilled.
-    
+
 
 В Kubernetes важно смотреть Pod/container metrics вместе с events.
 
@@ -451,23 +451,23 @@ Network metrics:
 В Kubernetes мониторят:
 
 - Pods;
-    
+
 - Deployments;
-    
+
 - Nodes;
-    
+
 - PVC;
-    
+
 - Services;
-    
+
 - restarts;
-    
+
 - readiness;
-    
+
 - scheduling issues;
-    
+
 - resource requests/limits.
-    
+
 
 ---
 
@@ -478,19 +478,19 @@ Application metrics — метрики самого приложения.
 Примеры:
 
 - request rate;
-    
+
 - error rate;
-    
+
 - latency;
-    
+
 - active users;
-    
+
 - queue length;
-    
+
 - DB query time;
-    
+
 - cache hit rate.
-    
+
 
 Они часто важнее голых CPU/RAM.
 
@@ -521,13 +521,13 @@ Traffic — объем нагрузки на сервис.
 Примеры:
 
 - requests per second;
-    
+
 - messages per second;
-    
+
 - jobs per minute;
-    
+
 - bytes per second.
-    
+
 
 Traffic помогает понять, выросла ли нагрузка.
 
@@ -540,13 +540,13 @@ Errors — количество или процент неуспешных за�
 Примеры:
 
 - HTTP 5xx;
-    
+
 - failed jobs;
-    
+
 - exceptions;
-    
+
 - timeouts.
-    
+
 
 Error rate часто важнее абсолютного количества ошибок.
 
@@ -559,15 +559,15 @@ Saturation — насколько ресурс близок к пределу.
 Примеры:
 
 - CPU почти 100%;
-    
+
 - memory почти закончилась;
-    
+
 - disk full;
-    
+
 - queue растет;
-    
+
 - connection pool заполнен.
-    
+
 
 Saturation показывает, что система упирается в лимит.
 
@@ -582,13 +582,13 @@ Utilization — насколько ресурс используется.
 Примеры:
 
 - CPU usage;
-    
+
 - memory usage;
-    
+
 - disk usage;
-    
+
 - network bandwidth usage.
-    
+
 
 Вопрос:
 
@@ -605,13 +605,13 @@ Saturation — есть ли очередь или ожидание ресурс
 Примеры:
 
 - run queue;
-    
+
 - disk queue;
-    
+
 - network queue;
-    
+
 - connection pool waiting.
-    
+
 
 Вопрос:
 
@@ -628,13 +628,13 @@ Errors — ошибки при работе ресурса.
 Примеры:
 
 - disk errors;
-    
+
 - network drops;
-    
+
 - interface errors;
-    
+
 - failed operations.
-    
+
 
 Вопрос:
 
@@ -667,13 +667,13 @@ Errors — сколько запросов завершается ошибкой
 Например:
 
 - HTTP 500;
-    
+
 - timeout;
-    
+
 - failed operation;
-    
+
 - exception.
-    
+
 
 ---
 
@@ -733,13 +733,13 @@ Threshold-based alert срабатывает при превышении пор�
 Примеры:
 
 - CPU > 90%;
-    
+
 - disk > 85%;
-    
+
 - errors > 5%;
-    
+
 - latency p95 > 500ms.
-    
+
 
 Просто настроить, но можно получить много ложных алертов.
 
@@ -752,11 +752,11 @@ Anomaly detection ищет необычное поведение.
 Например:
 
 - traffic резко упал;
-    
+
 - latency нетипично выросла;
-    
+
 - error rate отличается от обычного паттерна.
-    
+
 
 Сложнее threshold alerts, но полезно для динамических систем.
 
@@ -828,13 +828,13 @@ SLI — Service Level Indicator.
 Примеры:
 
 - availability;
-    
+
 - latency;
-    
+
 - error rate;
-    
+
 - request success rate.
-    
+
 
 ```text
 SLI = что измеряем
@@ -899,11 +899,11 @@ Application должна отдавать logs и metrics.
 Например:
 
 - `/metrics` для Prometheus;
-    
+
 - structured JSON logs;
-    
+
 - trace spans.
-    
+
 
 Без instrumented app observability будет слабой.
 
@@ -916,13 +916,13 @@ Exporter собирает metrics из системы и отдает их в н
 Примеры:
 
 - Node Exporter;
-    
+
 - postgres_exporter;
-    
+
 - nginx_exporter;
-    
+
 - blackbox_exporter.
-    
+
 
 ---
 
@@ -935,11 +935,11 @@ Collector собирает telemetry data и отправляет дальше.
 Он может принимать:
 
 - metrics;
-    
+
 - logs;
-    
+
 - traces.
-    
+
 
 ---
 
@@ -950,17 +950,17 @@ Storage хранит monitoring data.
 Примеры:
 
 - Prometheus TSDB;
-    
+
 - Elasticsearch;
-    
+
 - Loki;
-    
+
 - VictoriaMetrics;
-    
+
 - Thanos;
-    
+
 - Mimir.
-    
+
 
 Выбор зависит от типа данных и retention.
 
@@ -983,13 +983,13 @@ Alerting проверяет rules и отправляет уведомления
 Примеры:
 
 - Prometheus alert rules;
-    
+
 - Alertmanager;
-    
+
 - Grafana Alerting;
-    
+
 - cloud alerting.
-    
+
 
 ---
 
@@ -1002,15 +1002,15 @@ Prometheus — система сбора и хранения metrics.
 Особенности:
 
 - pull model;
-    
+
 - PromQL;
-    
+
 - labels;
-    
+
 - alert rules;
-    
+
 - service discovery.
-    
+
 
 Очень часто используется в Kubernetes.
 
@@ -1023,15 +1023,15 @@ Grafana — инструмент для dashboards и visualization.
 Может подключаться к:
 
 - Prometheus;
-    
+
 - Loki;
-    
+
 - Elasticsearch;
-    
+
 - InfluxDB;
-    
+
 - cloud monitoring.
-    
+
 
 ---
 
@@ -1042,15 +1042,15 @@ Alertmanager принимает alerts от Prometheus и управляет у�
 Он умеет:
 
 - grouping;
-    
+
 - routing;
-    
+
 - silencing;
-    
+
 - deduplication;
-    
+
 - escalation.
-    
+
 
 ---
 
@@ -1085,11 +1085,11 @@ OpenTelemetry — стандарт для сбора telemetry data.
 Поддерживает:
 
 - traces;
-    
+
 - metrics;
-    
+
 - logs.
-    
+
 
 Часто используется через OpenTelemetry SDK и Collector.
 
@@ -1102,15 +1102,15 @@ OpenTelemetry — стандарт для сбора telemetry data.
 Проверить:
 
 - какой процесс ест CPU;
-    
+
 - вырос ли traffic;
-    
+
 - нет ли бесконечного цикла;
-    
+
 - нет ли throttling;
-    
+
 - не идет ли GC/компиляция.
-    
+
 
 Команды:
 
@@ -1127,13 +1127,13 @@ pidstat
 Признаки memory leak:
 
 - memory usage постоянно растет;
-    
+
 - после нагрузки память не освобождается;
-    
+
 - появляются OOMKilled;
-    
+
 - растет heap.
-    
+
 
 Проверять нужно app metrics, heap dump, container memory, GC metrics.
 
@@ -1152,17 +1152,17 @@ df -i
 Причины:
 
 - логи;
-    
+
 - cache;
-    
+
 - backups;
-    
+
 - Docker images;
-    
+
 - временные файлы;
-    
+
 - закончились inodes.
-    
+
 
 ---
 
@@ -1171,19 +1171,19 @@ df -i
 Проверить:
 
 - latency между сервисами;
-    
+
 - DNS;
-    
+
 - packet loss;
-    
+
 - saturation;
-    
+
 - retries;
-    
+
 - firewall;
-    
+
 - load balancer.
-    
+
 
 Инструменты:
 
@@ -1201,19 +1201,19 @@ curl -w
 Смотреть:
 
 - error rate;
-    
+
 - logs;
-    
+
 - recent deploys;
-    
+
 - dependency errors;
-    
+
 - database;
-    
+
 - external API;
-    
+
 - saturation.
-    
+
 
 Важно понять: ошибки из-за кода, зависимости или инфраструктуры.
 
@@ -1224,21 +1224,21 @@ curl -w
 Причины:
 
 - вырос traffic;
-    
+
 - медленная БД;
-    
+
 - CPU throttling;
-    
+
 - network latency;
-    
+
 - locks;
-    
+
 - slow external API;
-    
+
 - garbage collection;
-    
+
 - queue backlog.
-    
+
 
 Смотреть p95/p99, а не только average.
 
@@ -1251,15 +1251,15 @@ curl -w
 Причины:
 
 - слишком низкий threshold;
-    
+
 - нет условия `for`;
-    
+
 - alert не требует действия;
-    
+
 - не учтены maintenance/deploy;
-    
+
 - мониторится симптом без impact.
-    
+
 
 ---
 
@@ -1317,13 +1317,13 @@ SLA: 99.5% в контракте
 Golden Signals:
 
 - Latency;
-    
+
 - Traffic;
-    
+
 - Errors;
-    
+
 - Saturation.
-    
+
 
 Это базовый набор сигналов для мониторинга сервиса.
 
@@ -1334,23 +1334,23 @@ Golden Signals:
 Минимум:
 
 - availability;
-    
+
 - request rate;
-    
+
 - error rate;
-    
+
 - latency p95/p99;
-    
+
 - saturation;
-    
+
 - CPU/memory;
-    
+
 - dependency errors;
-    
+
 - restarts;
-    
+
 - business-critical metrics.
-    
+
 
 ---
 
@@ -1385,11 +1385,11 @@ dependency деградировала?
 Хороший alert должен быть:
 
 - actionable;
-    
+
 - понятный;
-    
+
 - с правильной severity;
-    
+
 - связан с impact;
-    
+
 - без постоянного шума.

@@ -15,17 +15,17 @@ Prometheus — система мониторинга и сбора метрик.
 Prometheus используют для:
 
 - мониторинга приложений;
-    
+
 - мониторинга серверов;
-    
+
 - мониторинга Kubernetes;
-    
+
 - alerting;
-    
+
 - анализа нагрузки;
-    
+
 - поиска bottlenecks.
-    
+
 
 ---
 
@@ -94,33 +94,33 @@ Prometheus Server — основной компонент.
 Он:
 
 - scrape'ит targets;
-    
+
 - хранит metrics;
-    
+
 - выполняет PromQL;
-    
+
 - считает rules;
-    
+
 - отправляет alerts в Alertmanager.
-- 
-    
+-
+
 
 ---
 
 ### Exporters
- 
+
 Exporter — процесс, который собирает метрики из системы и отдает их в формате Prometheus.
 
 Примеры:
 
 - Node Exporter;
-    
+
 - Blackbox Exporter;
-    
+
 - postgres_exporter;
-    
+
 - nginx_exporter.
-    
+
 
 ---
 
@@ -131,9 +131,9 @@ Pushgateway используется, когда target не может быть
 Например:
 
 - короткоживущие batch jobs;
-    
+
 - cron jobs.
-    
+
 
 Но для обычных сервисов лучше использовать pull model напрямую.
 
@@ -146,15 +146,15 @@ Alertmanager принимает alerts от Prometheus.
 Он отвечает за:
 
 - grouping;
-    
+
 - routing;
-    
+
 - silencing;
-    
+
 - deduplication;
-    
+
 - отправку уведомлений.
-    
+
 
 Например в Slack, Telegram, email, PagerDuty.
 
@@ -167,13 +167,13 @@ Service Discovery позволяет Prometheus автоматически на�
 Например:
 
 - Kubernetes Pods;
-    
+
 - Kubernetes Services;
-    
+
 - EC2 instances;
-    
+
 - Consul services.
-    
+
 
 Без service discovery targets пришлось бы прописывать руками.
 
@@ -203,11 +203,11 @@ Counter — метрика, которая только растет.
 Примеры:
 
 - количество HTTP requests;
-    
+
 - количество ошибок;
-    
+
 - количество обработанных сообщений.
-    
+
 
 ```text
 http_requests_total
@@ -224,13 +224,13 @@ Gauge — метрика, которая может расти и падать.
 Примеры:
 
 - memory usage;
-    
+
 - CPU temperature;
-    
+
 - количество active connections;
-    
+
 - размер очереди.
-    
+
 
 ```text
 process_resident_memory_bytes
@@ -336,13 +336,13 @@ Cardinality — количество уникальных time series.
 Высокая cardinality опасна, потому что Prometheus начинает использовать много:
 
 - RAM;
-    
+
 - CPU;
-    
+
 - disk;
-    
+
 - времени на query.
-    
+
 
 Плохой label может быстро убить Prometheus.
 
@@ -353,30 +353,30 @@ Cardinality — количество уникальных time series.
 Хорошие labels:
 
 - `service`;
-    
+
 - `method`;
-    
+
 - `status`;
-    
+
 - `instance`;
-    
+
 - `namespace`;
-    
+
 - `pod`.
-    
+
 
 Плохие labels:
 
 - `user_id`;
-    
+
 - `request_id`;
-    
+
 - `email`;
-    
+
 - `session_id`;
-    
+
 - `timestamp`.
-    
+
 
 Главное правило: label не должен иметь бесконечно много уникальных значений.
 
@@ -454,15 +454,15 @@ scrape_configs:
 В нем задают:
 
 - scrape configs;
-    
+
 - alerting;
-    
+
 - rule files;
-    
+
 - global settings;
-    
+
 - service discovery.
-    
+
 
 ---
 
@@ -490,13 +490,13 @@ Service Discovery автоматически находит targets.
 В Kubernetes Prometheus может находить:
 
 - Pods;
-    
+
 - Services;
-    
+
 - Endpoints;
-    
+
 - Nodes.
-    
+
 
 Это удобнее, чем вручную обновлять `prometheus.yml`.
 
@@ -513,15 +513,15 @@ Status -> Targets
 Там видно:
 
 - `UP`;
-    
+
 - `DOWN`;
-    
+
 - endpoint;
-    
+
 - last scrape;
-    
+
 - scrape error.
-    
+
 
 ---
 
@@ -534,15 +534,15 @@ PromQL — язык запросов Prometheus.
 С его помощью можно:
 
 - смотреть метрики;
-    
+
 - считать rate;
-    
+
 - агрегировать;
-    
+
 - строить alerts;
-    
+
 - создавать dashboards.
-    
+
 
 ---
 
@@ -814,17 +814,17 @@ Exporter — сервис, который отдает метрики в фор�
 Он может собирать метрики из:
 
 - Linux host;
-    
+
 - базы данных;
-    
+
 - nginx;
-    
+
 - blackbox checks;
-    
+
 - Kubernetes API;
-    
+
 - приложений.
-    
+
 
 ---
 
@@ -835,17 +835,17 @@ Node Exporter собирает Linux host metrics.
 Например:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk;
-    
+
 - filesystem;
-    
+
 - network;
-    
+
 - load average.
-    
+
 
 Обычно слушает порт:
 
@@ -862,13 +862,13 @@ Blackbox Exporter проверяет сервисы снаружи.
 Например:
 
 - HTTP availability;
-    
+
 - TCP port;
-    
+
 - ICMP ping;
-    
+
 - TLS certificate.
-    
+
 
 Полезен для проверки “работает ли сервис глазами клиента”.
 
@@ -881,15 +881,15 @@ Blackbox Exporter проверяет сервисы снаружи.
 Например:
 
 - Deployment replicas;
-    
+
 - Pod phases;
-    
+
 - Node conditions;
-    
+
 - PVC status;
-    
+
 - Job status.
-    
+
 
 Он не показывает usage CPU/memory, он показывает состояние объектов.
 
@@ -904,13 +904,13 @@ cAdvisor собирает container metrics.
 Показывает:
 
 - container CPU;
-    
+
 - memory;
-    
+
 - filesystem;
-    
+
 - network.
-    
+
 
 ---
 
@@ -921,13 +921,13 @@ Database exporters собирают метрики из баз данных.
 Примеры:
 
 - postgres_exporter;
-    
+
 - mysqld_exporter;
-    
+
 - redis_exporter;
-    
+
 - mongodb_exporter.
-    
+
 
 Они показывают connections, queries, locks, replication, slow operations и другое.
 
@@ -1032,9 +1032,9 @@ Severity — уровень важности alert.
 Обычно:
 
 - `warning`;
-    
+
 - `critical`.
-    
+
 
 `critical` должен означать реальное влияние на production или пользователей.
 
@@ -1132,11 +1132,11 @@ Compaction объединяет маленькие blocks в более круп
 Это нужно для:
 
 - экономии места;
-    
+
 - ускорения чтения;
-    
+
 - оптимизации хранения.
-    
+
 
 ---
 
@@ -1147,13 +1147,13 @@ Prometheus из коробки хранит данные локально.
 Проблемы:
 
 - один Prometheus = один local disk;
-    
+
 - ограниченный retention;
-    
+
 - нет полноценного long-term HA storage;
-    
+
 - большой объем метрик быстро ест диск.
-    
+
 
 Для long-term storage используют Thanos, Mimir, Cortex, VictoriaMetrics.
 
@@ -1166,15 +1166,15 @@ Remote Write отправляет метрики из Prometheus во внешн
 Например:
 
 - Thanos Receive;
-    
+
 - Mimir;
-    
+
 - Cortex;
-    
+
 - VictoriaMetrics;
-    
+
 - cloud monitoring backend.
-    
+
 
 Prometheus продолжает scrape, но данные дополнительно уходят наружу.
 
@@ -1185,15 +1185,15 @@ Prometheus продолжает scrape, но данные дополнитель
 Thanos, Cortex и Mimir решают задачи:
 
 - long-term storage;
-    
+
 - global query;
-    
+
 - HA Prometheus;
-    
+
 - масштабирование;
-    
+
 - multi-cluster monitoring.
-    
+
 
 Они часто используются поверх Prometheus в больших инфраструктурах.
 
@@ -1208,17 +1208,17 @@ Thanos, Cortex и Mimir решают задачи:
 Он собирает метрики с:
 
 - Pods;
-    
+
 - Services;
-    
+
 - Nodes;
-    
+
 - kubelet;
-    
+
 - exporters;
-    
+
 - Kubernetes API objects.
-    
+
 
 ---
 
@@ -1229,13 +1229,13 @@ Prometheus может автоматически находить Kubernetes tar
 Например:
 
 - Pods с annotations;
-    
+
 - Services;
-    
+
 - Endpoints;
-    
+
 - Nodes.
-    
+
 
 Это удобно, потому что Pods постоянно создаются и удаляются.
 
@@ -1270,15 +1270,15 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Он добавляет CRDs:
 
 - Prometheus;
-    
+
 - Alertmanager;
-    
+
 - ServiceMonitor;
-    
+
 - PodMonitor;
-    
+
 - PrometheusRule.
-    
+
 
 Это упрощает настройку monitoring stack.
 
@@ -1291,21 +1291,21 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Обычно включает:
 
 - Prometheus Operator;
-    
+
 - Prometheus;
-    
+
 - Alertmanager;
-    
+
 - Grafana;
-    
+
 - node-exporter;
-    
+
 - kube-state-metrics;
-    
+
 - dashboards;
-    
+
 - default alert rules.
-    
+
 
 ---
 
@@ -1314,19 +1314,19 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Для Pods смотрят:
 
 - restarts;
-    
+
 - status/phase;
-    
+
 - CPU/memory;
-    
+
 - OOMKilled;
-    
+
 - readiness;
-    
+
 - container metrics;
-    
+
 - logs/events рядом с метриками.
-    
+
 
 ---
 
@@ -1335,23 +1335,23 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Для Nodes смотрят:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk;
-    
+
 - filesystem;
-    
+
 - network;
-    
+
 - load average;
-    
+
 - NodeReady;
-    
+
 - DiskPressure;
-    
+
 - MemoryPressure.
-    
+
 
 ---
 
@@ -1360,19 +1360,19 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Для Deployments и StatefulSets смотрят:
 
 - desired replicas;
-    
+
 - ready replicas;
-    
+
 - unavailable replicas;
-    
+
 - rollout status;
-    
+
 - restarts;
-    
+
 - pod health;
-    
+
 - resource usage.
-    
+
 
 ---
 
@@ -1385,21 +1385,21 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Проверить:
 
 - target URL;
-    
+
 - порт;
-    
+
 - network;
-    
+
 - DNS;
-    
+
 - metrics path;
-    
+
 - TLS;
-    
+
 - firewall;
-    
+
 - Service/Endpoints в Kubernetes.
-    
+
 
 ---
 
@@ -1408,17 +1408,17 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 Причины:
 
 - target не добавлен;
-    
+
 - target Down;
-    
+
 - неправильный metrics path;
-    
+
 - service discovery не нашел объект;
-    
+
 - labels не совпали;
-    
+
 - exporter не отдает нужную метрику.
-    
+
 
 Проверить Prometheus UI и `/targets`.
 
@@ -1426,7 +1426,7 @@ Prometheus Operator управляет Prometheus в Kubernetes.
 
 ### Неправильный metrics path
 
-По умолчанию Prometheus ходит на: 
+По умолчанию Prometheus ходит на:
 
 ```text
 /metrics
@@ -1447,15 +1447,15 @@ Timeout значит target не успел ответить.
 Причины:
 
 - приложение зависло;
-    
+
 - endpoint тяжелый;
-    
+
 - network latency;
-    
+
 - exporter перегружен;
-    
+
 - слишком маленький scrape timeout.
-    
+
 
 ---
 
@@ -1466,15 +1466,15 @@ DNS-ошибка значит Prometheus не может резолвить targ
 Проверить:
 
 - имя Service;
-    
+
 - namespace;
-    
+
 - CoreDNS;
-    
+
 - DNS search domain;
-    
+
 - правильность target address.
-    
+
 
 ---
 
@@ -1483,15 +1483,15 @@ DNS-ошибка значит Prometheus не может резолвить targ
 TLS-ошибка может быть из-за:
 
 - self-signed certificate;
-    
+
 - expired certificate;
-    
+
 - wrong hostname;
-    
+
 - неправильный CA;
-    
+
 - target требует client certificate.
-    
+
 
 Иногда для проверки временно используют `insecure_skip_verify`, но в production лучше настроить CA нормально.
 
@@ -1512,15 +1512,15 @@ TLS-ошибка может быть из-за:
 Высокая cardinality часто появляется из-за labels:
 
 - user_id;
-    
+
 - request_id;
-    
+
 - path с dynamic IDs;
-    
+
 - session_id;
-    
+
 - pod UID.
-    
+
 
 Решение — убрать такие labels или нормализовать значения.
 
@@ -1531,17 +1531,17 @@ TLS-ошибка может быть из-за:
 Причины:
 
 - высокая cardinality;
-    
+
 - слишком много targets;
-    
+
 - слишком маленький scrape interval;
-    
+
 - тяжелые queries;
-    
+
 - много active series;
-    
+
 - слишком много labels.
-    
+
 
 Проверять нужно TSDB status и cardinality.
 
@@ -1552,28 +1552,28 @@ TLS-ошибка может быть из-за:
 Причины:
 
 - большой retention;
-    
+
 - много metrics;
-    
+
 - высокая cardinality;
-    
+
 - много targets;
-    
+
 - слишком частый scrape.
-    
+
 
 Решения:
 
 - уменьшить retention;
-    
+
 - увеличить disk;
-    
+
 - убрать лишние metrics;
-    
+
 - снизить cardinality;
-    
+
 - настроить remote storage.
-    
+
 
 ---
 
@@ -1582,19 +1582,19 @@ TLS-ошибка может быть из-за:
 Проверить:
 
 - правильный metric name;
-    
+
 - labels;
-    
+
 - range window;
-    
+
 - `rate` применяется к Counter;
-    
+
 - aggregation by/without;
-    
+
 - нет ли counter reset;
-    
+
 - не смешиваются ли разные units.
-    
+
 
 ---
 
@@ -1781,17 +1781,17 @@ helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring
 Порядок:
 
 - открыть Prometheus UI → Targets;
-    
+
 - посмотреть scrape error;
-    
+
 - проверить DNS/port/path;
-    
+
 - проверить Service/Endpoints;
-    
+
 - проверить logs target/exporter;
-    
+
 - исправить config или сеть.
-    
+
 
 ---
 
@@ -1810,13 +1810,13 @@ Prometheus периодически scrape'ит targets по HTTP, забира�
 Pull model удобен, потому что Prometheus сам контролирует:
 
 - когда scrape'ить;
-    
+
 - кого scrape'ить;
-    
+
 - какой target жив;
-    
+
 - сколько длится scrape.
-    
+
 
 Также легко видеть состояние targets в UI.
 
@@ -1925,21 +1925,21 @@ Prometheus вычисляет alerting rules.
 Причины:
 
 - target недоступен по сети;
-    
+
 - неправильный port;
-    
+
 - неправильный metrics path;
-    
+
 - DNS не работает;
-    
+
 - TLS ошибка;
-    
+
 - exporter упал;
-    
+
 - Service/Endpoints пустые;
-    
+
 - firewall/NetworkPolicy блокирует.
-    
+
 
 ---
 
@@ -1950,16 +1950,16 @@ Prometheus вычисляет alerting rules.
 Он включает:
 
 - Prometheus Operator;
-    
+
 - Prometheus;
-    
+
 - Grafana;
-    
+
 - Alertmanager;
-    
+
 - node-exporter;
-    
+
 - kube-state-metrics.
-    
+
 
 Для приложений используют ServiceMonitor или PodMonitor.

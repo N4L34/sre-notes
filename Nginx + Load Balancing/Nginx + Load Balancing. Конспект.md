@@ -9,15 +9,15 @@ Nginx — высокопроизводительный web server, reverse proxy
 Он часто используется для:
 
 - раздачи статических файлов;
-    
+
 - проксирования запросов к приложению;
-    
+
 - TLS termination;
-    
+
 - балансировки между backend-серверами;
-    
+
 - rate limiting и caching.
-    
+
 
 ---
 
@@ -65,7 +65,7 @@ Client -> Nginx -> backend-2
 ---
 
 ### Event-driven architecture
- 
+
 Nginx использует event-driven архитектуру.
 
 Один worker может обслуживать множество соединений без создания отдельного процесса или thread на каждое соединение.
@@ -107,15 +107,15 @@ events {
 Master process:
 
 - читает конфигурацию;
-    
+
 - запускает workers;
-    
+
 - выполняет reload;
-    
+
 - управляет graceful shutdown;
-    
+
 - работает с privileged ports.
-    
+
 
 Запросы обрабатывают worker processes, а не master.
 
@@ -270,13 +270,13 @@ nginx -t
 Команда проверяет:
 
 - синтаксис;
-    
+
 - существование файлов;
-    
+
 - сертификаты;
-    
+
 - корректность директив.
-    
+
 
 ---
 
@@ -339,13 +339,13 @@ listen 80 default_server;
 Основные типы:
 
 - exact;
-    
+
 - prefix;
-    
+
 - regex;
-    
+
 - named location.
-    
+
 
 Порядок matching важен и может влиять на результат.
 
@@ -483,17 +483,17 @@ Reverse proxy стоит перед backend-серверами и принима
 Он может:
 
 - скрывать backend;
-    
+
 - завершать TLS;
-    
+
 - балансировать запросы;
-    
+
 - добавлять headers;
-    
+
 - кешировать ответы;
-    
+
 - ограничивать traffic.
-    
+
 
 ---
 
@@ -611,11 +611,11 @@ proxy_read_timeout 30s;
 ```
 
 - `proxy_connect_timeout` — подключение к backend;
-    
+
 - `proxy_send_timeout` — отправка запроса;
-    
+
 - `proxy_read_timeout` — ожидание данных от backend.
-    
+
 
 ---
 
@@ -663,13 +663,13 @@ Load Balancer распределяет traffic между несколькими
 Он также может:
 
 - проверять здоровье backend;
-    
+
 - выполнять failover;
-    
+
 - завершать TLS;
-    
+
 - скрывать внутреннюю архитектуру.
-    
+
 
 ---
 
@@ -679,15 +679,15 @@ Load balancing нужен для:
 
 
 - масштабирования;
-    
+
 - high availability;
-    
+
 - распределения нагрузки;
-    
+
 - maintenance без полного downtime;
-    
+
 - отказоустойчивости.
-    
+
 
 ---
 
@@ -720,13 +720,13 @@ Software Load Balancer — программа на обычном сервере
 Примеры:
 
 - Nginx;
-    
+
 - HAProxy;
-    
+
 - Envoy;
-    
+
 - Traefik.
-    
+
 
 ---
 
@@ -747,11 +747,11 @@ Layer 4 балансирует TCP/UDP-соединения.
 Он смотрит в основном на:
 
 - IP;
-    
+
 - port;
-    
+
 - protocol.
-    
+
 
 Не анализирует HTTP path или headers.
 
@@ -764,15 +764,15 @@ Layer 7 понимает HTTP/HTTPS.
 Может маршрутизировать по:
 
 - host;
-    
+
 - path;
-    
+
 - headers;
-    
+
 - cookies;
-    
+
 - HTTP method.
-    
+
 
 Nginx чаще используется как L7 load balancer.
 
@@ -818,15 +818,15 @@ Backend servers — серверы приложения за Nginx.
 Это могут быть:
 
 - VM;
-    
+
 - containers;
-    
+
 - Kubernetes Services;
-    
+
 - application processes;
-    
+
 - Unix sockets.
-    
+
 
 ---
 
@@ -900,9 +900,9 @@ server app1:8080 max_fails=3 fail_timeout=30s;
 `fail_timeout` определяет:
 
 - период подсчета ошибок;
-    
+
 - время временного исключения backend.
-    
+
 
 ```nginx
 server app1:8080 max_fails=3 fail_timeout=30s;
@@ -917,11 +917,11 @@ Connection reuse позволяет повторно использовать TC
 Это уменьшает:
 
 - TCP handshakes;
-    
+
 - latency;
-    
+
 - нагрузку на backend.
-    
+
 
 Для этого используют upstream keepalive.
 
@@ -1044,13 +1044,13 @@ hash $request_uri;
 Можно балансировать по:
 
 - URI;
-    
+
 - header;
-    
+
 - cookie;
-    
+
 - произвольной переменной.
-    
+
 
 ---
 
@@ -1065,11 +1065,11 @@ hash $request_uri consistent;
 Полезно для:
 
 - caches;
-    
+
 - sharded data;
-    
+
 - affinity по ключу.
-    
+
 
 ---
 
@@ -1144,19 +1144,19 @@ backend-1 failed -> traffic goes to backend-2
 Причины:
 
 - процесс не запущен;
-    
+
 - неправильный порт;
-    
+
 - firewall;
-    
+
 - DNS;
-    
+
 - приложение зависло;
-    
+
 - backend перегружен;
-    
+
 - network route отсутствует.
-    
+
 
 Проверить:
 
@@ -1218,15 +1218,15 @@ nginx -t && systemctl reload nginx
 Перед ними могут быть:
 
 - cloud load balancer;
-    
+
 - DNS balancing;
-    
+
 - VRRP/Keepalived;
-    
+
 - anycast;
-    
+
 - Kubernetes Service.
-    
+
 
 ```text
 Client -> HA endpoint -> Nginx-1 / Nginx-2 -> backends
@@ -1253,11 +1253,11 @@ Session Affinity — общее название закрепления клие
 Она может быть:
 
 - cookie-based;
-    
+
 - IP-based;
-    
+
 - hash-based.
-    
+
 
 ---
 
@@ -1290,15 +1290,15 @@ ip_hash;
 Недостатки:
 
 - неравномерная нагрузка;
-    
+
 - потеря сессии при падении backend;
-    
+
 - сложнее autoscaling;
-    
+
 - сложнее deployment;
-    
+
 - state привязан к серверу.
-    
+
 
 ---
 
@@ -1309,11 +1309,11 @@ ip_hash;
 Например:
 
 - Redis;
-    
+
 - database;
-    
+
 - distributed cache.
-    
+
 
 Тогда любой backend может обработать запрос клиента.
 
@@ -1388,11 +1388,11 @@ Private key нельзя публиковать или коммитить в Git
 Certificate chain включает:
 
 - server certificate;
-    
+
 - intermediate CA certificates;
-    
+
 - иногда root CA.
-    
+
 
 Если chain неполный, некоторые клиенты получат TLS error.
 
@@ -1483,7 +1483,7 @@ server {
     location / {
         try_files $uri $uri/ =404;
     }
-} 
+}
 ```
 
 Nginx эффективно раздает HTML, CSS, JS, images и другие файлы.
@@ -1497,11 +1497,11 @@ Browser caching говорит браузеру хранить ресурс ло
 Это уменьшает:
 
 - количество запросов;
-    
+
 - latency;
-    
+
 - нагрузку на сервер.
-    
+
 
 Управляется через `Expires` и `Cache-Control`.
 
@@ -1556,13 +1556,13 @@ Cache key определяет уникальность кешируемого �
 Обычно учитываются:
 
 - scheme;
-    
+
 - host;
-    
+
 - URI;
-    
+
 - query parameters.
-    
+
 
 Плохой cache key может смешать ответы разных пользователей.
 
@@ -1575,15 +1575,15 @@ Cache invalidation — удаление или обновление устаре
 Подходы:
 
 - TTL;
-    
+
 - purge;
-    
+
 - versioned URLs;
-    
+
 - cache bypass;
-    
+
 - смена cache key.
-    
+
 
 ---
 
@@ -1619,13 +1619,13 @@ Rate Limiting ограничивает количество запросов о�
 Используется для:
 
 - защиты API;
-    
+
 - защиты login endpoint;
-    
+
 - снижения нагрузки;
-    
+
 - частичной защиты от abuse.
-    
+
 
 ---
 
@@ -1708,21 +1708,21 @@ client_max_body_size 10m;
 Основные механизмы:
 
 - rate limiting;
-    
+
 - connection limits;
-    
+
 - timeouts;
-    
+
 - caching;
-    
+
 - buffering;
-    
+
 - request body limits;
-    
+
 - retries с ограничениями;
-    
+
 - circuit breaker на уровне приложения/proxy.
-    
+
 
 ---
 
@@ -1755,21 +1755,21 @@ Error log содержит ошибки Nginx и upstream.
 Уровни:
 
 - debug;
-    
+
 - info;
-    
+
 - notice;
-    
+
 - warn;
-    
+
 - error;
-    
+
 - crit;
-    
+
 - alert;
-    
+
 - emerg.
-    
+
 
 ---
 
@@ -1798,11 +1798,11 @@ access_log /var/log/nginx/access.log main;
 Оно включает:
 
 - чтение запроса;
-    
+
 - ожидание backend;
-    
+
 - отправку ответа клиенту.
-    
+
 
 ---
 
@@ -1938,11 +1938,11 @@ Keepalive позволяет использовать одно TCP-соедин�
 Плюсы:
 
 - меньше handshakes;
-    
+
 - ниже latency;
-    
+
 - меньше CPU.
-    
+
 
 Но слишком длинный keepalive держит соединения и file descriptors.
 
@@ -1953,17 +1953,17 @@ Keepalive позволяет использовать одно TCP-соедин�
 Основные timeouts:
 
 - `client_header_timeout`;
-    
+
 - `client_body_timeout`;
-    
+
 - `keepalive_timeout`;
-    
+
 - `proxy_connect_timeout`;
-    
+
 - `proxy_read_timeout`;
-    
+
 - `send_timeout`.
-    
+
 
 Слишком большие timeouts могут удерживать ресурсы, слишком маленькие — рвать нормальные запросы.
 
@@ -1978,11 +1978,11 @@ Buffering защищает backend от медленных клиентов.
 Нужно учитывать:
 
 - размер ответа;
-    
+
 - число соединений;
-    
+
 - streaming requirements.
-    
+
 
 ---
 
@@ -2124,15 +2124,15 @@ Annotations меняют поведение Ingress Controller.
 Например:
 
 - rewrite;
-    
+
 - proxy timeout;
-    
+
 - body size;
-    
+
 - rate limit;
-    
+
 - authentication.
-    
+
 
 Они зависят от конкретной реализации Ingress Controller.
 
@@ -2145,13 +2145,13 @@ Annotations меняют поведение Ingress Controller.
 Nginx Ingress Controller:
 
 - следит за Kubernetes API;
-    
+
 - читает Ingress/Service/Secret;
-    
+
 - динамически генерирует config;
-    
+
 - работает как Kubernetes controller.
-    
+
 
 ---
 
@@ -2162,13 +2162,13 @@ Service дает стабильный ClusterIP и направляет traffic 
 Балансировка может реализовываться через:
 
 - kube-proxy;
-    
+
 - iptables;
-    
+
 - IPVS;
-    
+
 - eBPF CNI.
-    
+
 
 ---
 
@@ -2199,15 +2199,15 @@ Pods
 Возможные причины:
 
 - некорректный HTTP request;
-    
+
 - слишком большие headers;
-    
+
 - неправильный `Host`;
-    
+
 - клиент отправил HTTP на HTTPS port;
-    
+
 - поврежденный cookie/header.
-    
+
 
 Проверить access и error logs.
 
@@ -2218,17 +2218,17 @@ Pods
 Причины:
 
 - нет прав на файл;
-    
+
 - directory listing запрещен;
-    
+
 - deny rule;
-    
+
 - неправильный owner/permissions;
-    
+
 - SELinux/AppArmor;
-    
+
 - отсутствует index file.
-    
+
 
 ---
 
@@ -2237,17 +2237,17 @@ Pods
 Причины:
 
 - файл не существует;
-    
+
 - неправильный `root`;
-    
+
 - неправильный `location`;
-    
+
 - backend вернул 404;
-    
+
 - rewrite изменил URI;
-    
+
 - запрос попал не в тот `server`.
-    
+
 
 ---
 
@@ -2278,13 +2278,13 @@ nginx -t && systemctl reload nginx
 Причины:
 
 - backend отвечает слишком долго;
-    
+
 - клиентский timeout;
-    
+
 - пользователь отменил запрос;
-    
+
 - промежуточный proxy оборвал соединение.
-    
+
 
 ---
 
@@ -2295,19 +2295,19 @@ nginx -t && systemctl reload nginx
 Причины:
 
 - connection refused;
-    
+
 - backend упал;
-    
+
 - неправильный порт;
-    
+
 - protocol mismatch;
-    
+
 - backend закрыл connection;
-    
+
 - DNS указывает неправильно;
-    
+
 - Unix socket недоступен.
-    
+
 
 ---
 
@@ -2316,15 +2316,15 @@ nginx -t && systemctl reload nginx
 Причины:
 
 - нет доступных backend;
-    
+
 - все upstream marked down;
-    
+
 - rate/connection limit;
-    
+
 - maintenance mode;
-    
+
 - приложение само вернуло 503.
-    
+
 
 ---
 
@@ -2335,15 +2335,15 @@ nginx -t && systemctl reload nginx
 Причины:
 
 - медленный backend;
-    
+
 - медленная БД;
-    
+
 - зависший запрос;
-    
+
 - маленький `proxy_read_timeout`;
-    
+
 - network latency.
-    
+
 
 ---
 
@@ -2366,15 +2366,15 @@ curl -v http://backend:8080
 Timeout обычно означает:
 
 - firewall drop;
-    
+
 - routing issue;
-    
+
 - NetworkPolicy;
-    
+
 - backend завис;
-    
+
 - сеть недоступна.
-    
+
 
 В отличие от connection refused, TCP-соединение не получает немедленного отказа.
 
@@ -2385,21 +2385,21 @@ Timeout обычно означает:
 Проверить:
 
 - процесс;
-    
+
 - port;
-    
+
 - health endpoint;
-    
+
 - firewall;
-    
+
 - DNS;
-    
+
 - routes;
-    
+
 - application logs;
-    
+
 - resource exhaustion.
-    
+
 
 ---
 
@@ -2448,19 +2448,19 @@ proxy_set_header Host backend.internal;
 Причины:
 
 - expired certificate;
-    
+
 - hostname mismatch;
-    
+
 - нет intermediate certificate;
-    
+
 - unsupported TLS version;
-    
+
 - неправильный private key;
-    
+
 - HTTP идет на HTTPS port;
-    
+
 - backend certificate не доверен.
-    
+
 
 Проверить:
 
@@ -2491,17 +2491,17 @@ proxy_set_header X-Forwarded-Proto $scheme;
 Причины:
 
 - sticky sessions;
-    
+
 - keepalive;
-    
+
 - разная длительность запросов;
-    
+
 - разные weights;
-    
+
 - один NAT IP при `ip_hash`;
-    
+
 - часть backend недоступна.
-    
+
 
 Проверять `$upstream_addr` в access logs.
 
@@ -2521,17 +2521,17 @@ $upstream_response_time
 Проверить:
 
 - CPU/RAM;
-    
+
 - DB queries;
-    
+
 - external dependencies;
-    
+
 - connection pools;
-    
+
 - locks;
-    
+
 - application traces.
-    
+
 
 ---
 
@@ -2540,24 +2540,24 @@ $upstream_response_time
 Симптомы:
 
 - ошибки `worker_connections are not enough`;
-    
+
 - новые клиенты не подключаются;
-    
+
 - много open connections.
-    
+
 
 Проверить:
 
 - `worker_connections`;
-    
+
 - file descriptor limits;
-    
+
 - keepalive;
-    
+
 - long-lived connections;
-    
+
 - WebSockets.
-    
+
 
 ---
 
@@ -2579,26 +2579,26 @@ curl -w '%{http_code} %{time_total}\n' -o /dev/null -s http://example.com
 Access log показывает:
 
 - request;
-    
+
 - status;
-    
+
 - время;
-    
+
 - upstream;
-    
+
 - client.
-    
+
 
 Error log показывает:
 
 - connection errors;
-    
+
 - timeout;
-    
+
 - config/runtime issues;
-    
+
 - permission errors.
-    
+
 
 Оба лога нужно анализировать вместе.
 
@@ -2805,19 +2805,19 @@ access_log /var/log/nginx/access.log upstream_log;
 Порядок:
 
 - посмотреть error log;
-    
+
 - проверить backend через `curl`;
-    
+
 - проверить port через `ss`/`nc`;
-    
+
 - проверить `proxy_pass`;
-    
+
 - проверить DNS;
-    
+
 - проверить protocol HTTP/HTTPS;
-    
+
 - проверить backend logs.
-    
+
 
 ---
 
@@ -2826,17 +2826,17 @@ access_log /var/log/nginx/access.log upstream_log;
 Порядок:
 
 - проверить `$upstream_response_time`;
-    
+
 - вызвать backend напрямую;
-    
+
 - проверить application/DB latency;
-    
+
 - проверить network;
-    
+
 - проверить `proxy_read_timeout`;
-    
+
 - не увеличивать timeout, не найдя root cause.
-    
+
 
 ---
 
@@ -2954,19 +2954,19 @@ TLS termination — расшифровка HTTPS на Nginx или другом 
 Основные причины:
 
 - backend не запущен;
-    
+
 - connection refused;
-    
+
 - неправильный port;
-    
+
 - неправильный protocol;
-    
+
 - backend закрыл соединение;
-    
+
 - DNS/Unix socket проблема;
-    
+
 - некорректный ответ backend.
-    
+
 
 ---
 
@@ -2975,15 +2975,15 @@ TLS termination — расшифровка HTTPS на Nginx или другом 
 Основные причины:
 
 - backend отвечает слишком долго;
-    
+
 - медленная БД;
-    
+
 - зависший запрос;
-    
+
 - network timeout;
-    
+
 - слишком маленький `proxy_read_timeout`.
-    
+
 
 ---
 
@@ -2994,15 +2994,15 @@ TLS termination — расшифровка HTTPS на Nginx или другом 
 Перед ними настроить:
 
 - cloud LB;
-    
+
 - VRRP/Keepalived;
-    
+
 - DNS;
-    
+
 - anycast;
-    
+
 - Kubernetes Service.
-    
+
 
 Также нужны health checks и отказоустойчивая конфигурация.
 
@@ -3015,14 +3015,14 @@ Backend описываются в `upstream`.
 Nginx выбирает backend по алгоритму:
 
 - Round Robin;
-    
+
 - Least Connections;
-    
+
 - IP Hash;
-    
+
 - Hash;
-    
+
 - Weighted balancing.
-    
+
 
 При ошибке он может временно исключить backend и попробовать другой.

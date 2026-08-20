@@ -7,15 +7,15 @@
 Например:
 
 - timestamp;
-    
+
 - level;
-    
+
 - status code;
-    
+
 - IP;
-    
+
 - message.
-    
+
 
 ```python
 with open("app.log") as f:

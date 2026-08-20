@@ -46,11 +46,11 @@ Actual State — реальное состояние в cluster прямо се�
 Например:
 
 - реально работает 2 Pod;
-    
+
 - image другой версии;
-    
+
 - Service изменен вручную.
-    
+
 
 GitOps сравнивает actual state с desired state.
 
@@ -135,11 +135,11 @@ Application — основной объект Argo CD.
 Он описывает:
 
 - откуда брать manifests;
-    
+
 - куда деплоить;
-    
+
 - как синхронизировать.
-    
+
 
 ```text
 Git repo + path/chart -> Kubernetes namespace/cluster
@@ -154,13 +154,13 @@ Project группирует Applications и задает ограничения
 Например:
 
 - какие repos разрешены;
-    
+
 - в какие clusters можно deploy;
-    
+
 - какие namespaces доступны;
-    
+
 - какие resources разрешены.
-    
+
 
 ---
 
@@ -183,11 +183,11 @@ Destination Cluster — cluster, куда Argo CD деплоит приложе�
 Это может быть:
 
 - тот же cluster, где стоит Argo CD;
-    
+
 - внешний Kubernetes cluster;
-    
+
 - несколько clusters.
-    
+
 
 ---
 
@@ -219,11 +219,11 @@ Argo CD умеет деплоить Helm charts.
 Можно использовать:
 
 - local chart из Git;
-    
+
 - chart из Helm repository;
-    
+
 - values files.
-    
+
 
 ---
 
@@ -250,9 +250,9 @@ Multiple Sources позволяют одной Argo CD Application брать д
 Например:
 
 - Helm chart из одного repo;
-    
+
 - values.yaml из другого repo.
-    
+
 
 Полезно для разделения app chart и environment config.
 
@@ -280,13 +280,13 @@ ApplicationSet автоматически создает много Applications
 Например:
 
 - для разных clusters;
-    
+
 - для разных namespaces;
-    
+
 - для разных environments;
-    
+
 - для всех директорий в Git repo.
-    
+
 
 ---
 
@@ -357,13 +357,13 @@ Sync Options меняют поведение sync.
 Например:
 
 - создавать namespace автоматически;
-    
+
 - применять server-side apply;
-    
+
 - отключать prune для отдельных ресурсов;
-    
+
 - задавать replace вместо apply.
-    
+
 
 ---
 
@@ -390,15 +390,15 @@ Health Status показывает состояние приложения.
 Примеры:
 
 - `Healthy`;
-    
+
 - `Progressing`;
-    
+
 - `Degraded`;
-    
+
 - `Suspended`;
-    
+
 - `Missing`.
-    
+
 
 Health отвечает на вопрос: “приложение живое или нет?”
 
@@ -411,11 +411,11 @@ Sync Status показывает, совпадает ли cluster с Git.
 Основные статусы:
 
 - `Synced`;
-    
+
 - `OutOfSync`;
-    
+
 - `Unknown`.
-    
+
 
 Sync отвечает на вопрос: “cluster соответствует Git или нет?”
 
@@ -442,11 +442,11 @@ Rollback делается через revert commit или возврат ста�
 Например:
 
 - откатить image tag;
-    
+
 - вернуть старый values.yaml;
-    
+
 - сделать `git revert`.
-    
+
 
 Argo CD применит старое состояние в cluster.
 
@@ -473,11 +473,11 @@ dev -> stage -> prod
 Обычно это делается через изменение Git:
 
 - обновить image tag;
-    
+
 - сделать PR в prod values;
-    
+
 - merge после approve.
-    
+
 
 ---
 
@@ -502,13 +502,13 @@ External Secrets синхронизирует secrets из внешнего secr
 Примеры:
 
 - AWS Secrets Manager;
-    
+
 - HashiCorp Vault;
-    
+
 - GCP Secret Manager;
-    
+
 - Azure Key Vault.
-    
+
 
 В Git хранится только ссылка на secret, а не сам secret value.
 
@@ -521,15 +521,15 @@ External Secrets синхронизирует secrets из внешнего secr
 Нормальные варианты:
 
 - External Secrets;
-    
+
 - Sealed Secrets;
-    
+
 - SOPS;
-    
+
 - Vault;
-    
+
 - cloud secret manager.
-    
+
 
 Главная идея: Git хранит декларацию, но не открытый secret.
 
@@ -544,13 +544,13 @@ OutOfSync значит cluster отличается от Git.
 Причины:
 
 - новый commit еще не применен;
-    
+
 - кто-то изменил resource вручную;
-    
+
 - sync failed;
-    
+
 - generated manifests отличаются.
-    
+
 
 Проверить:
 
@@ -568,13 +568,13 @@ Degraded значит приложение применилось, но рабо
 Например:
 
 - Pod падает;
-    
+
 - Deployment не rollout'ится;
-    
+
 - Service без endpoints;
-    
+
 - Job failed.
-    
+
 
 Проверять нужно уже Kubernetes resources:
 
@@ -593,15 +593,15 @@ Sync Failed значит Argo CD не смог применить manifests.
 Причины:
 
 - YAML ошибка;
-    
+
 - нет RBAC прав;
-    
+
 - отсутствует CRD;
-    
+
 - conflict;
-    
+
 - invalid Kubernetes field.
-    
+
 
 Смотреть details в UI или:
 
@@ -616,17 +616,17 @@ argocd app get myapp
 Проверить:
 
 - auto sync включен или нет;
-    
+
 - repo доступен;
-    
+
 - branch/path правильный;
-    
+
 - нет sync window;
-    
+
 - нет failed hook;
-    
+
 - есть ли права у Argo CD.
-    
+
 
 ---
 
@@ -635,15 +635,15 @@ argocd app get myapp
 Причины:
 
 - ошибка в values;
-    
+
 - chart не рендерится;
-    
+
 - dependency не скачалась;
-    
+
 - required value не задан;
-    
+
 - Kubernetes manifest invalid.
-    
+
 
 Проверить локально:
 
@@ -658,15 +658,15 @@ helm template myapp ./chart -f values.yaml
 Причины:
 
 - неправильный path;
-    
+
 - сломан `kustomization.yaml`;
-    
+
 - resource не найден;
-    
+
 - patch не применяется;
-    
+
 - несовместимые имена resources.
-    
+
 
 Проверить локально:
 
@@ -681,17 +681,17 @@ kustomize build overlays/prod
 Причины:
 
 - неправильный URL;
-    
+
 - нет SSH key/token;
-    
+
 - repo private;
-    
+
 - network issue;
-    
+
 - неправильный branch;
-    
+
 - истек credentials.
-    
+
 
 Проверить repository connection в Argo CD settings.
 
@@ -735,13 +735,13 @@ Argo CD может деплоить Helm chart из Git или Helm repo.
 Практика:
 
 - создать Application;
-    
+
 - указать chart/path;
-    
+
 - указать values file;
-    
+
 - выполнить sync.
-    
+
 
 ---
 
@@ -752,9 +752,9 @@ Auto Sync включает автоматическое применение и�
 Обычно вместе с ним можно включить:
 
 - prune;
-    
+
 - selfHeal.
-    
+
 
 Так Git становится настоящим source of truth.
 
@@ -765,11 +765,11 @@ Auto Sync включает автоматическое применение и�
 Практика:
 
 - включить selfHeal;
-    
+
 - вручную изменить Deployment через `kubectl edit`;
-    
+
 - посмотреть, как Argo CD вернет состояние из Git.
-    
+
 
 ---
 
@@ -780,11 +780,11 @@ GitOps rollback лучше делать через Git.
 Например:
 
 - вернуть старый image tag;
-    
+
 - сделать commit;
-    
+
 - дождаться sync.
-    
+
 
 Или использовать revert commit.
 
@@ -795,11 +795,11 @@ GitOps rollback лучше делать через Git.
 Практика:
 
 - создать root Application;
-    
+
 - в Git описать несколько child Applications;
-    
+
 - root Application применит остальные.
-    
+
 
 Удобно для bootstrap окружения.
 
@@ -847,13 +847,13 @@ Desired State — состояние, которое описано в Git.
 Например:
 
 - нужный image;
-    
+
 - replicas;
-    
+
 - config;
-    
+
 - Kubernetes manifests.
-    
+
 
 ---
 
@@ -870,15 +870,15 @@ Drift — расхождение между Git и реальным cluster.
 Argo CD:
 
 - читает manifests из Git/Helm/Kustomize;
-    
+
 - сравнивает с cluster;
-    
+
 - показывает diff;
-    
+
 - выполняет sync;
-    
+
 - следит за health и sync status.
-    
+
 
 ---
 
@@ -913,11 +913,11 @@ ApplicationSet — controller, который генерирует Argo CD Appli
 Плюсы:
 
 - история изменений;
-    
+
 - code review;
-    
+
 - rollback через revert;
-    
+
 - audit trail;
-    
+
 - единая точка управления infrastructure/app configs.

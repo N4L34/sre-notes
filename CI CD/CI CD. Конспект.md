@@ -11,13 +11,13 @@ CI — Continuous Integration.
 Обычно CI включает:
 
 - build;
-    
+
 - tests;
-    
+
 - lint;
-    
+
 - security checks.
-    
+
 
 ---
 
@@ -98,15 +98,15 @@ Runner или agent — машина, которая выполняет jobs.
 Это может быть:
 
 - VM;
-    
+
 - контейнер;
-    
+
 - Kubernetes Pod;
-    
+
 - self-hosted server;
-    
+
 - cloud runner.
-    
+
 
 ---
 
@@ -117,17 +117,17 @@ Triggers — события, которые запускают pipeline.
 Например:
 
 - push в branch;
-    
+
 - pull/merge request;
-    
+
 - tag;
-    
+
 - schedule;
-    
+
 - manual run;
-    
+
 - API call.
-    
+
 
 ---
 
@@ -156,11 +156,11 @@ Tests проверяют, что код работает правильно.
 Обычно бывают:
 
 - unit tests;
-    
+
 - integration tests;
-    
+
 - e2e tests.
-    
+
 
 Если tests падают, deploy обычно запрещается.
 
@@ -191,15 +191,15 @@ Security scan ищет уязвимости и проблемы безопасн
 Может проверять:
 
 - dependencies;
-    
+
 - Docker images;
-    
+
 - secrets;
-    
+
 - IaC configs;
-    
+
 - SAST.
-    
+
 
 Примеры инструментов:
 
@@ -236,15 +236,15 @@ docker push registry.example.com/myapp:1.0.0
 Registry может быть:
 
 - Docker Hub;
-    
+
 - GitLab Registry;
-    
+
 - GitHub Container Registry;
-    
+
 - AWS ECR;
-    
+
 - Harbor.
-    
+
 
 ---
 
@@ -373,15 +373,15 @@ Secrets — чувствительные данные.
 Например:
 
 - tokens;
-    
+
 - passwords;
-    
+
 - SSH keys;
-    
+
 - cloud credentials;
-    
+
 - registry credentials.
-    
+
 
 Secrets нельзя хранить прямо в репозитории.
 
@@ -446,13 +446,13 @@ Reusable pipelines позволяют не копировать одинаков
 Например:
 
 - общий job для Docker build;
-    
+
 - общий deploy template;
-    
+
 - общий security scan;
-    
+
 - общий Helm deploy.
-    
+
 
 Это упрощает поддержку CI/CD.
 
@@ -481,13 +481,13 @@ Retry повторяет job при временной ошибке.
 Полезно для нестабильных внешних зависимостей:
 
 - registry;
-    
+
 - package mirror;
-    
+
 - cloud API;
-    
+
 - network.
-    
+
 
 Но retry не должен скрывать настоящие баги.
 
@@ -500,13 +500,13 @@ Notifications сообщают о статусе pipeline.
 Например:
 
 - Slack;
-    
+
 - Telegram;
-    
+
 - email;
-    
+
 - Microsoft Teams.
-    
+
 
 Обычно уведомляют о failed deploy, failed tests или successful production release.
 
@@ -535,15 +535,15 @@ Failed build значит приложение не собралось.
 Проверить:
 
 - build logs;
-    
+
 - версии зависимостей;
-    
+
 - Dockerfile;
-    
+
 - package manager;
-    
+
 - переменные окружения.
-    
+
 
 Часто причина — разница между local environment и CI runner.
 
@@ -556,17 +556,17 @@ Failed tests значит проверки не прошли.
 Проверить:
 
 - test logs;
-    
+
 - flaky tests;
-    
+
 - test data;
-    
+
 - environment variables;
-    
+
 - dependencies;
-    
+
 - network calls.
-    
+
 
 Если тест нестабильный, его надо чинить, а не просто rerun бесконечно.
 
@@ -588,15 +588,15 @@ kubectl rollout status deployment/myapp
 Частые причины:
 
 - неправильный image tag;
-    
+
 - нет secret;
-    
+
 - ошибка Helm chart;
-    
+
 - readiness probe failed;
-    
+
 - нет ресурсов в cluster.
-    
+
 
 ---
 
@@ -607,15 +607,15 @@ Missing artifacts значит следующий job не нашел нужны
 Причины:
 
 - artifact не был сохранен;
-    
+
 - неправильный path;
-    
+
 - artifact expired;
-    
+
 - job dependency не настроена;
-    
+
 - build job упал.
-    
+
 
 ---
 
@@ -626,13 +626,13 @@ Cache problems могут давать странные ошибки.
 Например:
 
 - старая зависимость;
-    
+
 - битый cache;
-    
+
 - несовместимые версии;
-    
+
 - cache key слишком общий.
-    
+
 
 Иногда помогает очистить cache и пересобрать pipeline.
 
@@ -714,21 +714,21 @@ Canary     -> постепенная раскатка
 Хороший pipeline:
 
 - быстрый;
-    
+
 - понятный;
-    
+
 - воспроизводимый;
-    
+
 - не хранит secrets в коде;
-    
+
 - запускает tests и security checks;
-    
+
 - собирает immutable artifacts/images;
-    
+
 - поддерживает rollback;
-    
+
 - разделяет dev/stage/prod;
-    
+
 - имеет manual approval для production;
-    
+
 - дает понятные logs и notifications.

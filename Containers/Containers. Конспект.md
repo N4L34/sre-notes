@@ -9,15 +9,15 @@ Container — изолированный процесс с собственны�
 Внутри контейнера есть:
 
 - приложение;
-    
+
 - зависимости;
-    
+
 - filesystem;
-    
+
 - переменные окружения;
-    
+
 - настройки запуска.
-    
+
 
 Контейнер использует kernel хостовой ОС.
 
@@ -49,13 +49,13 @@ created -> running -> stopped -> removed
 Основные действия:
 
 - создать;
-    
+
 - запустить;
-    
+
 - остановить;
-    
+
 - удалить.
-    
+
 
 ---
 
@@ -66,11 +66,11 @@ OCI — стандарт для контейнеров.
 Определяет:
 
 - формат container image;
-    
+
 - как запускать container;
-    
+
 - как должен работать runtime.
-    
+
 
 Благодаря OCI разные runtime совместимы между собой.
 
@@ -102,15 +102,15 @@ Namespaces — механизм Linux для изоляции процессов
 Они позволяют контейнеру иметь свои:
 
 - процессы;
-    
+
 - сеть;
-    
+
 - hostname;
-    
+
 - mounts;
-    
+
 - users.
-    
+
 
 ---
 
@@ -135,15 +135,15 @@ Network namespace изолирует сеть.
 У контейнера могут быть свои:
 
 - interfaces;
-    
+
 - IP;
-    
+
 - routing table;
-    
+
 - ports;
-    
+
 - firewall rules.
-    
+
 
 ---
 
@@ -162,11 +162,11 @@ IPC namespace изолирует межпроцессное взаимодейс
 Например:
 
 - shared memory;
-    
+
 - semaphores;
-    
+
 - message queues.
-    
+
 
 ---
 
@@ -199,13 +199,13 @@ cgroups ограничивают и учитывают ресурсы проце
 Можно ограничить:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk I/O;
-    
+
 - количество процессов.
-    
+
 
 ---
 
@@ -287,15 +287,15 @@ Read-only layers — неизменяемые слои image.
 Он управляет:
 
 - images;
-    
+
 - containers;
-    
+
 - snapshots;
-    
+
 - lifecycle;
-    
+
 - запуском через `runc`.
-    
+
 
 Docker и Kubernetes могут использовать containerd.
 
@@ -342,13 +342,13 @@ Docker Engine — платформа Docker для запуска контейн
 Включает:
 
 - Docker daemon;
-    
+
 - Docker CLI;
-    
+
 - API;
-    
+
 - работу с images, networks, volumes.
-    
+
 
 ---
 
@@ -373,13 +373,13 @@ Network namespace дает контейнеру отдельную сетеву�
 Внутри контейнера могут быть свои:
 
 - IP;
-    
+
 - interfaces;
-    
+
 - routes;
-    
+
 - ports.
-    
+
 
 ---
 
@@ -400,7 +400,7 @@ container eth0 <-> veth on host
 Linux bridge соединяет контейнеры на одном хосте.
 
 Docker bridge network обычно работает через Linux bridge.
- 
+
 ```text
 container -> veth -> bridge -> host network
 ```
@@ -458,11 +458,11 @@ Writable layer хранит изменения контейнера.
 Например:
 
 - созданные файлы;
-    
+
 - измененные конфиги;
-    
+
 - временные данные.
-    
+
 
 Но это не лучший вариант для важных данных.
 
@@ -514,11 +514,11 @@ Persistent data — данные, которые должны пережить �
 Например:
 
 - база данных;
-    
+
 - uploads;
-    
+
 - state приложения.
-    
+
 
 Для этого используют volumes или внешнее хранилище.
 
@@ -587,11 +587,11 @@ AppArmor ограничивает, что процесс может делать
 Например:
 
 - какие файлы читать;
-    
+
 - какие операции выполнять;
-    
+
 - какие capabilities использовать.
-    
+
 
 Это дополнительный слой безопасности.
 
@@ -646,15 +646,15 @@ docker inspect container_name
 Частые причины:
 
 - неправильный command;
-    
+
 - нет env;
-    
+
 - ошибка приложения;
-    
+
 - нет прав;
-    
+
 - не найден image.
-    
+
 
 ---
 
@@ -686,13 +686,13 @@ CrashLoopBackOff — концепция из Kubernetes.
 Причины:
 
 - приложение падает;
-    
+
 - неправильный config;
-    
+
 - нет secret/env;
-    
+
 - dependency недоступна.
-    
+
 
 ---
 
@@ -703,15 +703,15 @@ CrashLoopBackOff — концепция из Kubernetes.
 Проверить:
 
 - user внутри контейнера;
-    
+
 - права на файл;
-    
+
 - bind mount;
-    
+
 - SELinux/AppArmor;
-    
+
 - execute bit.
-    
+
 
 ```bash
 docker exec -it container id
@@ -725,17 +725,17 @@ ls -la
 Проверить:
 
 - network namespace;
-    
+
 - route;
-    
+
 - DNS;
-    
+
 - firewall;
-    
+
 - Docker network;
-    
+
 - port mapping.
-    
+
 
 ```bash
 docker network ls
@@ -874,17 +874,17 @@ docker exec -it container_name sh
 Смотреть:
 
 - env;
-    
+
 - filesystem;
-    
+
 - network;
-    
+
 - process;
-    
+
 - logs;
-    
+
 - exit code.
-    
+
 
 ---
 
@@ -947,11 +947,11 @@ Namespace — механизм Linux для изоляции.
 Например:
 
 - PID namespace изолирует процессы;
-    
+
 - network namespace изолирует сеть;
-    
+
 - mount namespace изолирует filesystem.
-    
+
 
 ---
 
@@ -962,13 +962,13 @@ cgroups — механизм Linux для ограничения и учета �
 Ограничивают:
 
 - CPU;
-    
+
 - memory;
-    
+
 - I/O;
-    
+
 - количество процессов.
-    
+
 
 ---
 
@@ -995,11 +995,11 @@ OCI — стандарт контейнеров.
 Он описывает:
 
 - формат image;
-    
+
 - runtime specification;
-    
+
 - совместимость container runtimes.
-    
+
 
 ---
 

@@ -7,15 +7,15 @@ Grafana — инструмент для визуализации observability-�
 Она показывает:
 
 - metrics;
-    
+
 - logs;
-    
+
 - traces;
-    
+
 - alerts;
-    
+
 - dashboards.
-    
+
 
 Grafana сама обычно не собирает метрики, а читает их из Data Sources.
 
@@ -26,19 +26,19 @@ Grafana сама обычно не собирает метрики, а чита�
 Grafana используют для:
 
 - dashboards;
-    
+
 - графиков;
-    
+
 - анализа метрик;
-    
+
 - просмотра логов;
-    
+
 - alerting;
-    
+
 - troubleshooting;
-    
+
 - мониторинга Kubernetes, серверов и приложений.
-    
+
 
 ---
 
@@ -63,17 +63,17 @@ Dashboard — набор панелей на одной странице.
 Например:
 
 - CPU;
-    
+
 - memory;
-    
+
 - latency;
-    
+
 - error rate;
-    
+
 - requests per second;
-    
+
 - pod restarts.
-    
+
 
 Dashboard помогает быстро понять состояние системы.
 
@@ -86,17 +86,17 @@ Visualization — способ отображения данных.
 Например:
 
 - graph;
-    
+
 - table;
-    
+
 - stat;
-    
+
 - gauge;
-    
+
 - heatmap;
-    
+
 - logs view.
-    
+
 
 Одна и та же метрика может отображаться разными способами.
 
@@ -109,13 +109,13 @@ Panel — отдельный блок внутри dashboard.
 Например:
 
 - график CPU;
-    
+
 - таблица Pod'ов;
-    
+
 - stat с error rate;
-    
+
 - logs panel.
-    
+
 
 Каждая panel обычно содержит query к Data Source.
 
@@ -128,19 +128,19 @@ Data Source — источник данных для Grafana.
 Примеры:
 
 - Prometheus;
-    
+
 - Loki;
-    
+
 - Elasticsearch;
-    
+
 - InfluxDB;
-    
+
 - CloudWatch;
-    
+
 - Azure Monitor;
-    
+
 - Google Cloud Monitoring.
-    
+
 
 ---
 
@@ -153,15 +153,15 @@ Grafana Server — backend-сервис Grafana.
 Он:
 
 - обслуживает UI;
-    
+
 - хранит dashboards/settings;
-    
+
 - подключается к data sources;
-    
+
 - выполняет alert rules;
-    
+
 - управляет users/permissions.
-    
+
 
 ---
 
@@ -170,17 +170,17 @@ Grafana Server — backend-сервис Grafana.
 Backend Grafana отвечает за:
 
 - API;
-    
+
 - authentication;
-    
+
 - работу с database;
-    
+
 - plugins;
-    
+
 - alerting;
-    
+
 - запросы к data sources.
-    
+
 
 ---
 
@@ -191,15 +191,15 @@ Frontend — web UI Grafana.
 Через него пользователь:
 
 - открывает dashboards;
-    
+
 - редактирует panels;
-    
+
 - пишет queries;
-    
+
 - смотрит alerts;
-    
+
 - настраивает data sources.
-    
+
 
 ---
 
@@ -210,17 +210,17 @@ Grafana использует database для хранения своих дан�
 Там лежат:
 
 - dashboards;
-    
+
 - users;
-    
+
 - teams;
-    
+
 - folders;
-    
+
 - data source configs;
-    
+
 - alert rules.
-    
+
 
 По умолчанию может быть SQLite, но для production лучше PostgreSQL/MySQL.
 
@@ -233,11 +233,11 @@ Plugins расширяют Grafana.
 Бывают:
 
 - data source plugins;
-    
+
 - panel plugins;
-    
+
 - app plugins.
-    
+
 
 Например, plugin для конкретного cloud monitoring или нестандартной visualization.
 
@@ -250,13 +250,13 @@ Provisioning — настройка Grafana через файлы.
 Можно описывать как код:
 
 - data sources;
-    
+
 - dashboards;
-    
+
 - alerting;
-    
+
 - folders.
-    
+
 
 Это удобно для Kubernetes, Helm и GitOps.
 
@@ -313,11 +313,11 @@ Grafana может строить dashboards по данным из Elasticsearc
 Например:
 
 - application logs;
-    
+
 - nginx logs;
-    
+
 - audit logs.
-    
+
 
 ---
 
@@ -338,11 +338,11 @@ Grafana может подключаться к cloud monitoring.
 Примеры:
 
 - AWS CloudWatch;
-    
+
 - Google Cloud Monitoring;
-    
+
 - Azure Monitor.
-    
+
 
 Это удобно, если инфраструктура уже мониторится cloud provider'ом.
 
@@ -353,15 +353,15 @@ Grafana может подключаться к cloud monitoring.
 Обычно нужно указать:
 
 - type;
-    
+
 - URL;
-    
+
 - credentials;
-    
+
 - auth method;
-    
+
 - default settings.
-    
+
 
 Для Prometheus пример URL:
 
@@ -378,17 +378,17 @@ http://prometheus:9090
 Dashboard состоит из:
 
 - panels;
-    
+
 - rows;
-    
+
 - variables;
-    
+
 - time range;
-    
+
 - annotations;
-    
+
 - settings.
-    
+
 
 Обычно один dashboard делают под конкретную систему или сервис.
 
@@ -401,17 +401,17 @@ Panels — основные элементы dashboard.
 Каждая panel обычно имеет:
 
 - query;
-    
+
 - visualization type;
-    
+
 - title;
-    
+
 - legend;
-    
+
 - thresholds;
-    
+
 - units.
-    
+
 
 ---
 
@@ -422,15 +422,15 @@ Rows группируют panels внутри dashboard.
 Например:
 
 - Overview;
-    
+
 - CPU/Memory;
-    
+
 - Network;
-    
+
 - Errors;
-    
+
 - Latency.
-    
+
 
 Это помогает держать dashboard читаемым.
 
@@ -443,13 +443,13 @@ Variables позволяют делать dashboard динамическим.
 Например:
 
 - выбрать namespace;
-    
+
 - выбрать pod;
-    
+
 - выбрать service;
-    
+
 - выбрать instance.
-    
+
 
 Так один dashboard можно использовать для разных сервисов.
 
@@ -476,15 +476,15 @@ Dashboard можно импортировать и экспортировать.
 Это удобно для:
 
 - backup;
-    
+
 - sharing;
-    
+
 - Git;
-    
+
 - provisioning;
-    
+
 - переноса между Grafana instances.
-    
+
 
 ---
 
@@ -495,15 +495,15 @@ Dashboard JSON — полное описание dashboard.
 В нем есть:
 
 - panels;
-    
+
 - queries;
-    
+
 - variables;
-    
+
 - layout;
-    
+
 - settings.
-    
+
 
 Его можно хранить в Git как dashboard-as-code.
 
@@ -514,13 +514,13 @@ Dashboard JSON — полное описание dashboard.
 Dashboard можно шарить:
 
 - по ссылке;
-    
+
 - snapshot;
-    
+
 - export JSON;
-    
+
 - через folder permissions.
-    
+
 
 В production важно контролировать доступ к sensitive dashboards.
 
@@ -535,17 +535,17 @@ Time series — график значений во времени.
 Подходит для:
 
 - CPU;
-    
+
 - memory;
-    
+
 - request rate;
-    
+
 - latency;
-    
+
 - errors;
-    
+
 - disk usage.
-    
+
 
 Это самый частый тип panel.
 
@@ -558,11 +558,11 @@ Gauge показывает текущее значение относитель�
 Например:
 
 - disk usage 82%;
-    
+
 - CPU usage 70%;
-    
+
 - memory usage 65%.
-    
+
 
 Хорошо подходит для capacity/saturation.
 
@@ -575,15 +575,15 @@ Stat показывает одно число.
 Например:
 
 - current RPS;
-    
+
 - error rate;
-    
+
 - number of pods;
-    
+
 - uptime;
-    
+
 - p95 latency.
-    
+
 
 Удобно для overview dashboard.
 
@@ -596,13 +596,13 @@ Table показывает данные в виде таблицы.
 Например:
 
 - список Pod'ов;
-    
+
 - usage по namespaces;
-    
+
 - топ сервисов по ошибкам;
-    
+
 - состояние PVC.
-    
+
 
 ---
 
@@ -625,15 +625,15 @@ Logs panel показывает логи.
 Можно фильтровать logs по:
 
 - service;
-    
+
 - pod;
-    
+
 - namespace;
-    
+
 - level;
-    
+
 - text search.
-    
+
 
 ---
 
@@ -644,15 +644,15 @@ Annotations — отметки событий на графиках.
 Например:
 
 - deploy;
-    
+
 - incident;
-    
+
 - config change;
-    
+
 - restart;
-    
+
 - autoscaling event.
-    
+
 
 Они помогают связать изменение метрик с событием.
 
@@ -696,15 +696,15 @@ Query editor — интерфейс для написания запросов.
 В нем можно:
 
 - писать PromQL;
-    
+
 - выбирать labels;
-    
+
 - смотреть preview;
-    
+
 - настраивать legend;
-    
+
 - использовать variables.
-    
+
 
 ---
 
@@ -727,21 +727,21 @@ label_values(kube_pod_info, namespace)
 Kubernetes dashboard обычно показывает:
 
 - Nodes;
-    
+
 - Pods;
-    
+
 - CPU/memory;
-    
+
 - restarts;
-    
+
 - network;
-    
+
 - PVC;
-    
+
 - Deployment status;
-    
+
 - cluster health.
-    
+
 
 Часто готовые dashboards идут с `kube-prometheus-stack`.
 
@@ -754,19 +754,19 @@ Node Exporter dashboard показывает Linux host metrics.
 Обычно:
 
 - CPU;
-    
+
 - RAM;
-    
+
 - disk;
-    
+
 - filesystem;
-    
+
 - network;
-    
+
 - load average;
-    
+
 - system info.
-    
+
 
 ---
 
@@ -775,19 +775,19 @@ Node Exporter dashboard показывает Linux host metrics.
 Application dashboard должен показывать:
 
 - request rate;
-    
+
 - error rate;
-     
+
 - latency p95/p99;
-    
+
 - saturation;
-    
+
 - dependencies;
-    
+
 - business metrics;
-    
+
 - deploy annotations.
-    
+
 
 Лучше строить dashboard вокруг пользовательского impact, а не только CPU/RAM.
 
@@ -804,15 +804,15 @@ Grafana Alerting позволяет создавать alerts прямо в Graf
 Например:
 
 - Slack;
-    
+
 - Telegram;
-    
+
 - email;
-    
+
 - PagerDuty;
-    
+
 - webhook.
-    
+
 
 ---
 
@@ -837,13 +837,13 @@ Alert condition — условие, которое Grafana проверяет.
 Например:
 
 - значение выше threshold;
-    
+
 - нет данных;
-    
+
 - query вернула ошибку;
-    
+
 - error rate выше нормы.
-    
+
 
 ---
 
@@ -862,15 +862,15 @@ Contact points — куда отправлять alert.
 Примеры:
 
 - Slack channel;
-    
+
 - email;
-    
+
 - Telegram;
-    
+
 - PagerDuty;
-    
+
 - webhook.
-    
+
 
 ---
 
@@ -881,13 +881,13 @@ Notification policies определяют routing alert'ов.
 Например:
 
 - critical → on-call;
-    
+
 - warning → team channel;
-    
+
 - database alerts → DB team;
-    
+
 - frontend alerts → frontend team.
-    
+
 
 ---
 
@@ -898,13 +898,13 @@ Silence временно отключает уведомления по alert'а
 Используется при:
 
 - maintenance;
-    
+
 - planned deploy;
-    
+
 - known issue;
-    
+
 - шумном alert.
-    
+
 
 Silence не исправляет проблему, а только убирает уведомления.
 
@@ -934,15 +934,15 @@ Dashboard variables делают dashboard переиспользуемым.
 Например:
 
 - `$cluster`;
-    
+
 - `$namespace`;
-    
+
 - `$pod`;
-    
+
 - `$service`;
-    
+
 - `$instance`.
-    
+
 
 ---
 
@@ -967,15 +967,15 @@ Label variables часто строятся из labels метрик.
 Например:
 
 - namespace;
-    
+
 - pod;
-    
+
 - service;
-    
+
 - instance;
-    
+
 - job.
-    
+
 
 Это удобно для Kubernetes dashboards.
 
@@ -1020,15 +1020,15 @@ Users — пользователи Grafana.
 Им можно давать доступ к:
 
 - dashboards;
-    
+
 - folders;
-    
+
 - data sources;
-    
+
 - alerts;
-    
+
 - admin settings.
-    
+
 
 ---
 
@@ -1039,15 +1039,15 @@ Teams — группы пользователей.
 Например:
 
 - backend;
-    
+
 - frontend;
-    
+
 - platform;
-    
+
 - sre;
-    
+
 - security.
-    
+
 
 Через teams проще управлять permissions.
 
@@ -1060,11 +1060,11 @@ Roles определяют уровень доступа.
 Типичные роли:
 
 - Viewer;
-    
+
 - Editor;
-    
+
 - Admin.
-    
+
 
 Viewer смотрит dashboards, Editor может редактировать, Admin управляет настройками.
 
@@ -1077,11 +1077,11 @@ Permissions управляют доступом к folders и dashboards.
 Например:
 
 - команда backend может редактировать свои dashboards;
-    
+
 - остальные могут только смотреть;
-    
+
 - security dashboards доступны только SRE/security.
-    
+
 
 ---
 
@@ -1102,15 +1102,15 @@ Authentication — как пользователь входит в Grafana.
 Варианты:
 
 - login/password;
-    
+
 - LDAP;
-    
+
 - OAuth;
-    
+
 - SAML;
-    
+
 - auth proxy.
-    
+
 
 В production лучше использовать централизованную authentication.
 
@@ -1123,15 +1123,15 @@ OAuth позволяет входить через внешний identity provi
 Например:
 
 - GitHub;
-    
+
 - GitLab;
-    
+
 - Google;
-    
+
 - Okta;
-    
+
 - Azure AD / Entra ID.
-    
+
 
 Это удобнее и безопаснее, чем локальные пользователи.
 
@@ -1146,13 +1146,13 @@ Provisioning позволяет настраивать Grafana через YAML-�
 Можно provision'ить:
 
 - data sources;
-    
+
 - dashboards;
-    
+
 - alerting;
-    
+
 - plugins.
-    
+
 
 Это удобно для GitOps и Kubernetes.
 
@@ -1167,13 +1167,13 @@ Dashboards as code — хранение dashboards в Git.
 Плюсы:
 
 - review изменений;
-    
+
 - rollback;
-    
+
 - единый source of truth;
-    
+
 - восстановление Grafana.
-    
+
 
 ---
 
@@ -1200,13 +1200,13 @@ datasources:
 Основные config-файлы Grafana:
 
 - `grafana.ini`;
-    
+
 - provisioning YAML;
-    
+
 - dashboards JSON;
-    
+
 - alerting configs.
-    
+
 
 В Kubernetes это обычно ConfigMap/Secret.
 
@@ -1219,24 +1219,24 @@ datasources:
 Например:
 
 - отдельным Grafana chart;
-    
+
 - внутри `kube-prometheus-stack`.
-    
+
 
 Values позволяют настроить:
 
 - admin password;
-    
+
 - data sources;
-    
+
 - dashboards;
-    
+
 - ingress;
-    
+
 - persistence;
-    
+
 - plugins.
-    
+
 
 ---
 
@@ -1249,17 +1249,17 @@ Grafana в Kubernetes обычно запускается как Deployment.
 Компоненты:
 
 - Pod с Grafana;
-    
+
 - Service;
-    
+
 - Ingress;
-    
+
 - ConfigMaps;
-    
+
 - Secrets;
-    
+
 - PVC для persistent storage.
-    
+
 
 ---
 
@@ -1268,17 +1268,17 @@ Grafana в Kubernetes обычно запускается как Deployment.
 `kube-prometheus-stack` часто ставит сразу:
 
 - Prometheus;
-    
+
 - Grafana;
-    
+
 - Alertmanager;
-    
+
 - node-exporter;
-    
+
 - kube-state-metrics;
-    
+
 - default dashboards.
-    
+
 
 Это самый популярный быстрый способ поднять monitoring stack в Kubernetes.
 
@@ -1289,21 +1289,21 @@ Grafana в Kubernetes обычно запускается как Deployment.
 Kubernetes dashboards обычно показывают:
 
 - cluster overview;
-    
+
 - node resources;
-    
+
 - pod resources;
-    
+
 - deployments;
-    
+
 - namespaces;
-    
+
 - restarts;
-    
+
 - PVC usage;
-    
+
 - alerts.
-    
+
 
 ---
 
@@ -1312,21 +1312,21 @@ Kubernetes dashboards обычно показывают:
 Для Nodes смотрят:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk;
-    
+
 - filesystem;
-    
+
 - network;
-    
+
 - load average;
-    
+
 - NodeReady;
-    
+
 - DiskPressure/MemoryPressure.
-    
+
 
 ---
 
@@ -1335,19 +1335,19 @@ Kubernetes dashboards обычно показывают:
 Для Pods смотрят:
 
 - CPU/memory;
-    
+
 - restarts;
-    
+
 - OOMKilled;
-    
+
 - readiness;
-    
+
 - status phase;
-    
+
 - network;
-    
+
 - container filesystem.
-    
+
 
 ---
 
@@ -1356,19 +1356,19 @@ Kubernetes dashboards обычно показывают:
 Для приложений смотрят:
 
 - RPS;
-    
+
 - error rate;
-    
+
 - latency;
-    
+
 - saturation;
-    
+
 - dependency errors;
-    
+
 - queue size;
-    
+
 - business metrics.
-    
+
 
 Это важнее, чем просто “Pod Running”.
 
@@ -1381,17 +1381,17 @@ Kubernetes dashboards обычно показывают:
 Причины:
 
 - Data Source недоступен;
-    
+
 - неправильный PromQL/LogQL;
-    
+
 - выбран неправильный time range;
-    
+
 - labels не совпадают;
-    
+
 - метрик реально нет;
-    
+
 - переменная выбрала пустое значение.
-    
+
 
 Проверить query напрямую в Data Source.
 
@@ -1402,19 +1402,19 @@ Kubernetes dashboards обычно показывают:
 Проверить:
 
 - URL;
-    
+
 - DNS;
-    
+
 - network;
-    
+
 - credentials;
-    
+
 - TLS;
-    
+
 - proxy settings;
-    
+
 - доступ из Pod Grafana до Data Source.
-    
+
 
 В Kubernetes часто проблема в Service name или namespace.
 
@@ -1425,26 +1425,26 @@ Kubernetes dashboards обычно показывают:
 Признаки:
 
 - query возвращает пусто;
-    
+
 - слишком много series;
-    
+
 - неверные значения;
-    
+
 - ошибка syntax.
-    
+
 
 Проверить:
 
 - metric name;
-    
+
 - labels;
-    
+
 - range vector;
-    
+
 - aggregation;
-    
+
 - rate/increase только для counters.
-    
+
 
 ---
 
@@ -1453,17 +1453,17 @@ Kubernetes dashboards обычно показывают:
 Причины:
 
 - слишком тяжелые queries;
-    
+
 - большой time range;
-    
+
 - слишком много panels;
-    
+
 - высокая cardinality;
-    
+
 - нет recording rules;
-    
+
 - слишком частое refresh interval.
-    
+
 
 Решение: упростить queries, добавить recording rules, уменьшить panels.
 
@@ -1476,13 +1476,13 @@ Kubernetes dashboards обычно показывают:
 Причины:
 
 - плохие labels;
-    
+
 - query без aggregation;
-    
+
 - multi-value variable выбирает слишком много;
-    
+
 - высок cardinality.
-    
+
 
 Нужно агрегировать через `sum by`, `avg by` и ограничивать labels.
 
@@ -1493,17 +1493,17 @@ Kubernetes dashboards обычно показывают:
 Причины:
 
 - много пользователей;
-    
+
 - много dashboards;
-    
+
 - тяжелые queries;
-    
+
 - частый auto-refresh;
-    
+
 - много alert rules;
-    
+
 - медленная database.
-    
+
 
 Важно помнить: нагрузка часто падает не только на Grafana, но и на Prometheus/Loki.
 
@@ -1514,15 +1514,15 @@ Kubernetes dashboards обычно показывают:
 Проблемы с permissions:
 
 - пользователь не видит dashboard;
-    
+
 - не может редактировать panel;
-    
+
 - нет доступа к folder;
-    
+
 - нет прав на data source;
-    
+
 - роль только Viewer.
-    
+
 
 Проверять нужно organization, team, folder permissions и role.
 
@@ -1553,17 +1553,17 @@ http://prometheus:9090
 Создать dashboard:
 
 - New dashboard;
-    
+
 - Add visualization;
-    
+
 - выбрать Data Source;
-    
+
 - написать query;
-    
+
 - выбрать visualization;
-    
+
 - сохранить dashboard.
-    
+
 
 ---
 
@@ -1572,15 +1572,15 @@ http://prometheus:9090
 Примеры panel:
 
 - CPU usage;
-    
+
 - memory usage;
-    
+
 - disk usage;
-    
+
 - filesystem available;
-    
+
 - network traffic.
-    
+
 
 Для Node Exporter это обычно делается через Prometheus queries.
 
@@ -1609,19 +1609,19 @@ namespace
 Минимальные panels:
 
 - CPU by namespace;
-    
+
 - Memory by namespace;
-    
+
 - Pod restarts;
-    
+
 - Pods not ready;
-    
+
 - Node status;
-    
+
 - PVC usage;
-    
+
 - Deployment replicas.
-    
+
 
 ---
 
@@ -1630,11 +1630,11 @@ namespace
 В Grafana можно импортировать dashboard:
 
 - через dashboard ID;
-    
+
 - через JSON;
-    
+
 - через provisioning.
-    
+
 
 Готовые dashboards часто используют для Node Exporter и Kubernetes.
 
@@ -1645,15 +1645,15 @@ namespace
 Пример:
 
 - выбрать query;
-    
+
 - задать condition;
-    
+
 - настроить evaluation interval;
-    
+
 - выбрать contact point;
-    
+
 - сохранить alert rule.
-    
+
 
 Alert должен быть понятным и actionable.
 
@@ -1712,13 +1712,13 @@ Panel — отдельная визуализация внутри dashboard.
 Например:
 
 - график CPU;
-    
+
 - таблица Pod'ов;
-    
+
 - stat error rate;
-    
+
 - logs panel.
-    
+
 
 ---
 
@@ -1729,15 +1729,15 @@ Data Source — источник данных для Grafana.
 Например:
 
 - Prometheus;
-    
+
 - Loki;
-    
+
 - Elasticsearch;
-    
+
 - CloudWatch;
-    
+
 - Azure Monitor.
-    
+
 
 ---
 
@@ -1778,13 +1778,13 @@ Alertmanager принимает alerts от Prometheus и занимается r
 Нужно:
 
 - собрать metrics через Prometheus;
-    
+
 - поставить kube-state-metrics и node-exporter;
-    
+
 - подключить Prometheus в Grafana;
-    
+
 - создать panels по Nodes, Pods, Deployments, PVC;
-    
+
 - добавить variables для cluster/namespace/pod;
-    
+
 - настроить alerts на важные симптомы.

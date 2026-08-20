@@ -22,13 +22,13 @@ Runner или Agent — машина, которая выполняет pipeline
 Это может быть:
 
 - VM;
-    
+
 - Docker container;
-    
+
 - Kubernetes Pod;
-    
+
 - bare-metal server.
-    
+
 
 В GitLab чаще говорят **Runner**, в Jenkins — **Agent**, в GitHub Actions — **Runner**.
 
@@ -136,15 +136,15 @@ Conditions определяют, когда запускать job.
 Например:
 
 - только для `main`;
-    
+
 - только для tags;
-    
+
 - только для pull/merge request;
-    
+
 - только вручную;
-    
+
 - если изменились конкретные файлы.
-    
+
 
 ---
 
@@ -255,15 +255,15 @@ Manual deploy — ручное подтверждение перед депло�
 Используется для:
 
 - production;
-    
+
 - database migrations;
-    
+
 - risky changes;
-    
+
 - rollback;
-    
+
 - infrastructure changes.
-    
+
 
 Это защита от случайного deploy.
 
@@ -354,15 +354,15 @@ helm upgrade --install myapp ./chart \
 Secrets нужны для:
 
 - registry login;
-    
+
 - kubeconfig;
-    
+
 - cloud credentials;
-    
+
 - tokens;
-    
+
 - webhook URLs.
-    
+
 
 Их нельзя хранить в репозитории.
 
@@ -535,9 +535,9 @@ GitHub Runners выполняют jobs.
 Бывают:
 
 - GitHub-hosted;
-    
+
 - self-hosted.
-    
+
 
 GitHub-hosted runners часто используют `ubuntu-latest`.
 
@@ -637,19 +637,19 @@ Jenkins сильно зависит от plugins.
 Плагины нужны для:
 
 - Git;
-    
+
 - Docker;
-    
+
 - Kubernetes;
-    
+
 - credentials;
-    
+
 - Slack;
-    
+
 - Blue Ocean;
-    
+
 - cloud integrations.
-    
+
 
 Минус — plugins нужно обновлять и поддерживать.
 
@@ -696,19 +696,19 @@ GitHub Actions тесно встроен в GitHub и имеет большой 
 Оба умеют:
 
 - build;
-    
+
 - test;
-    
+
 - artifacts;
-    
+
 - cache;
-    
+
 - secrets;
-    
+
 - deploy;
-    
+
 - self-hosted runners.
-    
+
 
 ---
 

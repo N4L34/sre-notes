@@ -19,17 +19,17 @@
 Логи нужны для:
 
 - troubleshooting;
-    
+
 - расследования инцидентов;
-    
+
 - audit;
-    
+
 - анализа поведения приложения;
-    
+
 - поиска ошибок;
-    
+
 - понимания контекста проблемы.
-    
+
 
 Метрики говорят “что сломалось”, логи часто помогают понять “почему”.
 
@@ -42,15 +42,15 @@ Application logs — логи самого приложения.
 Примеры:
 
 - ошибка подключения к БД;
-    
+
 - пользователь не авторизован;
-    
+
 - запрос обработан;
-    
+
 - exception stack trace;
-    
+
 - payment failed.
-    
+
 
 ---
 
@@ -61,15 +61,15 @@ System logs — логи операционной системы.
 Например:
 
 - systemd services;
-    
+
 - kernel messages;
-    
+
 - SSH login;
-    
+
 - cron jobs;
-    
+
 - disk/network errors.
-    
+
 
 В Linux часто смотрят через `journalctl` или файлы в `/var/log`.
 
@@ -96,13 +96,13 @@ Audit logs — логи действий пользователей или си�
 Например:
 
 - кто удалил ресурс;
-    
+
 - кто изменил права;
-    
+
 - кто вошел в систему;
-    
+
 - кто прочитал secret.
-    
+
 
 Audit logs важны для security и compliance.
 
@@ -156,15 +156,15 @@ Log levels показывают важность сообщения.
 Обычно:
 
 - DEBUG;
-    
+
 - INFO;
-    
+
 - WARN;
-    
+
 - ERROR;
-    
+
 - FATAL.
-    
+
 
 Правильный level помогает фильтровать шум.
 
@@ -177,11 +177,11 @@ DEBUG — подробная информация для разработки и
 Например:
 
 - значения переменных;
-    
+
 - детали запроса;
-    
+
 - внутренние шаги выполнения.
-    
+
 
 В production DEBUG обычно выключают или включают временно.
 
@@ -194,13 +194,13 @@ INFO — нормальные важные события.
 Например:
 
 - приложение стартовало;
-    
+
 - запрос обработан;
-    
+
 - job завершился;
-    
+
 - пользователь вошел.
-    
+
 
 INFO не должен быть слишком шумным.
 
@@ -213,13 +213,13 @@ WARN — потенциальная проблема, но сервис еще �
 Например:
 
 - retry запроса;
-    
+
 - медленный ответ dependency;
-    
+
 - deprecated config;
-    
+
 - превышен мягкий лимит.
-    
+
 
 ---
 
@@ -230,13 +230,13 @@ ERROR — ошибка, которая повлияла на операцию.
 Например:
 
 - запрос завершился 500;
-    
+
 - не удалось подключиться к БД;
-    
+
 - job failed;
-    
+
 - exception.
-    
+
 
 ERROR обычно должен быть расследуемым.
 
@@ -249,11 +249,11 @@ FATAL — критическая ошибка, после которой при�
 Например:
 
 - не загрузился обязательный config;
-    
+
 - нет подключения к критичной dependency при старте;
-    
+
 - corruption данных.
-    
+
 
 После FATAL приложение часто завершает процесс.
 
@@ -268,17 +268,17 @@ FATAL — критическая ошибка, после которой при�
 Централизованное логирование дает:
 
 - единый поиск;
-    
+
 - хранение после удаления Pod;
-    
+
 - dashboards;
-    
+
 - alerts;
-    
+
 - audit;
-    
+
 - удобное расследование инцидентов.
-    
+
 
 ---
 
@@ -289,17 +289,17 @@ Log collection — сбор логов с источников.
 Источники:
 
 - приложения;
-    
+
 - контейнеры;
-    
+
 - Kubernetes nodes;
-    
+
 - systemd;
-    
+
 - nginx;
-    
+
 - databases.
-    
+
 
 Обычно сбор делает log agent.
 
@@ -329,15 +329,15 @@ Log storage — хранилище логов.
 Примеры:
 
 - Elasticsearch;
-    
+
 - Loki;
-    
+
 - OpenSearch;
-    
+
 - S3/Object Storage;
-    
+
 - cloud logging services.
-    
+
 
 ---
 
@@ -354,11 +354,11 @@ status=500 method=GET path=/api
 получить поля:
 
 - `status`;
-    
+
 - `method`;
-    
+
 - `path`.
-    
+
 
 ---
 
@@ -379,13 +379,13 @@ Log search — поиск по логам.
 Например:
 
 - найти все `ERROR`;
-    
+
 - найти request по `trace_id`;
-    
+
 - найти все 500 за 10 минут;
-    
+
 - найти логи конкретного Pod.
-    
+
 
 ---
 
@@ -396,13 +396,13 @@ Log visualization — отображение логов в UI.
 Примеры:
 
 - Kibana Discover;
-    
+
 - Grafana Explore;
-    
+
 - logs panels;
-    
+
 - dashboards по ошибкам.
-    
+
 
 ---
 
@@ -432,15 +432,15 @@ Retention нужен для контроля стоимости и compliance.
 Примеры:
 
 - stdout/stderr контейнера;
-    
+
 - `/var/log/nginx/access.log`;
-    
+
 - journald;
-    
+
 - application file;
-    
+
 - Kubernetes audit log.
-    
+
 
 ---
 
@@ -451,17 +451,17 @@ Log agent собирает логи и отправляет их дальше.
 Примеры:
 
 - Fluent Bit;
-    
+
 - Fluentd;
-    
+
 - Filebeat;
-    
+
 - Promtail;
-    
+
 - Grafana Alloy;
-    
+
 - Vector.
-    
+
 
 В Kubernetes обычно запускается как DaemonSet.
 
@@ -476,19 +476,19 @@ Enrichment добавляет metadata.
 Например:
 
 - namespace;
-    
+
 - pod;
-    
+
 - container;
-    
+
 - node;
-    
+
 - environment;
-    
+
 - cluster;
-    
+
 - service.
-    
+
 
 Это делает поиск и фильтрацию удобнее.
 
@@ -511,15 +511,15 @@ Storage хранит логи.
 Примеры:
 
 - Elasticsearch;
-    
+
 - Loki;
-    
+
 - S3;
-    
+
 - OpenSearch;
-    
+
 - cloud logging.
-    
+
 
 Выбор зависит от объема, поиска, цены и retention.
 
@@ -532,11 +532,11 @@ Visualization показывает логи пользователю.
 Примеры:
 
 - Kibana;
-    
+
 - Grafana;
-    
+
 - OpenSearch Dashboards.
-    
+
 
 Обычно там делают search, filters и dashboards.
 
@@ -549,13 +549,13 @@ Alerting по логам — алерты на основе появления �
 Например:
 
 - много `ERROR`;
-    
+
 - появилась строка `panic`;
-    
+
 - много failed logins;
-    
+
 - 500 errors больше порога.
-    
+
 
 Важно не делать слишком шумные log alerts.
 
@@ -587,13 +587,13 @@ echo "error message" >&2
 Он собирает логи:
 
 - systemd services;
-    
+
 - kernel;
-    
+
 - boot;
-    
+
 - stdout/stderr сервисов.
-    
+
 
 Смотреть через `journalctl`.
 
@@ -623,11 +623,11 @@ Syslog — классический механизм логирования в L
 Логи могут попадать в:
 
 - `/var/log/syslog`;
-    
+
 - `/var/log/messages`;
-    
+
 - remote syslog server.
-    
+
 
 Сейчас часто используется вместе с rsyslog или journald.
 
@@ -658,11 +658,11 @@ Log rotation — ротация логов.
 Обычно старый файл:
 
 - переименовывается;
-    
+
 - сжимается;
-    
+
 - удаляется после retention.
-    
+
 
 ---
 
@@ -717,15 +717,15 @@ Docker logging driver определяет, куда писать логи.
 Примеры:
 
 - `json-file`;
-    
+
 - `journald`;
-    
+
 - `syslog`;
-    
+
 - `fluentd`;
-    
+
 - `awslogs`.
-    
+
 
 По умолчанию часто используется `json-file`.
 
@@ -871,11 +871,11 @@ Kubernetes audit logs показывают обращения к API Server.
 Например:
 
 - кто создал Secret;
-    
+
 - кто удалил Pod;
-    
+
 - кто изменил RoleBinding.
-    
+
 
 Это важно для security и расследований.
 
@@ -898,13 +898,13 @@ Agent читает container logs с Node и отправляет их в storag
 Pod может быть:
 
 - удален;
-    
+
 - пересоздан;
-    
+
 - evicted;
-    
+
 - перемещен на другую Node.
-    
+
 
 Если логи только внутри Pod, они легко теряются.
 
@@ -945,13 +945,13 @@ Elasticsearch — search engine и storage для документов.
 В логировании он:
 
 - хранит logs как documents;
-    
+
 - индексирует поля;
-    
+
 - позволяет быстро искать;
-    
+
 - используется Kibana для визуализации.
-    
+
 
 ---
 
@@ -962,13 +962,13 @@ Logstash — pipeline processor для логов.
 Он умеет:
 
 - принимать input;
-    
+
 - парсить и фильтровать;
-    
+
 - обогащать данные;
-    
+
 - отправлять output.
-    
+
 
 Но он довольно тяжелый по ресурсам.
 
@@ -993,11 +993,11 @@ Fluent Bit — легковесный log collector.
 Плюсы:
 
 - меньше CPU/RAM;
-    
+
 - хорошо подходит для edge/node log collection;
-    
+
 - поддерживает много outputs.
-    
+
 
 ---
 
@@ -1008,15 +1008,15 @@ Kibana — UI для Elasticsearch/OpenSearch.
 Используется для:
 
 - поиска логов;
-    
+
 - dashboards;
-    
+
 - visualizations;
-    
+
 - alerting;
-    
+
 - data views.
-    
+
 
 ---
 
@@ -1044,13 +1044,13 @@ Elasticsearch cluster — группа nodes, которые вместе хра
 Cluster отвечает за:
 
 - распределение shards;
-    
+
 - репликацию;
-    
+
 - поиск;
-    
+
 - отказоустойчивость.
-    
+
 
 ---
 
@@ -1061,15 +1061,15 @@ Node — отдельный Elasticsearch instance.
 Типы ролей:
 
 - master;
-    
+
 - data;
-    
+
 - ingest;
-    
+
 - coordinating;
-    
+
 - machine learning.
-    
+
 
 Для маленького setup роли часто совмещены.
 
@@ -1114,17 +1114,17 @@ Field — поле внутри document.
 Примеры:
 
 - `timestamp`;
-    
+
 - `level`;
-    
+
 - `service`;
-    
+
 - `message`;
-    
+
 - `pod`;
-    
+
 - `namespace`.
-    
+
 
 ---
 
@@ -1135,15 +1135,15 @@ Mapping описывает типы полей в index.
 Например:
 
 - `keyword`;
-    
+
 - `text`;
-    
+
 - `date`;
-    
+
 - `long`;
-    
+
 - `ip`.
-    
+
 
 Неправильный mapping может ломать поиск и агрегации.
 
@@ -1166,11 +1166,11 @@ Replica — копия primary shard.
 Нужна для:
 
 - отказоустойчивости;
-    
+
 - повышения доступности;
-    
+
 - распределения read load.
-    
+
 
 Если replica не может разместиться, cluster может быть yellow.
 
@@ -1197,15 +1197,15 @@ Elasticsearch поддерживает разные запросы.
 Примеры:
 
 - поиск по exact field;
-    
+
 - full-text search;
-    
+
 - range query;
-    
+
 - bool query;
-    
+
 - aggregation.
-    
+
 
 В Kibana часто используют KQL.
 
@@ -1234,11 +1234,11 @@ Retention — сколько хранить логи.
 Например:
 
 - хранить app logs 30 дней;
-    
+
 - audit logs 1 год;
-    
+
 - debug logs 7 дней.
-    
+
 
 ---
 
@@ -1249,11 +1249,11 @@ Retention — сколько хранить логи.
 Например:
 
 - `user_id`;
-    
+
 - `request_id`;
-    
+
 - `session_id`.
-    
+
 
 Это может раздувать индексы, memory usage и ухудшать aggregation/search performance.
 
@@ -1264,17 +1264,17 @@ Retention — сколько хранить логи.
 Elasticsearch требует много ресурсов, потому что:
 
 - индексирует данные;
-    
+
 - хранит shards;
-    
+
 - держит структуры поиска в памяти;
-    
+
 - выполняет тяжелые queries;
-    
+
 - делает replication;
-    
+
 - обрабатывает большой объем логов.
-    
+
 
 Для production ему нужны нормальные CPU/RAM/disk.
 
@@ -1289,17 +1289,17 @@ Log collector собирает логи и отправляет их в storage.
 Примеры:
 
 - Logstash;
-    
+
 - Fluentd;
-    
+
 - Fluent Bit;
-    
+
 - Filebeat;
-    
+
 - Vector;
-    
+
 - Promtail.
-    
+
 
 ---
 
@@ -1310,17 +1310,17 @@ Input — откуда collector получает логи.
 Примеры:
 
 - file;
-    
+
 - TCP;
-    
+
 - UDP;
-    
+
 - HTTP;
-    
+
 - journald;
-    
+
 - Kubernetes container logs.
-    
+
 
 ---
 
@@ -1331,17 +1331,17 @@ Filter обрабатывает логи.
 Например:
 
 - parse JSON;
-    
+
 - parse regex;
-    
+
 - добавить field;
-    
+
 - удалить secret;
-    
+
 - изменить timestamp;
-    
+
 - drop debug logs.
-    
+
 
 ---
 
@@ -1352,17 +1352,17 @@ Output — куда отправлять логи.
 Примеры:
 
 - Elasticsearch;
-    
+
 - Loki;
-    
+
 - Kafka;
-    
+
 - S3;
-    
+
 - stdout;
-    
+
 - cloud logging.
-    
+
 
 ---
 
@@ -1379,15 +1379,15 @@ Parsing превращает строку в поля.
 можно разобрать в:
 
 - ip;
-    
+
 - method;
-    
+
 - path;
-    
+
 - status;
-    
+
 - duration.
-    
+
 
 ---
 
@@ -1410,17 +1410,17 @@ Collector может добавлять metadata.
 В Kubernetes обычно добавляют:
 
 - namespace;
-    
+
 - pod;
-    
+
 - container;
-    
+
 - node;
-    
+
 - labels;
-    
+
 - annotations.
-    
+
 
 Это помогает искать логи по workload.
 
@@ -1433,11 +1433,11 @@ Buffering сохраняет логи временно, если output недо
 Buffer может быть:
 
 - memory;
-    
+
 - file/disk;
-    
+
 - persistent queue.
-    
+
 
 Это снижает риск потери логов.
 
@@ -1496,13 +1496,13 @@ Discover — раздел Kibana для поиска и просмотра ло�
 Там можно:
 
 - выбрать time range;
-    
+
 - фильтровать fields;
-    
+
 - искать текст;
-    
+
 - смотреть documents.
-    
+
 
 ---
 
@@ -1513,13 +1513,13 @@ Search — поиск по логам.
 Например:
 
 - `level: error`;
-    
+
 - `service: api`;
-    
+
 - `status >= 500`;
-    
+
 - текст внутри message.
-    
+
 
 ---
 
@@ -1530,13 +1530,13 @@ Filters ограничивают выборку.
 Примеры:
 
 - namespace = prod;
-    
+
 - level = error;
-    
+
 - service = backend;
-    
+
 - status >= 500.
-    
+
 
 Фильтры помогают быстро сузить проблему.
 
@@ -1549,15 +1549,15 @@ Kibana dashboards показывают visualizations по логам.
 Например:
 
 - errors over time;
-    
+
 - top services by errors;
-    
+
 - status codes;
-    
+
 - latency distribution;
-    
+
 - failed logins.
-    
+
 
 ---
 
@@ -1568,15 +1568,15 @@ Visualizations — графики и таблицы по логам.
 Примеры:
 
 - bar chart;
-    
+
 - line chart;
-    
+
 - pie chart;
-    
+
 - data table;
-    
+
 - heatmap.
-    
+
 
 ---
 
@@ -1603,13 +1603,13 @@ Kibana может создавать alerts по логам.
 Например:
 
 - ошибок больше 100 за 5 минут;
-    
+
 - появились failed logins;
-    
+
 - нет логов от сервиса;
-    
+
 - cluster health red.
-    
+
 
 ---
 
@@ -1636,13 +1636,13 @@ Promtail/Alloy/Fluent Bit -> Loki -> Grafana
 В distributed mode есть отдельные компоненты:
 
 - distributor;
-    
+
 - ingester;
-    
+
 - querier;
-    
+
 - query frontend.
-    
+
 
 ---
 
@@ -1667,24 +1667,24 @@ Labels в Loki нужны для выбора log streams.
 Примеры хороших labels:
 
 - `cluster`;
-    
+
 - `namespace`;
-    
+
 - `app`;
-    
+
 - `pod`;
-    
+
 - `container`.
-    
+
 
 Плохие labels:
 
 - `request_id`;
-    
+
 - `user_id`;
-    
+
 - `trace_id`.
-    
+
 
 ---
 
@@ -1724,11 +1724,11 @@ Loki          -> labels + cheaper log storage
 Loki не индексирует полный текст, чтобы:
 
 - снизить стоимость хранения;
-    
+
 - уменьшить размер индекса;
-    
+
 - лучше масштабироваться для больших объемов логов.
-    
+
 
 Поиск по тексту есть, но он сканирует выбранные streams.
 
@@ -1747,28 +1747,28 @@ Cardinality labels — проблема, когда labels имеют слишк
 Хорошие labels:
 
 - `namespace`;
-    
+
 - `app`;
-    
+
 - `container`;
-    
+
 - `cluster`;
-    
+
 - `environment`.
-    
+
 
 Плохие labels:
 
 - `request_id`;
-    
+
 - `user_id`;
-    
+
 - `email`;
-    
+
 - `session_id`;
-    
+
 - `timestamp`.
-    
+
 
 Trace/request ID лучше хранить внутри строки лога, а не label.
 
@@ -1801,11 +1801,11 @@ Grafana Alloy — agent для сбора telemetry.
 Он может собирать:
 
 - logs;
-    
+
 - metrics;
-    
+
 - traces.
-    
+
 
 Для Loki Alloy может заменить Promtail и отправлять logs в Loki.
 
@@ -1844,13 +1844,13 @@ Query frontend оптимизирует запросы.
 Он может:
 
 - делить большие queries на части;
-    
+
 - кешировать результаты;
-    
+
 - ставить queries в очередь;
-    
+
 - снижать нагрузку на queriers.
-    
+
 
 ---
 
@@ -1861,13 +1861,13 @@ Object Storage хранит chunks и index data.
 Примеры:
 
 - S3;
-    
+
 - GCS;
-    
+
 - Azure Blob;
-    
+
 - MinIO.
-    
+
 
 Для production Loki обычно использует object storage.
 
@@ -1880,13 +1880,13 @@ Single binary mode — Loki запускается одним процессом
 Подходит для:
 
 - dev;
-    
+
 - small setup;
-    
+
 - тестов;
-    
+
 - простых инсталляций.
-    
+
 
 ---
 
@@ -1918,13 +1918,13 @@ LogQL — язык запросов Loki.
 Позволяет:
 
 - выбирать streams;
-    
+
 - фильтровать строки;
-    
+
 - парсить JSON/logfmt;
-    
+
 - строить метрики из логов.
-    
+
 
 ---
 
@@ -2067,13 +2067,13 @@ count_over_time({app="api"} |= "error" [5m])
 Например:
 
 - количество ошибок;
-    
+
 - rate 500;
-    
+
 - количество failed login;
-    
+
 - число timeout за 5 минут.
-    
+
 
 Но если есть возможность, лучше важные метрики экспортировать напрямую из приложения.
 
@@ -2116,13 +2116,13 @@ Logs panel показывает логи прямо на dashboard.
 Например:
 
 - последние ошибки сервиса;
-    
+
 - логи Pod;
-    
+
 - failed jobs;
-    
+
 - audit события.
-    
+
 
 ---
 
@@ -2155,13 +2155,13 @@ Logs panel показывает логи прямо на dashboard.
 В Grafana можно рядом смотреть:
 
 - метрику error rate;
-    
+
 - логи с `ERROR`;
-    
+
 - deploy annotations;
-    
+
 - traces.
-    
+
 
 Это помогает быстрее найти причину инцидента.
 
@@ -2226,13 +2226,13 @@ Trace ID — ID distributed trace.
 Он позволяет связать:
 
 - logs;
-    
+
 - spans;
-    
+
 - запросы между сервисами;
-    
+
 - ошибки.
-    
+
 
 Trace ID должен попадать в structured logs.
 
@@ -2243,17 +2243,17 @@ Trace ID должен попадать в structured logs.
 Чтобы связать логи с запросом пользователя, в логи добавляют:
 
 - request_id;
-    
+
 - trace_id;
-    
+
 - user_id, если безопасно;
-    
+
 - session_id, если безопасно;
-    
+
 - route;
-    
+
 - service.
-    
+
 
 Sensitive данные нужно маскировать.
 
@@ -2310,15 +2310,15 @@ Tokens тоже нельзя логировать.
 Опасны:
 
 - API tokens;
-    
+
 - JWT;
-    
+
 - OAuth tokens;
-    
+
 - cloud credentials;
-    
+
 - session cookies.
-    
+
 
 В логах должны быть только masked values.
 
@@ -2331,15 +2331,15 @@ Tokens тоже нельзя логировать.
 Например:
 
 - email;
-    
+
 - phone;
-    
+
 - address;
-    
+
 - passport data;
-    
+
 - payment data.
-    
+
 
 Логи часто имеют широкий доступ, поэтому PII опасна.
 
@@ -2352,15 +2352,15 @@ Tokens тоже нельзя логировать.
 Причины:
 
 - там могут быть user data;
-    
+
 - internal errors;
-    
+
 - IP addresses;
-    
+
 - security events;
-    
+
 - business data.
-    
+
 
 Нужны RBAC, teams, audit и least privilege.
 
@@ -2375,13 +2375,13 @@ Audit logs особенно чувствительные.
 Их нужно:
 
 - защищать от удаления;
-    
+
 - хранить дольше;
-    
+
 - ограничивать по доступу;
-    
+
 - использовать для расследований.
-    
+
 
 ---
 
@@ -2390,18 +2390,18 @@ Audit logs особенно чувствительные.
 Логи желательно шифровать:
 
 - in transit;
-    
+
 - at rest.
-    
+
 
 Например:
 
 - TLS между agent и storage;
-    
+
 - disk/object storage encryption;
-    
+
 - encrypted backups.
-    
+
 
 ---
 
@@ -2412,13 +2412,13 @@ Retention policy определяет, сколько хранить логи.
 Важно балансировать:
 
 - стоимость;
-    
+
 - compliance;
-    
+
 - security;
-    
+
 - usefulness для расследований.
-    
+
 
 ---
 
@@ -2427,15 +2427,15 @@ Retention policy определяет, сколько хранить логи.
 Secrets в логах опасны, потому что:
 
 - логи читают многие люди;
-    
+
 - логи уходят в сторонние системы;
-    
+
 - логи долго хранятся;
-    
+
 - их сложно полностью удалить;
-    
+
 - backups тоже могут содержать secret.
-    
+
 
 Если secret попал в лог — его нужно считать скомпрометированным.
 
@@ -2448,17 +2448,17 @@ Secrets в логах опасны, потому что:
 Проверить:
 
 - log agent запущен;
-    
+
 - есть права читать файлы;
-    
+
 - правильный path;
-    
+
 - DaemonSet работает на Node;
-    
+
 - container пишет в stdout/stderr;
-    
+
 - нет ошибок в agent logs.
-    
+
 
 ---
 
@@ -2467,19 +2467,19 @@ Secrets в логах опасны, потому что:
 Проверить:
 
 - output config;
-    
+
 - network до storage;
-    
+
 - credentials;
-    
+
 - TLS;
-    
+
 - rate limits;
-    
+
 - ошибки в logs agent;
-    
+
 - storage health.
-    
+
 
 ---
 
@@ -2488,15 +2488,15 @@ Secrets в логах опасны, потому что:
 Причины:
 
 - формат лога изменился;
-    
+
 - regex не подходит;
-    
+
 - JSON невалидный;
-    
+
 - timestamp в неправильном формате;
-    
+
 - multiline logs не настроены.
-    
+
 
 Лучше использовать structured JSON logs вместо сложного regex.
 
@@ -2509,15 +2509,15 @@ Secrets в логах опасны, потому что:
 Проверить:
 
 - timezone;
-    
+
 - формат timestamp;
-    
+
 - clock sync;
-    
+
 - parser config;
-    
+
 - source field.
-    
+
 
 ---
 
@@ -2526,17 +2526,17 @@ Secrets в логах опасны, потому что:
 Причины:
 
 - нет buffering;
-    
+
 - storage недоступен;
-    
+
 - agent restart;
-    
+
 - переполнен buffer;
-    
+
 - слишком высокий объем логов;
-    
+
 - Pod удалился до сбора логов.
-    
+
 
 Решение — buffering, backpressure, retries, capacity planning.
 
@@ -2547,15 +2547,15 @@ Secrets в логах опасны, потому что:
 Причины:
 
 - два агента читают один файл;
-    
+
 - неправильный offset tracking;
-    
+
 - retry без deduplication;
-    
+
 - пересбор логов после restart;
-    
+
 - несколько pipelines отправляют в одно место.
-    
+
 
 ---
 
@@ -2564,17 +2564,17 @@ Secrets в логах опасны, потому что:
 Причины:
 
 - тяжелые regex;
-    
+
 - слишком много логов;
-    
+
 - parsing на Node;
-    
+
 - multiline processing;
-    
+
 - compression;
-    
+
 - слишком много outputs.
-    
+
 
 Решение — упростить parsing, уменьшить volume, использовать JSON logs.
 
@@ -2585,15 +2585,15 @@ Secrets в логах опасны, потому что:
 Причины:
 
 - большой buffer;
-    
+
 - output недоступен;
-    
+
 - много multiline logs;
-    
+
 - слишком много files/streams;
-    
+
 - backpressure.
-    
+
 
 Проверить buffer settings и состояние storage.
 
@@ -2608,17 +2608,17 @@ Red — часть primary shards недоступна.
 Проверить:
 
 - disk space;
-    
+
 - node health;
-    
+
 - shard allocation;
-    
+
 - cluster health;
-    
+
 - index settings;
-    
+
 - количество replicas.
-    
+
 
 ---
 
@@ -2627,30 +2627,30 @@ Red — часть primary shards недоступна.
 Причины:
 
 - слишком большой retention;
-    
+
 - много логов;
-    
+
 - много shards;
-    
+
 - нет ILM;
-    
+
 - debug logs включены;
-    
+
 - replicas слишком много.
-    
+
 
 Решения:
 
 - уменьшить retention;
-    
+
 - включить ILM;
-    
+
 - удалить старые индексы;
-    
+
 - снизить объем логов;
-    
+
 - увеличить storage.
-    
+
 
 ---
 
@@ -2661,13 +2661,13 @@ Red — часть primary shards недоступна.
 Проблемы:
 
 - много memory overhead;
-    
+
 - медленный cluster state;
-    
+
 - плохая производительность queries;
-    
+
 - долгие recovery.
-    
+
 
 Нужно укрупнять индексы и правильно настраивать rollover.
 
@@ -2678,17 +2678,17 @@ Red — часть primary shards недоступна.
 Причины:
 
 - слишком большой time range;
-    
+
 - слишком широкий selector;
-    
+
 - мало labels в selector;
-    
+
 - высокая cardinality;
-    
+
 - тяжелый regex;
-    
+
 - много log volume.
-    
+
 
 Решение — сузить labels и time range, избегать широких `{}` queries.
 
@@ -2701,13 +2701,13 @@ Red — часть primary shards недоступна.
 Плохие labels:
 
 - request_id;
-    
+
 - user_id;
-    
+
 - trace_id;
-    
+
 - timestamp.
-    
+
 
 Решение — оставить эти данные в log line, а labels держать стабильными.
 
@@ -2718,28 +2718,28 @@ Red — часть primary shards недоступна.
 Причины:
 
 - DEBUG включен в production;
-    
+
 - слишком подробные access logs;
-    
+
 - healthchecks логируются;
-    
+
 - повторяющиеся ошибки;
-    
+
 - noisy services.
-    
+
 
 Решения:
 
 - уменьшить log level;
-    
+
 - sampling;
-    
+
 - drop filters;
-    
+
 - не логировать healthcheck;
-    
+
 - исправить spammy error.
-    
+
 
 ---
 
@@ -2809,11 +2809,11 @@ kubectl logs <pod> --previous
 Практика:
 
 - Elasticsearch/OpenSearch как storage;
-    
+
 - Fluent Bit как DaemonSet;
-    
+
 - Kibana/OpenSearch Dashboards как UI.
-    
+
 
 Проверить, что логи Pod'ов появились в UI.
 
@@ -2850,13 +2850,13 @@ level: "error" and service: "api"
 Практика:
 
 - установить Loki;
-    
+
 - установить агент;
-    
+
 - подключить Grafana;
-    
+
 - проверить LogQL.
-    
+
 
 ---
 
@@ -2976,13 +2976,13 @@ Structured logging — логи в формате с полями, наприм�
 Плюсы:
 
 - легче парсить;
-    
+
 - легче фильтровать;
-    
+
 - легче строить alerts/dashboards;
-    
+
 - лучше для distributed systems.
-    
+
 
 ---
 
@@ -3001,15 +3001,15 @@ Docker/Kubernetes автоматически собирают эти поток�
 Обычно:
 
 - приложение пишет в stdout/stderr;
-    
+
 - container runtime пишет логи на Node;
-    
+
 - log agent DaemonSet читает файлы логов;
-    
+
 - agent добавляет Kubernetes metadata;
-    
+
 - отправляет в Loki/Elasticsearch.
-    
+
 
 ---
 
@@ -3066,13 +3066,13 @@ LogQL — язык запросов Loki.
 Порядок:
 
 - взять ID из ответа/header/user report;
-    
+
 - найти все логи по этому ID;
-    
+
 - посмотреть ошибки;
-    
+
 - перейти в trace, если есть tracing.
-    
+
 
 ---
 
@@ -3081,18 +3081,18 @@ LogQL — язык запросов Loki.
 Нельзя логировать:
 
 - passwords;
-    
+
 - tokens;
-    
+
 - private keys;
-    
+
 - cookies/session IDs;
-    
+
 - payment data;
-    
+
 - персональные данные без необходимости;
-    
+
 - secrets из env/config.
-    
+
 
 Если secret попал в лог, его нужно считать скомпрометированным.

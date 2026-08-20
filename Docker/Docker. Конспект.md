@@ -49,11 +49,11 @@ Docker Engine — основная часть Docker.
 Включает:
 
 - Docker daemon;
-    
+
 - Docker CLI;
-    
+
 - API для управления Docker.
-    
+
 
 ---
 
@@ -108,11 +108,11 @@ Docker Registry — хранилище Docker images.
 Может быть:
 
 - публичным;
-    
+
 - приватным;
-    
+
 - self-hosted.
-    
+
 
 Примеры:
 
@@ -163,13 +163,13 @@ Docker image — неизменяемый шаблон приложения.
 Внутри обычно есть:
 
 - filesystem;
-    
+
 - зависимости;
-    
+
 - runtime;
-    
+
 - настройки запуска.
-    
+
 
 ---
 
@@ -360,9 +360,9 @@ COPY app.py /app/app.py
 Например:
 
 - распаковывать архивы;
-    
+
 - скачивать URL.
-    
+
 
 ```dockerfile
 ADD app.tar.gz /app/
@@ -591,17 +591,17 @@ docker inspect web
 Можно увидеть:
 
 - IP;
-    
+
 - mounts;
-    
+
 - env;
-    
+
 - network;
-    
+
 - command;
-    
+
 - state.
-    
+
 
 ---
 
@@ -676,9 +676,9 @@ docker inspect container_name
 Обычно:
 
 - `0` — успешное завершение;
-    
+
 - не `0` — ошибка.
-    
+
 
 ---
 
@@ -730,11 +730,11 @@ Docker сам создаст volume, но его сложнее найти и о
 Например:
 
 - базы данных;
-    
+
 - uploads;
-    
+
 - stateful data.
-    
+
 
 ---
 
@@ -857,13 +857,13 @@ postgres://db:5432
 Containers могут общаться:
 
 - через custom bridge network;
-    
+
 - через published ports;
-    
+
 - через host network;
-    
+
 - через external network.
-    
+
 
 Лучше использовать custom network, а не связывать всё через localhost.
 
@@ -1281,11 +1281,11 @@ Image scanning ищет уязвимости в Docker image.
 Проверяются:
 
 - OS packages;
-    
+
 - зависимости приложения;
-    
+
 - известные CVE.
-    
+
 
 Примеры инструментов:
 
@@ -1393,15 +1393,15 @@ docker inspect container_name
 Причины:
 
 - ошибка приложения;
-    
+
 - нет env;
-    
+
 - нет доступа к файлам;
-    
+
 - не готова база;
-    
+
 - неправильная команда запуска.
-    
+
 
 ---
 
@@ -1412,13 +1412,13 @@ docker inspect container_name
 Проверить:
 
 - user внутри container;
-    
+
 - права на bind mount;
-    
+
 - владельца файлов;
-    
+
 - execute permissions.
-    
+
 
 ```bash
 docker exec -it container_name id
@@ -1452,13 +1452,13 @@ ss -tulpn | grep 8080
 Проблемы с volumes часто связаны с:
 
 - неправильным путем;
-    
+
 - правами;
-    
+
 - владельцем файлов;
-    
+
 - пустым volume поверх данных image.
-    
+
 
 Проверить:
 
@@ -1505,15 +1505,15 @@ docker exec -it container_name curl http://service:port
 Image pull может падать из-за:
 
 - неправильного имени image;
-    
+
 - неправильного tag;
-    
+
 - отсутствия доступа;
-    
+
 - проблем с registry;
-    
+
 - rate limit.
-    
+
 
 Проверить:
 
@@ -1558,11 +1558,11 @@ docker stats
 Признаки:
 
 - exit code `137`;
-    
+
 - OOMKilled;
-    
+
 - резкое завершение процесса.
-    
+
 
 ---
 
@@ -1992,15 +1992,15 @@ docker exec -it container_name sh
 Проверить:
 
 - env;
-    
+
 - command;
-    
+
 - ports;
-    
+
 - volumes;
-    
+
 - network;
-    
+
 - exit code;
-    
-- application logs. 
+
+- application logs.

@@ -9,17 +9,17 @@ Kubernetes — система оркестрации контейнеров.
 Он управляет:
 
 - запуском контейнеров;
-    
+
 - масштабированием;
-    
+
 - сетью;
-    
+
 - конфигурацией;
-    
+
 - обновлениями;
-    
+
 - self-healing.
-    
+
 
 ---
 
@@ -30,15 +30,15 @@ Kubernetes нужен, чтобы управлять приложениями в
 Он решает задачи:
 
 - где запустить контейнер;
-    
+
 - что делать, если контейнер упал;
-    
+
 - как обновить приложение без downtime;
-    
+
 - как дать сервису постоянный DNS/IP;
-    
+
 - как масштабировать приложение.
-    
+
 
 ---
 
@@ -73,11 +73,11 @@ Control Plane — управляющая часть Kubernetes.
 
 
 - куда поставить Pod;
-    
+
 - сколько реплик должно работать;
-    
+
 - что пересоздать после падения.
-    
+
 
 ---
 
@@ -88,11 +88,11 @@ Worker Node — сервер, на котором реально запуска�
 На node работают:
 
 - kubelet;
-    
+
 - kube-proxy;
-    
+
 - container runtime.
-    
+
 
 ---
 
@@ -129,11 +129,11 @@ Desired state — желаемое состояние системы.
 Например:
 
 - должно быть 3 реплики;
-    
+
 - image должен быть `nginx:1.25`;
-    
+
 - Service должен слушать порт 80.
-    
+
 
 Kubernetes постоянно сравнивает desired state с actual state.
 
@@ -162,21 +162,21 @@ Kubernetes objects — сущности, которыми управляет Kub
 Примеры:
 
 - Pod;
-    
+
 - Deployment;
-    
+
 - Service;
-    
+
 - ConfigMap;
-    
+
 - Secret;
-    
+
 - Ingress;
-    
+
 - StatefulSet;
-    
+
 - Job.
-    
+
 
 ---
 
@@ -207,15 +207,15 @@ Namespaces помогают разделять окружения, команд�
 Через него проходят:
 
 - `kubectl`;
-    
+
 - controllers;
-    
+
 - scheduler;
-    
+
 - kubelet;
-    
+
 - external integrations.
-    
+
 
 Почти все компоненты общаются через API Server.
 
@@ -228,17 +228,17 @@ Namespaces помогают разделять окружения, команд�
 В ней хранится состояние кластера:
 
 - Pods;
-    
+
 - Deployments;
-    
+
 - Services;
-    
+
 - Secrets;
-    
+
 - ConfigMaps;
-    
+
 - Nodes.
-    
+
 
 Если потерять etcd без backup — можно потерять состояние кластера.
 
@@ -251,15 +251,15 @@ Namespaces помогают разделять окружения, команд�
 Он учитывает:
 
 - requests/limits;
-    
+
 - nodeSelector;
-    
+
 - taints/tolerations;
-    
+
 - affinity;
-    
+
 - доступные ресурсы.
-    
+
 
 Scheduler не запускает Pod сам, он только назначает Node.
 
@@ -274,13 +274,13 @@ Controllers следят, чтобы actual state совпадал с desired st
 Например:
 
 - Deployment controller;
-    
+
 - ReplicaSet controller;
-    
+
 - Node controller;
-    
+
 - Job controller.
-    
+
 
 ---
 
@@ -291,13 +291,13 @@ Controllers следят, чтобы actual state совпадал с desired st
 Например:
 
 - создает cloud LoadBalancer;
-    
+
 - работает с cloud routes;
-    
+
 - управляет cloud volumes;
-    
+
 - обновляет информацию о nodes.
-    
+
 
 Обычно нужен в AWS/GCP/Azure и других cloud-средах.
 
@@ -325,13 +325,13 @@ HA Control Plane — отказоустойчивый Control Plane.
 Обычно делают:
 
 - несколько API Servers;
-    
+
 - несколько control plane nodes;
-    
+
 - etcd cluster;
-    
+
 - LoadBalancer перед API Server.
-    
+
 
 Цель — чтобы кластер продолжал работать при падении одной control plane node.
 
@@ -346,13 +346,13 @@ HA Control Plane — отказоустойчивый Control Plane.
 Он:
 
 - получает PodSpec от API Server;
-    
+
 - просит runtime запустить контейнеры;
-    
+
 - следит за состоянием Pods;
-    
+
 - отправляет статус обратно в Kubernetes.
-    
+
 
 ---
 
@@ -365,11 +365,11 @@ HA Control Plane — отказоустойчивый Control Plane.
 Обычно работает через:
 
 - iptables;
-    
+
 - IPVS;
-    
+
 - nftables в некоторых реализациях.
-    
+
 
 ---
 
@@ -380,9 +380,9 @@ Container Runtime запускает контейнеры.
 Примеры:
 
 - containerd;
-    
+
 - CRI-O.
-    
+
 
 Kubernetes через kubelet просит runtime создать container.
 
@@ -411,22 +411,22 @@ CNI — Container Network Interface.
 CNI plugin создает:
 
 - Pod IP;
-    
+
 - routes;
-    
+
 - network interfaces;
-    
+
 - network policies, если поддерживает.
-    
+
 
 Примеры:
 
 - Calico;
-    
+
 - Cilium;
-    
+
 - Flannel.
-    
+
 
 ---
 
@@ -439,13 +439,13 @@ CSI — Container Storage Interface.
 Через CSI Kubernetes работает с:
 
 - cloud disks;
-    
+
 - network storage;
-    
+
 - block volumes;
-    
+
 - persistent volumes.
-    
+
 
 ---
 
@@ -463,15 +463,15 @@ kubectl describe node <node-name>
 Там видно:
 
 - Ready/NotReady;
-    
+
 - capacity;
-    
+
 - allocatable;
-    
+
 - conditions;
-    
+
 - running pods.
-    
+
 
 ---
 
@@ -482,15 +482,15 @@ Node conditions — состояния node.
 Примеры:
 
 - `Ready`;
-    
+
 - `MemoryPressure`;
-    
+
 - `DiskPressure`;
-    
+
 - `PIDPressure`;
-    
+
 - `NetworkUnavailable`.
-    
+
 
 Если Node `NotReady`, Kubernetes перестает нормально размещать на ней workload.
 
@@ -529,15 +529,15 @@ Pod создается, планируется на Node, запускает к�
 Основные phases:
 
 - `Pending`;
-    
+
 - `Running`;
-    
+
 - `Succeeded`;
-    
+
 - `Failed`;
-    
+
 - `Unknown`.
-    
+
 
 Phase показывает общее состояние Pod.
 
@@ -550,13 +550,13 @@ Phase показывает общее состояние Pod.
 Они:
 
 - запускаются вместе;
-    
+
 - живут на одной Node;
-    
+
 - делят сеть;
-    
+
 - могут делить volumes.
-    
+
 
 Используется для sidecar-паттернов.
 
@@ -569,11 +569,11 @@ Phase показывает общее состояние Pod.
 Это значит:
 
 - один IP на весь Pod;
-    
+
 - общий localhost;
-    
+
 - общие порты.
-    
+
 
 Например, sidecar может обращаться к app через `localhost`.
 
@@ -586,9 +586,9 @@ Phase показывает общее состояние Pod.
 Например:
 
 - app пишет файл;
-    
+
 - sidecar читает этот файл и отправляет куда-то дальше.
-    
+
 
 ---
 
@@ -601,13 +601,13 @@ Init Containers запускаются до основных контейнер�
 Примеры:
 
 - дождаться базы;
-    
+
 - подготовить config;
-    
+
 - скачать файлы;
-    
+
 - выполнить миграции.
-    
+
 
 ---
 
@@ -618,13 +618,13 @@ Sidecar container — вспомогательный контейнер рядо
 Примеры:
 
 - log shipper;
-    
+
 - proxy;
-    
+
 - metrics exporter;
-    
+
 - service mesh proxy.
-    
+
 
 Он расширяет поведение основного приложения.
 
@@ -657,11 +657,11 @@ Static Pods создаются напрямую kubelet, без API Server.
 Варианты:
 
 - `Always`;
-    
+
 - `OnFailure`;
-    
+
 - `Never`.
-    
+
 
 Для Deployment обычно используется `Always`.
 
@@ -674,11 +674,11 @@ Pod termination — процесс остановки Pod.
 Kubernetes:
 
 - отправляет SIGTERM;
-    
+
 - ждет grace period;
-    
+
 - если процесс не завершился — отправляет SIGKILL.
-    
+
 
 ---
 
@@ -689,15 +689,15 @@ Graceful shutdown — аккуратное завершение приложен
 Приложение должно:
 
 - принять SIGTERM;
-    
+
 - перестать принимать новые запросы;
-    
+
 - завершить текущие запросы;
-    
+
 - закрыть соединения;
-    
+
 - выйти.
-    
+
 
 ---
 
@@ -790,13 +790,13 @@ Annotations — metadata для объектов.
 Примеры:
 
 - описание;
-    
+
 - настройки ingress controller;
-    
+
 - данные для external tools;
-    
+
 - checksum config.
-    
+
 
 ---
 
@@ -844,15 +844,15 @@ Deployment — объект для управления stateless-приложе
 Он управляет:
 
 - ReplicaSet;
-    
+
 - replicas;
-    
+
 - rolling updates;
-    
+
 - rollback;
-    
+
 - rollout history.
-    
+
 
 Обычно приложения запускают именно через Deployment, а не напрямую через Pod.
 
@@ -991,13 +991,13 @@ StatefulSet — controller для stateful-приложений.
 Он дает Pods:
 
 - стабильные имена;
-    
+
 - стабильную сетевую identity;
-    
+
 - отдельные volumes;
-    
+
 - упорядоченный запуск и остановку.
-    
+
 
 ---
 
@@ -1010,13 +1010,13 @@ StatefulSet нужен, когда важна идентичность Pod.
 Например:
 
 - базы данных;
-    
+
 - кластеры;
-    
+
 - очереди;
-    
+
 - системы с persistent state.
-    
+
 
 ---
 
@@ -1083,9 +1083,9 @@ app-2 -> app-1 -> app-0
 Например:
 
 - `postgres-0` получает свой volume;
-    
+
 - `postgres-1` получает свой volume.
-    
+
 
 Volumes сохраняются даже после пересоздания Pod.
 
@@ -1110,15 +1110,15 @@ Stateful applications хранят состояние.
 Примеры:
 
 - PostgreSQL;
-    
+
 - MySQL;
-    
+
 - Kafka;
-    
+
 - Redis cluster;
-    
+
 - Elasticsearch.
-    
+
 
 Для них важны disk, identity и порядок запуска.
 
@@ -1131,9 +1131,9 @@ StatefulSet поддерживает update strategies.
 Чаще всего:
 
 - `RollingUpdate`;
-    
+
 - `OnDelete`.
-    
+
 
 `OnDelete` обновляет Pod только после ручного удаления старого Pod.
 
@@ -1168,15 +1168,15 @@ DaemonSet используют для node-level компонентов.
 Примеры:
 
 - log collector;
-    
+
 - monitoring agent;
-    
+
 - CNI plugin;
-    
+
 - storage agent;
-    
+
 - security agent.
-    
+
 
 ---
 
@@ -1187,13 +1187,13 @@ Job запускает задачу до успешного завершения
 Примеры:
 
 - миграция базы;
-    
+
 - batch processing;
-    
+
 - one-time script;
-    
+
 - backup.
-    
+
 
 Job не предназначен для постоянно работающего сервиса.
 
@@ -1278,11 +1278,11 @@ restartPolicy: Never
 Варианты:
 
 - `Allow`;
-    
+
 - `Forbid`;
-    
+
 - `Replace`.
-    
+
 
 ---
 
@@ -1488,9 +1488,9 @@ sessionAffinity: ClientIP
 Варианты:
 
 - `Cluster`;
-    
+
 - `Local`.
-    
+
 
 `Local` сохраняет original client IP, но отправляет traffic только на Pods на этой Node.
 
@@ -1503,9 +1503,9 @@ sessionAffinity: ClientIP
 Варианты:
 
 - `Cluster`;
-    
+
 - `Local`.
-    
+
 
 `Local` старается направлять traffic только на endpoints на той же Node.
 
@@ -1558,13 +1558,13 @@ Node должна иметь возможность достучаться до 
 Это нужно для:
 
 - kubelet;
-    
+
 - probes;
-    
+
 - сетевой диагностики;
-    
+
 - traffic routing.
-    
+
 
 ---
 
@@ -1577,13 +1577,13 @@ CNI — Container Network Interface.
 Примеры CNI:
 
 - Calico;
-    
+
 - Cilium;
-    
+
 - Flannel;
-    
+
 - Weave Net.
-    
+
 
 ---
 
@@ -1594,13 +1594,13 @@ CNI — Container Network Interface.
 Контейнеры внутри одного Pod делят:
 
 - IP;
-    
+
 - localhost;
-    
+
 - network interfaces;
-    
+
 - ports.
-    
+
 
 ---
 
@@ -1675,13 +1675,13 @@ eBPF позволяет выполнять безопасные программ
 В Kubernetes eBPF может использоваться для:
 
 - networking;
-    
+
 - observability;
-    
+
 - security;
-    
+
 - замены kube-proxy.
-    
+
 
 Пример CNI с eBPF — Cilium.
 
@@ -1788,13 +1788,13 @@ Ingress Controller — компонент, который реально обр�
 Примеры:
 
 - Nginx Ingress Controller;
-    
+
 - Traefik;
-    
+
 - HAProxy;
-    
+
 - AWS ALB Controller.
-    
+
 
 ---
 
@@ -1822,7 +1822,7 @@ rules:
 ### Host-based routing
 
 Host-based routing направляет traffic по доменному имени.
- 
+
 ```text
 app.example.com -> app-service
 api.example.com -> api-service
@@ -1891,13 +1891,13 @@ Gateway API — более современная и гибкая замена I
 Основные идеи:
 
 - Gateway;
-    
+
 - HTTPRoute;
-    
+
 - TLSRoute;
-    
+
 - разделение ролей infra/app teams.
-    
+
 
 ---
 
@@ -1916,15 +1916,15 @@ kubectl logs -n ingress-nginx <controller-pod>
 Частые проблемы:
 
 - неправильный host;
-    
+
 - неправильный path;
-    
+
 - Service без endpoints;
-    
+
 - TLS Secret не найден;
-    
+
 - DNS не указывает на LB.
-    
+
 
 ---
 
@@ -1937,13 +1937,13 @@ ConfigMap хранит обычную конфигурацию приложен�
 Например:
 
 - URLs;
-    
+
 - feature flags;
-    
+
 - config files;
-    
+
 - non-sensitive settings.
-    
+
 
 ---
 
@@ -1954,13 +1954,13 @@ Secret хранит чувствительные данные.
 Например:
 
 - passwords;
-    
+
 - tokens;
-    
+
 - certificates;
-    
+
 - private keys.
-    
+
 
 Но Secret сам по себе не равен полноценному secret manager.
 
@@ -1975,13 +1975,13 @@ Base64 — это не шифрование.
 Для безопасности нужны:
 
 - RBAC;
-    
+
 - encryption at rest;
-    
+
 - external secret manager;
-    
+
 - ограничение доступа.
-    
+
 
 ---
 
@@ -2034,13 +2034,13 @@ Projected volume объединяет несколько источников в
 Например:
 
 - ConfigMap;
-    
+
 - Secret;
-    
+
 - Downward API;
-    
+
 - ServiceAccount token.
-    
+
 
 ---
 
@@ -2055,11 +2055,11 @@ immutable: true
 Плюсы:
 
 - меньше случайных изменений;
-    
+
 - лучше производительность kube-apiserver;
-    
+
 - предсказуемость конфигурации.
-    
+
 
 ---
 
@@ -2080,13 +2080,13 @@ Secret rotation — регулярная замена secret.
 Обычно нужно:
 
 - создать новый secret;
-    
+
 - обновить workload;
-    
+
 - перезапустить Pods;
-    
+
 - отключить старый secret.
-    
+
 
 ---
 
@@ -2097,13 +2097,13 @@ External Secrets — подход, когда Kubernetes Secret синхрони
 Примеры:
 
 - AWS Secrets Manager;
-    
+
 - HashiCorp Vault;
-    
+
 - GCP Secret Manager;
-    
+
 - Azure Key Vault.
-    
+
 
 ---
 
@@ -2124,13 +2124,13 @@ Volume в Kubernetes — storage, подключенный к Pod.
 Используется для:
 
 - временных файлов;
-    
+
 - конфигов;
-    
+
 - persistent data;
-    
+
 - обмена файлами между containers в Pod.
-    
+
 
 ---
 
@@ -2168,15 +2168,15 @@ PersistentVolume, или PV, — storage resource в кластере.
 Это может быть:
 
 - cloud disk;
-    
+
 - NFS;
-    
+
 - Ceph;
-    
+
 - локальный диск;
-    
+
 - CSI volume.
-    
+
 
 ---
 
@@ -2199,13 +2199,13 @@ StorageClass описывает тип storage и provisioner.
 Например:
 
 - fast SSD;
-    
+
 - standard HDD;
-    
+
 - encrypted disk;
-    
+
 - regional disk.
-    
+
 
 ---
 
@@ -2236,11 +2236,11 @@ Access Modes описывают, как volume может быть подклю�
 Основные:
 
 - ReadWriteOnce;
-    
+
 - ReadOnlyMany;
-    
+
 - ReadWriteMany.
-    
+
 
 ---
 
@@ -2275,9 +2275,9 @@ Volume Binding Mode определяет, когда PVC привязывает�
 Варианты:
 
 - `Immediate`;
-    
+
 - `WaitForFirstConsumer`.
-    
+
 
 `WaitForFirstConsumer` полезен, когда storage зависит от зоны Node.
 
@@ -2290,9 +2290,9 @@ Reclaim Policy определяет, что делать с PV после уда
 Основные варианты:
 
 - `Retain`;
-    
+
 - `Delete`.
-    
+
 
 ---
 
@@ -2321,13 +2321,13 @@ CSI — Container Storage Interface.
 Примеры:
 
 - AWS EBS CSI;
-    
+
 - GCE PD CSI;
-    
+
 - Azure Disk CSI;
-    
+
 - Ceph CSI.
-    
+
 
 ---
 
@@ -2352,13 +2352,13 @@ VolumeSnapshot — snapshot persistent volume.
 Используется для:
 
 - backup;
-    
+
 - restore;
-    
+
 - clone данных;
-    
+
 - миграций.
-    
+
 
 Работает через CSI snapshot support.
 
@@ -2461,11 +2461,11 @@ Kubernetes использует QoS при нехватке ресурсов.
 Основные:
 
 - Guaranteed;
-    
+
 - Burstable;
-    
+
 - BestEffort.
-    
+
 
 ---
 
@@ -2512,13 +2512,13 @@ ResourceQuota ограничивает суммарные ресурсы namespa
 Например:
 
 - сколько CPU;
-    
+
 - сколько memory;
-    
+
 - сколько PVC;
-    
+
 - сколько Pods.
-    
+
 
 ---
 
@@ -2670,13 +2670,13 @@ timeoutSeconds: 3
 Примеры:
 
 - слишком короткий timeout;
-    
+
 - liveness проверяет зависимость от БД;
-    
+
 - readiness всегда возвращает OK;
-    
+
 - endpoint слишком тяжелый.
-    
+
 
 ---
 
@@ -2699,13 +2699,13 @@ kube-scheduler выбирает Node для Pod.
 Упрощенно:
 
 - фильтрует неподходящие Nodes;
-    
+
 - оценивает подходящие Nodes;
-    
+
 - выбирает лучшую;
-    
+
 - записывает binding через API Server.
-    
+
 
 ---
 
@@ -2880,13 +2880,13 @@ Custom metrics — метрики приложения.
 Например:
 
 - requests per second;
-    
+
 - queue length;
-    
+
 - active users;
-    
+
 - latency.
-    
+
 
 Используются через metrics adapter.
 
@@ -2899,11 +2899,11 @@ External metrics приходят из внешних систем.
 Например:
 
 - длина очереди в cloud queue;
-    
+
 - Kafka lag;
-    
+
 - cloud monitoring metric.
-    
+
 
 ---
 
@@ -2947,13 +2947,13 @@ KEDA масштабирует workloads по event-driven метрикам.
 Например:
 
 - Kafka lag;
-    
+
 - RabbitMQ queue;
-    
+
 - Prometheus query;
-    
+
 - cloud queues.
-    
+
 
 Может масштабировать даже до нуля.
 
@@ -2986,13 +2986,13 @@ Authentication отвечает на вопрос: “кто ты?”
 В Kubernetes это может быть:
 
 - certificate;
-    
+
 - token;
-    
+
 - OIDC;
-    
+
 - ServiceAccount token.
-    
+
 
 ---
 
@@ -3003,11 +3003,11 @@ Authorization отвечает на вопрос: “что тебе можно 
 Например:
 
 - можно ли читать Pods;
-    
+
 - можно ли создавать Secrets;
-    
+
 - можно ли удалять Deployments.
-    
+
 
 ---
 
@@ -3018,13 +3018,13 @@ RBAC — Role-Based Access Control.
 Он управляет доступами через:
 
 - Role;
-    
+
 - ClusterRole;
-    
+
 - RoleBinding;
-    
+
 - ClusterRoleBinding.
-    
+
 
 ---
 
@@ -3043,11 +3043,11 @@ ClusterRole задает права на уровне всего кластер�
 Например:
 
 - Nodes;
-    
+
 - PersistentVolumes;
-    
+
 - Namespaces.
-    
+
 
 ---
 
@@ -3080,15 +3080,15 @@ SecurityContext задает security-настройки Pod или container.
 Например:
 
 - user;
-    
+
 - group;
-    
+
 - capabilities;
-    
+
 - read-only filesystem;
-    
+
 - privilege escalation.
-    
+
 
 ---
 
@@ -3195,11 +3195,11 @@ Pod Security Standards — набор уровней безопасности д
 Основные уровни:
 
 - Privileged;
-    
+
 - Baseline;
-    
+
 - Restricted.
-    
+
 
 `Restricted` — самый строгий стандарт.
 
@@ -3222,13 +3222,13 @@ Admission Controllers проверяют или изменяют requests к Kub
 Например, могут запретить:
 
 - privileged containers;
-    
+
 - images без trusted registry;
-    
+
 - Pods без limits;
-    
+
 - root containers.
-    
+
 
 ---
 
@@ -3237,17 +3237,17 @@ Admission Controllers проверяют или изменяют requests к Kub
 Базовая безопасность images:
 
 - использовать trusted base images;
-    
+
 - сканировать на CVE;
-    
+
 - не хранить secrets;
-    
+
 - фиксировать версии;
-    
+
 - использовать минимальные images;
-    
+
 - подписывать images, если нужно.
-    
+
 
 ---
 
@@ -3256,17 +3256,17 @@ Admission Controllers проверяют или изменяют requests к Kub
 Secrets нужно защищать через:
 
 - RBAC;
-    
+
 - encryption at rest;
-    
+
 - external secret manager;
-    
+
 - rotation;
-    
+
 - запрет лишнего доступа;
-    
+
 - не логировать secret values.
-    
+
 
 ---
 
@@ -3277,15 +3277,15 @@ Least privilege — давать минимально необходимые п�
 В Kubernetes это касается:
 
 - RBAC;
-    
+
 - ServiceAccounts;
-    
+
 - NetworkPolicies;
-    
+
 - Linux capabilities;
-    
+
 - access к Secrets;
-    
+
 - cloud IAM permissions.
 
 ## 19. kubectl
@@ -3625,13 +3625,13 @@ apiVersion: apps/v1
 Например:
 
 - `v1`;
-    
+
 - `apps/v1`;
-    
+
 - `batch/v1`;
-    
+
 - `networking.k8s.io/v1`.
-    
+
 
 ---
 
@@ -3646,15 +3646,15 @@ kind: Deployment
 Примеры:
 
 - Pod;
-    
+
 - Service;
-    
+
 - Deployment;
-    
+
 - ConfigMap;
-    
+
 - Secret.
-    
+
 
 ---
 
@@ -3696,13 +3696,13 @@ spec:
 Например:
 
 - сколько replicas ready;
-    
+
 - какой Pod phase;
-    
+
 - IP Pod;
-    
+
 - conditions.
-    
+
 
 Обычно `status` обновляет сам Kubernetes.
 
@@ -3770,11 +3770,11 @@ Finalizers блокируют удаление объекта, пока не в�
 Например:
 
 - удалить внешний cloud resource;
-    
+
 - освободить volume;
-    
+
 - убрать external DNS record.
-    
+
 
 Если finalizer завис, объект может долго висеть в `Terminating`.
 
@@ -3960,13 +3960,13 @@ Helm hooks позволяют запускать ресурсы на этапа�
 Например:
 
 - pre-install;
-    
+
 - post-install;
-    
+
 - pre-upgrade;
-    
+
 - post-upgrade.
-    
+
 
 Часто используют для migrations или one-time Jobs.
 
@@ -3981,9 +3981,9 @@ Chart может зависеть от других charts.
 Пример:
 
 - app chart зависит от PostgreSQL chart;
-    
+
 - monitoring chart зависит от Grafana/Prometheus charts.
-    
+
 
 ---
 
@@ -4019,13 +4019,13 @@ kubectl logs ...
 В нем хранятся:
 
 - clusters;
-    
+
 - users;
-    
+
 - contexts;
-    
+
 - certificates/tokens.
-    
+
 
 ---
 
@@ -4049,15 +4049,15 @@ Certificates используются для TLS и authentication.
 В Kubernetes сертификаты могут использовать:
 
 - kube-apiserver;
-    
+
 - kubelet;
-    
+
 - etcd;
-    
+
 - users/admins;
-    
+
 - control plane components.
-    
+
 
 ---
 
@@ -4068,11 +4068,11 @@ Cluster certificates защищают общение компонентов Kube
 Например:
 
 - API Server ↔ kubelet;
-    
+
 - API Server ↔ etcd;
-    
+
 - controller/scheduler ↔ API Server.
-    
+
 
 Истекшие сертификаты могут сломать cluster.
 
@@ -4167,11 +4167,11 @@ cordon -> drain -> работы на node -> uncordon
 Например:
 
 - обновить OS;
-    
+
 - перезагрузить;
-    
+
 - обновить kubelet/container runtime.
-    
+
 
 ---
 
@@ -4204,13 +4204,13 @@ Control Plane HA означает несколько control plane nodes.
 Обычно есть:
 
 - несколько kube-apiserver;
-    
+
 - etcd cluster;
-    
+
 - load balancer перед API;
-    
+
 - отказоустойчивые controller/scheduler.
-    
+
 
 ---
 
@@ -4240,11 +4240,11 @@ kubectl describe pod my-pod
 Events часто объясняют:
 
 - почему Pod Pending;
-    
+
 - почему image не скачался;
-    
+
 - почему probe failed.
-    
+
 
 ---
 
@@ -4257,13 +4257,13 @@ Kubernetes сам не хранит их вечно.
 Для production обычно нужен log collector:
 
 - Fluent Bit;
-    
+
 - Vector;
-    
+
 - Promtail;
-    
+
 - Filebeat.
-    
+
 
 ---
 
@@ -4317,13 +4317,13 @@ Prometheus собирает и хранит метрики.
 В Kubernetes часто собирает:
 
 - app metrics;
-    
+
 - node metrics;
-    
+
 - kubelet metrics;
-    
+
 - Kubernetes object metrics.
-    
+
 
 ---
 
@@ -4334,15 +4334,15 @@ Prometheus собирает и хранит метрики.
 Например:
 
 - replicas;
-    
+
 - pod phases;
-    
+
 - deployment status;
-    
+
 - node conditions;
-    
+
 - resource requests/limits.
-    
+
 
 ---
 
@@ -4353,15 +4353,15 @@ Node Exporter собирает Linux host metrics.
 Например:
 
 - CPU;
-    
+
 - memory;
-    
+
 - disk;
-    
+
 - filesystem;
-    
+
 - network.
-    
+
 
 Обычно запускается как DaemonSet.
 
@@ -4374,13 +4374,13 @@ Dashboards визуализируют состояние кластера.
 Примеры:
 
 - Kubernetes Dashboard;
-    
+
 - Grafana dashboards;
-    
+
 - Lens/OpenLens;
-    
+
 - cloud provider dashboards.
-    
+
 
 Dashboard не заменяет понимание `kubectl`.
 
@@ -4393,15 +4393,15 @@ Application metrics — метрики самого приложения.
 Примеры:
 
 - request rate;
-    
+
 - error rate;
-    
+
 - latency;
-    
+
 - queue size;
-    
+
 - active users.
-    
+
 
 Лучше экспортировать их в Prometheus format.
 
@@ -4414,17 +4414,17 @@ Cluster metrics показывают состояние Kubernetes и Nodes.
 Примеры:
 
 - CPU/memory usage;
-    
+
 - Pod count;
-    
+
 - Node readiness;
-    
+
 - restarts;
-    
+
 - disk pressure;
-    
+
 - network traffic.
-    
+
 
 ---
 
@@ -4435,11 +4435,11 @@ Audit logs показывают, кто и что делал через Kubernet
 Например:
 
 - кто удалил Secret;
-    
+
 - кто создал Pod;
-    
+
 - кто изменил RoleBinding.
-    
+
 
 Очень важно для security и расследований.
 
@@ -4452,13 +4452,13 @@ Distributed tracing помогает отследить запрос через 
 Примеры инструментов:
 
 - Jaeger;
-    
+
 - Tempo;
-    
+
 - Zipkin;
-    
+
 - OpenTelemetry.
-    
+
 
 Полезно для микросервисов и поиска latency bottleneck.
 
@@ -4473,15 +4473,15 @@ Distributed tracing помогает отследить запрос через 
 Частые причины:
 
 - нет ресурсов;
-    
+
 - PVC Pending;
-    
+
 - taints/tolerations;
-    
+
 - nodeSelector/affinity;
-    
+
 - image еще скачивается.
-    
+
 
 Проверить:
 
@@ -4505,13 +4505,13 @@ kubectl describe pod <pod>
 Частые причины:
 
 - ошибка приложения;
-    
+
 - неправильный env;
-    
+
 - нет Secret/ConfigMap;
-    
+
 - неправильный command.
-    
+
 
 ---
 
@@ -4522,13 +4522,13 @@ ImagePullBackOff значит Kubernetes не может скачать image и
 Причины:
 
 - неправильный image/tag;
-    
+
 - нет доступа к registry;
-    
+
 - нет imagePullSecret;
-    
+
 - registry недоступен.
-    
+
 
 ---
 
@@ -4553,13 +4553,13 @@ CreateContainerConfigError возникает до запуска контейн
 Частые причины:
 
 - отсутствует ConfigMap;
-    
+
 - отсутствует Secret;
-    
+
 - неправильный volume;
-    
+
 - ошибка в envFrom/env.
-    
+
 
 ---
 
@@ -4570,15 +4570,15 @@ ContainerCreating значит контейнер еще создается.
 Если долго висит, проверить:
 
 - image pull;
-    
+
 - volume mount;
-    
+
 - CNI;
-    
+
 - events;
-    
+
 - kubelet на Node.
-    
+
 
 ---
 
@@ -4596,11 +4596,11 @@ kubectl top pod <pod>
 Решения:
 
 - увеличить memory limit;
-    
+
 - найти memory leak;
-    
+
 - настроить requests/limits.
-    
+
 
 ---
 
@@ -4611,13 +4611,13 @@ Evicted значит kubelet выселил Pod с Node.
 Причины:
 
 - DiskPressure;
-    
+
 - MemoryPressure;
-    
+
 - Ephemeral storage;
-    
+
 - Node pressure.
-    
+
 
 Проверить:
 
@@ -4645,15 +4645,15 @@ Pod в `Terminating` удаляется.
 Если завис:
 
 - finalizers;
-    
+
 - volume detach;
-    
+
 - node недоступна;
-    
+
 - процесс не завершается;
-    
+
 - долгий terminationGracePeriod.
-    
+
 
 ---
 
@@ -4679,15 +4679,15 @@ Readiness failed значит Pod не готов принимать traffic.
 Проверить:
 
 - endpoint readiness;
-    
+
 - порт;
-    
+
 - path;
-    
+
 - timeout;
-    
+
 - зависимости приложения.
-    
+
 
 ---
 
@@ -4698,11 +4698,11 @@ Liveness failed приводит к restart контейнера.
 Проверить:
 
 - не слишком ли строгий timeout;
-    
+
 - не проверяет ли liveness внешнюю зависимость;
-    
+
 - хватает ли initialDelay/startupProbe.
-    
+
 
 ---
 
@@ -4742,17 +4742,17 @@ kubectl describe pod <pod>
 Permission denied может быть из-за:
 
 - non-root user;
-    
+
 - прав на volume;
-    
+
 - fsGroup;
-    
+
 - readOnlyRootFilesystem;
-    
+
 - SELinux/AppArmor;
-    
+
 - отсутствия execute bit.
-    
+
 
 Проверить logs и securityContext.
 
@@ -4773,13 +4773,13 @@ kubectl describe svc <service>
 Частые причины:
 
 - нет endpoints;
-    
+
 - неправильный selector;
-    
+
 - неправильный targetPort;
-    
+
 - Pods не Ready.
-    
+
 
 ---
 
@@ -4788,15 +4788,15 @@ kubectl describe svc <service>
 Проверить:
 
 - Pod IP;
-    
+
 - CNI;
-    
+
 - NetworkPolicy;
-    
+
 - firewall;
-    
+
 - Node routing.
-    
+
 
 Команды:
 
@@ -4812,15 +4812,15 @@ kubectl exec -it pod-a -- ping <pod-b-ip>
 Проверить:
 
 - Service существует;
-    
+
 - endpoints есть;
-    
+
 - DNS работает;
-    
+
 - targetPort правильный;
-    
+
 - NetworkPolicy не блокирует.
-    
+
 
 ```bash
 kubectl get svc
@@ -4862,13 +4862,13 @@ kubectl logs -n kube-system -l k8s-app=kube-dns
 Проверить:
 
 - selector Service;
-    
+
 - labels Pods;
-    
+
 - readiness probe;
-    
+
 - namespace.
-    
+
 
 ```bash
 kubectl get endpoints <service>
@@ -4909,15 +4909,15 @@ targetPort: 8080
 Частые причины:
 
 - host не совпадает;
-    
+
 - path не совпадает;
-    
+
 - Ingress class неправильный;
-    
+
 - нет default backend;
-    
+
 - запрос идет не в тот Ingress Controller.
-    
+
 
 ---
 
@@ -4928,15 +4928,15 @@ targetPort: 8080
 Проверить:
 
 - Service endpoints;
-    
+
 - targetPort;
-    
+
 - readiness;
-    
+
 - app port;
-    
+
 - логи Ingress Controller.
-    
+
 
 ---
 
@@ -4960,17 +4960,17 @@ kubectl describe networkpolicy <name>
 Проверить:
 
 - Node IP;
-    
+
 - nodePort;
-    
+
 - firewall/security groups;
-    
+
 - kube-proxy;
-    
+
 - есть ли endpoints;
-    
+
 - externalTrafficPolicy.
-    
+
 
 ```bash
 kubectl get svc
@@ -4985,15 +4985,15 @@ LoadBalancer может зависнуть в Pending, если cloud provider �
 Причины:
 
 - нет cloud-controller-manager;
-    
+
 - нет permissions;
-    
+
 - unsupported environment;
-    
+
 - закончились quotas;
-    
+
 - bare-metal без MetalLB.
-    
+
 
 ---
 
@@ -5045,13 +5045,13 @@ kubectl describe pvc <pvc>
 Причины:
 
 - нет StorageClass;
-    
+
 - provisioner не работает;
-    
+
 - неподходящий AccessMode;
-    
+
 - нет ресурсов storage.
-    
+
 
 ---
 
@@ -5062,15 +5062,15 @@ kubectl describe pvc <pvc>
 Проверить:
 
 - StorageClass;
-    
+
 - CSI controller logs;
-    
+
 - cloud permissions;
-    
+
 - quotas;
-    
+
 - events PVC.
-    
+
 
 ---
 
@@ -5107,15 +5107,15 @@ kubectl describe pvc <pvc>
 Причины:
 
 - CSI issue;
-    
+
 - Node проблема;
-    
+
 - permission denied;
-    
+
 - volume attach timeout;
-    
+
 - неправильный mount path.
-    
+
 
 ---
 
@@ -5128,11 +5128,11 @@ Multi-Attach возникает, когда volume нельзя подключи
 Решение:
 
 - дождаться detach;
-    
+
 - перенести Pod;
-    
+
 - использовать RWX storage, если нужно много Nodes.
-    
+
 
 ---
 
@@ -5141,15 +5141,15 @@ Multi-Attach возникает, когда volume нельзя подключи
 Причины:
 
 - container работает не root;
-    
+
 - volume принадлежит другому UID/GID;
-    
+
 - не задан fsGroup;
-    
+
 - SELinux/AppArmor;
-    
+
 - readonly mount.
-    
+
 
 Проверить securityContext и права внутри Pod.
 
@@ -5164,11 +5164,11 @@ PV может быть привязан к zone/Node.
 Решение:
 
 - использовать `WaitForFirstConsumer`;
-    
+
 - проверить Node affinity у PV;
-    
+
 - проверить topology constraints.
-    
+
 
 ---
 
@@ -5186,13 +5186,13 @@ du -sh /path/*
 Решения:
 
 - cleanup;
-    
+
 - expansion PVC;
-    
+
 - увеличить storage;
-    
+
 - настроить retention.
-    
+
 
 ---
 
@@ -5201,15 +5201,15 @@ du -sh /path/*
 Проверить:
 
 - `volumeClaimTemplates`;
-    
+
 - StorageClass;
-    
+
 - PVC status;
-    
+
 - events StatefulSet/Pod;
-    
+
 - permissions provisioner.
-    
+
 
 ```bash
 kubectl get pvc
@@ -5241,13 +5241,13 @@ kubectl describe pod <pod>
 Решения:
 
 - уменьшить CPU requests;
-    
+
 - добавить Nodes;
-    
+
 - освободить ресурсы;
-    
+
 - проверить overprovisioning.
-    
+
 
 ---
 
@@ -5258,13 +5258,13 @@ kubectl describe pod <pod>
 Решения:
 
 - уменьшить memory requests;
-    
+
 - добавить Nodes;
-    
+
 - пересмотреть limits/requests;
-    
+
 - найти тяжелые Pods.
-    
+
 
 ---
 
@@ -5317,13 +5317,13 @@ systemctl status kubelet
 Причины:
 
 - kubelet down;
-    
+
 - network issue;
-    
+
 - container runtime down;
-    
+
 - disk/memory pressure.
-    
+
 
 ---
 
@@ -5334,13 +5334,13 @@ DiskPressure значит на Node проблема с диском.
 Причины:
 
 - заполнен filesystem;
-    
+
 - много images;
-    
+
 - много logs;
-    
+
 - ephemeral storage.
-    
+
 
 Проверить на Node:
 
@@ -5374,11 +5374,11 @@ PIDPressure значит на Node заканчиваются process IDs.
 Причины:
 
 - fork bomb;
-    
+
 - слишком много процессов;
-    
+
 - утечки процессов.
-    
+
 
 Проверить:
 
@@ -5395,13 +5395,13 @@ Eviction — выселение Pod из-за давления ресурсов.
 Причины:
 
 - memory pressure;
-    
+
 - disk pressure;
-    
+
 - ephemeral storage;
-    
+
 - node condition.
-    
+
 
 Проверить `kubectl describe pod`.
 
@@ -5414,15 +5414,15 @@ Node unreachable значит control plane не может связаться �
 Причины:
 
 - network issue;
-    
+
 - Node down;
-    
+
 - kubelet down;
-    
+
 - firewall;
-    
+
 - cloud/network problem.
-    
+
 
 ---
 
@@ -5489,11 +5489,11 @@ Ingress маршрутизирует HTTP/HTTPS traffic к Service.
 Минимально нужно:
 
 - Ingress Controller;
-    
+
 - Ingress resource;
-    
+
 - DNS на внешний IP/LB.
-    
+
 
 ---
 
@@ -5536,11 +5536,11 @@ StatefulSet нужен для stateful-приложений.
 Практика:
 
 - создать Headless Service;
-    
+
 - создать StatefulSet;
-    
+
 - добавить `volumeClaimTemplates`.
-    
+
 
 ---
 
@@ -5551,9 +5551,9 @@ DaemonSet запускает Pod на каждой Node.
 Практика:
 
 - создать DaemonSet с `busybox` или log agent;
-    
+
 - проверить, что Pod появился на каждой Node.
-    
+
 
 ---
 
@@ -5566,9 +5566,9 @@ CronJob запускает Job по расписанию.
 Практика:
 
 - Job с `echo hello`;
-    
+
 - CronJob каждую минуту.
-    
+
 
 ---
 
@@ -5577,11 +5577,11 @@ CronJob запускает Job по расписанию.
 Добавить:
 
 - readinessProbe;
-    
+
 - livenessProbe;
-    
+
 - startupProbe.
-    
+
 
 Проверить, как Pod выходит из endpoints при failed readiness.
 
@@ -5620,13 +5620,13 @@ kubectl autoscale deployment nginx --cpu-percent=70 --min=2 --max=10
 Практика:
 
 - создать ServiceAccount;
-    
+
 - создать Role;
-    
+
 - создать RoleBinding;
-    
+
 - проверить через `kubectl auth can-i`.
-    
+
 
 ---
 
@@ -5635,9 +5635,9 @@ kubectl autoscale deployment nginx --cpu-percent=70 --min=2 --max=10
 Практика:
 
 - запретить весь ingress traffic;
-    
+
 - разрешить traffic только от конкретного Pod label.
-    
+
 
 Важно: нужен CNI с поддержкой NetworkPolicy.
 
@@ -5675,11 +5675,11 @@ kubectl rollout history deployment/nginx
 Практика:
 
 - поменять Service selector на неправильный;
-    
+
 - проверить `kubectl get endpoints`;
-    
+
 - вернуть правильный selector.
-    
+
 
 Главный симптом — Service без endpoints.
 
@@ -5690,11 +5690,11 @@ kubectl rollout history deployment/nginx
 Практика:
 
 - указать неправильный path/port;
-    
+
 - Pod будет Running, но не Ready;
-    
+
 - Service не будет отправлять на него traffic.
-    
+
 
 Проверить через `describe pod`.
 
@@ -5707,11 +5707,11 @@ kubectl rollout history deployment/nginx
 Потом:
 
 - посмотреть logs;
-    
+
 - посмотреть `--previous`;
-    
+
 - исправить command/image/env.
-    
+
 
 ---
 
@@ -5722,11 +5722,11 @@ kubectl rollout history deployment/nginx
 Потом:
 
 - увидеть `OOMKilled`;
-    
+
 - увеличить limit;
-    
+
 - исправить приложение.
-    
+
 
 ---
 
@@ -5737,11 +5737,11 @@ kubectl rollout history deployment/nginx
 Потом:
 
 - посмотреть `describe pvc`;
-    
+
 - исправить StorageClass;
-    
+
 - проверить создание PV.
-    
+
 
 ---
 
@@ -5766,15 +5766,15 @@ kubectl uncordon node1
 Дальше:
 
 - API Server валидирует объект;
-    
+
 - сохраняет состояние в etcd;
-    
+
 - controllers видят изменения;
-    
+
 - scheduler назначает Pods на Nodes;
-    
+
 - kubelet запускает containers через runtime.
-    
+
 
 ---
 
@@ -5797,13 +5797,13 @@ Deployment — для stateless-приложений.
 StatefulSet — для stateful-приложений, где нужны:
 
 - стабильные имена;
-    
+
 - стабильные volumes;
-    
+
 - порядок запуска;
-    
+
 - stable network identity.
-    
+
 
 ---
 
@@ -5816,11 +5816,11 @@ DaemonSet запускает Pod на каждой подходящей Node.
 Примеры DaemonSet:
 
 - log agent;
-    
+
 - monitoring agent;
-    
+
 - CNI plugin.
-    
+
 
 ---
 
@@ -5966,9 +5966,9 @@ Deployment постепенно заменяет старые Pods новыми.
 Параметры:
 
 - `maxSurge`;
-    
+
 - `maxUnavailable`.
-    
+
 
 Цель — обновить приложение без полной остановки.
 
@@ -5979,15 +5979,15 @@ Deployment постепенно заменяет старые Pods новыми.
 Причины:
 
 - не хватает CPU/memory;
-    
+
 - PVC Pending;
-    
+
 - taints без tolerations;
-    
+
 - nodeSelector/affinity mismatch;
-    
+
 - scheduler не нашел Node.
-    
+
 
 Смотреть `kubectl describe pod`.
 
@@ -6000,15 +6000,15 @@ Deployment постепенно заменяет старые Pods новыми.
 Причины:
 
 - ошибка приложения;
-    
+
 - неправильный command;
-    
+
 - нет env/secret/config;
-    
+
 - dependency недоступна;
-    
+
 - probe убивает контейнер.
-    
+
 
 ---
 
@@ -6021,13 +6021,13 @@ Kernel/Kubernetes убивает процесс.
 Проверять:
 
 - memory limits;
-    
+
 - usage;
-    
+
 - memory leaks;
-    
+
 - размер heap/cache.
-    
+
 
 ---
 
@@ -6061,11 +6061,11 @@ systemctl status containerd
 Частые причины:
 
 - kubelet down;
-    
+
 - container runtime down;
-    
+
 - network issue;
-    
+
 - disk/memory pressure;
-    
+
 - Node unreachable.

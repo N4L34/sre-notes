@@ -9,17 +9,17 @@ Infrastructure as Code, или IaC — подход, при котором ин�
 Например:
 
 - servers;
-    
+
 - networks;
-    
+
 - databases;
-    
+
 - Kubernetes resources;
-    
+
 - firewall rules;
-    
+
 - cloud resources.
-    
+
 
 ---
 
@@ -28,15 +28,15 @@ Infrastructure as Code, или IaC — подход, при котором ин�
 IaC нужен, чтобы инфраструктура была:
 
 - повторяемой;
-    
+
 - версионируемой;
-    
+
 - проверяемой через review;
-    
+
 - автоматизированной;
-    
+
 - менее зависимой от ручных действий.
-    
+
 
 ---
 
@@ -92,15 +92,15 @@ IaC-код хранят в Git.
 Это дает:
 
 - историю изменений;
-    
+
 - pull request review;
-    
+
 - rollback;
-    
+
 - audit;
-    
+
 - понимание, кто и когда изменил инфраструктуру.
-    
+
 
 ---
 
@@ -115,17 +115,17 @@ Terraform — инструмент для создания и управлени
 Обычно используется для:
 
 - cloud resources;
-    
+
 - networks;
-    
+
 - servers;
-    
+
 - databases;
-    
+
 - Kubernetes resources;
-    
+
 - IAM.
-    
+
 
 ---
 
@@ -163,17 +163,17 @@ Provider — плагин для работы с конкретной платф
 Примеры:
 
 - AWS;
-    
+
 - Google Cloud;
-    
+
 - Azure;
-    
+
 - Kubernetes;
-    
+
 - Helm;
-    
+
 - Cloudflare.
-    
+
 
 ---
 
@@ -429,13 +429,13 @@ Terraform state — файл, где Terraform хранит информацию
 В нем могут быть:
 
 - resource IDs;
-    
+
 - attributes;
-    
+
 - outputs;
-    
+
 - иногда sensitive values.
-    
+
 
 Его нельзя случайно терять или публично коммитить.
 
@@ -448,13 +448,13 @@ Local state хранится на машине пользователя.
 Минусы:
 
 - сложно работать в команде;
-    
+
 - можно потерять файл;
-    
+
 - нет нормального locking;
-    
+
 - риск конфликтов.
-    
+
 
 ---
 
@@ -465,13 +465,13 @@ Remote state хранится удаленно.
 Например:
 
 - S3;
-    
+
 - Terraform Cloud;
-    
+
 - GCS;
-    
+
 - Azure Storage.
-    
+
 
 Это стандартный вариант для командной работы.
 
@@ -510,13 +510,13 @@ State locking блокирует state во время apply.
 Последствия:
 
 - дублирование ресурсов;
-    
+
 - невозможность нормального destroy;
-    
+
 - опасные изменения;
-    
+
 - ручной import ресурсов.
-    
+
 
 ---
 
@@ -529,15 +529,15 @@ Module — переиспользуемый набор Terraform-конфигу�
 Например, module для:
 
 - VPC;
-    
+
 - EC2;
-    
+
 - Kubernetes cluster;
-    
+
 - database;
-    
+
 - IAM role.
-    
+
 
 ---
 
@@ -609,15 +609,15 @@ VPC — изолированная сеть в AWS.
 Terraform может создавать:
 
 - VPC;
-    
+
 - subnets;
-    
+
 - route tables;
-    
+
 - internet gateway;
-    
+
 - NAT gateway.
-    
+
 
 ---
 
@@ -643,13 +643,13 @@ Security Group — firewall для AWS resources.
 Обычно описывает:
 
 - inbound rules;
-    
+
 - outbound rules;
-    
+
 - allowed ports;
-    
+
 - allowed CIDR или source SG.
-    
+
 
 ---
 
@@ -660,15 +660,15 @@ IAM управляет доступами в AWS.
 Terraform может создавать:
 
 - users;
-    
+
 - roles;
-    
+
 - policies;
-    
+
 - instance profiles;
-    
+
 - service permissions.
-    
+
 
 С IAM нужно соблюдать least privilege.
 
@@ -681,13 +681,13 @@ Terraform может управлять Kubernetes resources через Kubernet
 Например:
 
 - namespaces;
-    
+
 - deployments;
-    
+
 - services;
-    
+
 - configmaps.
-    
+
 
 Но часто Kubernetes manifests лучше вести через Helm/GitOps, а Terraform оставить для инфраструктуры.
 
@@ -704,15 +704,15 @@ Ansible — инструмент для configuration management и automation.
 Он используется для:
 
 - настройки серверов;
-    
+
 - установки пакетов;
-    
+
 - изменения конфигов;
-    
+
 - деплоя приложений;
-    
+
 - выполнения команд на группах hosts.
-    
+
 
 ---
 
@@ -723,15 +723,15 @@ Configuration Management — управление состоянием серв�
 Например:
 
 - nginx установлен;
-    
+
 - config лежит на месте;
-    
+
 - service запущен;
-    
+
 - user создан;
-    
+
 - firewall настроен.
-    
+
 
 ---
 
@@ -817,13 +817,13 @@ Task — отдельное действие в playbook.
 Например:
 
 - установить пакет;
-    
+
 - скопировать файл;
-    
+
 - перезапустить service;
-    
+
 - создать user.
-    
+
 
 ---
 
@@ -834,19 +834,19 @@ Module — готовая функция Ansible для выполнения д�
 Примеры:
 
 - `apt`;
-    
+
 - `yum`;
-    
+
 - `copy`;
-    
+
 - `template`;
-    
+
 - `service`;
-    
+
 - `user`;
-    
+
 - `file`.
-    
+
 
 ---
 
@@ -909,17 +909,17 @@ Facts — информация о managed host.
 Например:
 
 - hostname;
-    
+
 - OS;
-    
+
 - IP;
-    
+
 - memory;
-    
+
 - CPU;
-    
+
 - disks.
-    
+
 
 Посмотреть можно через:
 
@@ -1049,15 +1049,15 @@ Templates используют для генерации конфигов.
 Например:
 
 - nginx;
-    
+
 - systemd unit;
-    
+
 - app config;
-    
+
 - prometheus config;
-    
+
 - logrotate config.
-    
+
 
 После изменения config обычно вызывают handler для restart/reload.
 
@@ -1109,13 +1109,13 @@ ansible-vault encrypt secrets.yml
 Используют для:
 
 - passwords;
-    
+
 - tokens;
-    
+
 - private keys;
-    
+
 - credentials.
-    
+
 
 ---
 
@@ -1163,17 +1163,17 @@ Terraform хорошо подходит для provisioning.
 Например:
 
 - VPC;
-    
+
 - EC2;
-    
+
 - RDS;
-    
+
 - IAM;
-    
+
 - Kubernetes clusters;
-    
+
 - cloud resources.
-    
+
 
 Он управляет lifecycle ресурсов через state.
 
@@ -1186,15 +1186,15 @@ Ansible хорошо подходит для настройки уже суще�
 Например:
 
 - установить nginx;
-    
+
 - настроить config;
-    
+
 - создать users;
-    
+
 - запустить service;
-    
+
 - разложить файлы.
-    
+
 
 ---
 
@@ -1203,28 +1203,28 @@ Ansible хорошо подходит для настройки уже суще�
 Terraform:
 
 - cloud infrastructure;
-    
+
 - network;
-    
+
 - managed services;
-    
+
 - declarative provisioning;
-    
+
 - stateful lifecycle.
-    
+
 
 Ansible:
 
 - configuration management;
-    
+
 - OS setup;
-    
+
 - app deploy;
-    
+
 - imperative automation;
-    
+
 - server maintenance.
-    
+
 
 ---
 
@@ -1241,9 +1241,9 @@ Ansible настраивает OS и приложения
 Например:
 
 - Terraform создал EC2;
-    
+
 - Ansible поставил nginx и application config.
-    
+
 
 ---
 
@@ -1297,13 +1297,13 @@ Backend нужен, чтобы хранить Terraform state.
 Например:
 
 - S3 + DynamoDB;
-    
+
 - Terraform Cloud;
-    
+
 - GCS;
-    
+
 - Azure Storage.
-    
+
 
 ---
 
@@ -1314,11 +1314,11 @@ Backend нужен, чтобы хранить Terraform state.
 Например:
 
 - что будет создано;
-    
+
 - что изменится;
-    
+
 - что удалится.
-    
+
 
 Он не применяет изменения.
 
@@ -1331,13 +1331,13 @@ Provider — плагин Terraform для работы с API конкретн�
 Например:
 
 - AWS provider;
-    
+
 - Kubernetes provider;
-    
+
 - Helm provider;
-    
+
 - Cloudflare provider.
-    
+
 
 ---
 
@@ -1348,13 +1348,13 @@ Resource — объект инфраструктуры, которым упра�
 Например:
 
 - EC2 instance;
-    
+
 - VPC;
-    
+
 - Security Group;
-    
+
 - Kubernetes namespace.
-    
+
 
 ---
 
@@ -1381,11 +1381,11 @@ Playbook — YAML-файл с описанием задач Ansible.
 Он говорит:
 
 - на каких hosts запускаться;
-    
+
 - какие tasks выполнить;
-    
+
 - какие roles применить.
-    
+
 
 ---
 

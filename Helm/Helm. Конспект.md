@@ -21,13 +21,13 @@ Helm нужен, чтобы не писать и не поддерживать �
 Он помогает:
 
 - шаблонизировать манифесты;
-    
+
 - переиспользовать конфиги;
-    
+
 - делать install/upgrade/rollback;
-    
+
 - хранить версии приложений.
-    
+
 
 ---
 
@@ -106,13 +106,13 @@ Helm умеет хранить charts в OCI registry.
 Например:
 
 - Docker Registry;
-    
+
 - GitHub Container Registry;
-    
+
 - GitLab Registry;
-    
+
 - AWS ECR.
-    
+
 
 Пример:
 
@@ -211,11 +211,11 @@ README.md
 Туда часто пишут:
 
 - как проверить приложение;
-    
+
 - какой URL открыть;
-    
+
 - какие команды выполнить.
-    
+
 
 ---
 
@@ -226,13 +226,13 @@ README.md
 Например:
 
 - имя приложения;
-    
+
 - labels;
-    
+
 - fullname;
-    
+
 - common selectors.
-    
+
 
 Это помогает не копировать одинаковые куски YAML.
 
@@ -296,7 +296,7 @@ name: {{ .Values.name | quote }}
 ### if
 
 `if` добавляет условную логику.
- 
+
 ```yaml
 {{- if .Values.ingress.enabled }}
 kind: Ingress
@@ -739,9 +739,9 @@ Chart dependencies — зависимости одного chart от други
 Например:
 
 - приложение зависит от PostgreSQL;
-    
+
 - monitoring stack зависит от Grafana.
-    
+
 
 ---
 
@@ -866,13 +866,13 @@ Helm hooks запускают Kubernetes resources на определенных
 Например:
 
 - до установки;
-    
+
 - после установки;
-    
+
 - перед upgrade;
-    
+
 - перед удалением.
-    
+
 
 ---
 
@@ -896,11 +896,11 @@ annotations:
 Например:
 
 - smoke test;
-    
+
 - initialization job;
-    
+
 - notification.
-    
+
 
 ---
 
@@ -919,11 +919,11 @@ annotations:
 Например:
 
 - проверка состояния;
-    
+
 - post-migration;
-    
+
 - smoke test.
-    
+
 
 ---
 
@@ -1074,13 +1074,13 @@ DRY значит не повторять одинаковый YAML много р
 Например:
 
 - labels;
-    
+
 - names;
-    
+
 - selectors;
-    
+
 - annotations.
-    
+
 
 ---
 
@@ -1142,13 +1142,13 @@ Annotations используют для дополнительной metadata.
 Например:
 
 - ingress controller settings;
-    
+
 - checksum config;
-    
+
 - hook annotations;
-    
+
 - monitoring scrape config.
-    
+
 
 ---
 
@@ -1181,11 +1181,11 @@ MAJOR.MINOR.PATCH
 Обычно:
 
 - PATCH — bugfix;
-    
+
 - MINOR — новая совместимая функциональность;
-    
+
 - MAJOR — breaking changes.
-    
+
 
 ---
 
@@ -1196,13 +1196,13 @@ MAJOR.MINOR.PATCH
 Не стоит хранить там:
 
 - passwords;
-    
+
 - tokens;
-    
+
 - private keys;
-    
+
 - webhook URLs.
-    
+
 
 Лучше использовать External Secrets, Sealed Secrets или secret manager.
 
@@ -1213,27 +1213,27 @@ MAJOR.MINOR.PATCH
 Production chart обычно содержит:
 
 - Deployment/StatefulSet;
-    
+
 - Service;
-    
+
 - Ingress;
-    
+
 - ConfigMap;
-    
+
 - Secret integration;
-    
+
 - ServiceAccount/RBAC;
-    
+
 - probes;
-    
+
 - resources;
-    
+
 - autoscaling;
-    
+
 - NetworkPolicy;
-    
+
 - PodDisruptionBudget.
-    
+
 
 ---
 
@@ -1256,15 +1256,15 @@ helm create myapp
 Вынести в values:
 
 - image;
-    
+
 - tag;
-    
+
 - replicas;
-    
+
 - resources;
-    
+
 - env.
-    
+
 
 ---
 
@@ -1550,17 +1550,17 @@ kubectl logs
 Helm используют, потому что он дает:
 
 - templates;
-    
+
 - values для разных окружений;
-    
+
 - install/upgrade/rollback;
-    
+
 - dependencies;
-    
+
 - versioned releases;
-    
+
 - переиспользование chart.
-    
+
 
 ---
 
@@ -1569,17 +1569,17 @@ Helm используют, потому что он дает:
 Обычно:
 
 - один chart на приложение;
-    
+
 - values files для dev/stage/prod;
-    
+
 - secrets отдельно от values;
-    
+
 - resources/probes/securityContext обязательны;
-    
+
 - templates DRY через helpers;
-    
+
 - chart versioning;
-    
+
 - CI с `helm lint` и `helm template`;
-    
+
 - GitOps/CI/CD для деплоя.

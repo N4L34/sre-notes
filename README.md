@@ -11,6 +11,8 @@ A public DevOps and SRE knowledge base with practical Markdown notes on Linux, n
 
 Most detailed notes are written in Russian. The structure is intentionally simple, so the repository is still easy to browse, search, and learn from on GitHub.
 
+Best experience: open the vault in Obsidian. Internal wiki-style links and note navigation were designed with Obsidian in mind.
+
 ## Overview
 
 This repository is meant to be a clean personal handbook for recurring SRE topics:
